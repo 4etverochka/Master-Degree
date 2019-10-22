@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="KPI">
+
+    <test name="Teachers page test">
+        <classes>
+            <class name="tests.kpi.otp.TeachersTest">
+            </class>
+        </classes>
+    </test>
+
+</suite>

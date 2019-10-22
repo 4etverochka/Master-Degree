@@ -1,0 +1,76 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.8.1'
+}
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+allure {
+    autoconfigure = true
+    aspectjweaver = true
+    clean = true
+    version = '2.8.1'
+    useTestNG {
+        version = '2.8.1'
+    }
+    downloadLinkFormat = 'https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/%s/allure-commandline-%<s.zip'
+}
+
+dependencies {
+    compile(
+            ['org.codehaus.groovy:groovy-all:2.5.6'],
+            ['ch.qos.logback:logback-classic:1.2.2'],
+            ['org.apache.logging.log4j:log4j-api:2.12.0'],
+            ['org.apache.logging.log4j:log4j-core:2.12.0'],
+            ['com.codeborne:selenide:5.2.3'],
+            ['org.projectlombok:lombok:1.18.8'],
+            ['org.apache.commons:commons-text:1.6'],
+            ['org.aeonbits.owner:owner:1.0.10'],
+            ['io.github.bonigarcia:webdrivermanager:3.6.2'],
+            ['org.apache.bcel:bcel:6.0'],
+            ['net.sf.jxls:jxls-core:1.0.6'],
+            ['io.qameta.allure:allure-testng:2.8.1']
+    )
+
+    testCompile(
+            ['org.projectlombok:lombok:1.18.8'],
+            ['com.codeborne:selenide:5.2.3'],
+            ['org.testng:testng:6.14.3'],
+            ['io.qameta.allure:allure-testng:2.8.1']
+    )
+
+    annotationProcessor(
+            ['org.projectlombok:lombok:1.18.8'],
+            ['io.qameta.allure:allure-testng:2.8.1']
+    )
+
+    testAnnotationProcessor(
+            ['org.projectlombok:lombok:1.18.8'],
+            ['io.qameta.allure:allure-testng:2.8.1']
+    )
+
+    testImplementation(
+            ['org.projectlombok:lombok:1.18.8'],
+            ['org.hamcrest:hamcrest:2.1'],
+            ['io.qameta.allure:allure-testng:2.8.1']
+    )
+}
+
+test {
+    useTestNG() {
+        suites("src/test/resources/EbayTestSuit.xml",
+        "src/test/resources/KpiOtpTestSuit.xml",
+        "src/test/resources/KyivstarTestSuit.xml")
+    }
+    scanForTestClasses = true
+    testLogging.showStandardStreams = true
+    dependsOn 'cleanTest'
+}
+

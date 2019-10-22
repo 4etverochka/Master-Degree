@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Kyivstar">
+
+    <test name="Search results test">
+        <classes>
+            <class name="tests.kyivstar.ua.SearchTest">
+            <methods>
+                <include name="validSearchListSize"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Shop counter test">
+        <classes>
+            <class name="tests.kyivstar.ua.ShopTest">
+                <methods>
+                    <include name="shopPageCounterValidValue"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

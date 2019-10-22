@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Ebay">
+
+    <test name="Home page login test">
+        <classes>
+            <class name="tests.ebay.com.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Search test" parallel="methods">
+        <classes>
+            <class name="tests.ebay.com.SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="Shopping cart test">
+        <classes>
+            <class name="tests.ebay.com.ShoppingCartTest"/>
+        </classes>
+    </test>
+
+</suite>

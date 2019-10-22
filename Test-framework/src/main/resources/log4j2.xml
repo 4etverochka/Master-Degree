@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n"/>
+        </Console>
+
+        <RollingFile
+                name="FileLogger"
+                fileName="src/main/resources/log_file.log"
+                filePattern="src/main/log_file.%i.log.gz"
+                ignoreExceptions="false">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>
+            </PatternLayout>
+
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="5"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="consoleLogger" additivity="true">
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <Logger name="fileLogger1">
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+
+        <Root level="All">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>
