@@ -20,7 +20,7 @@ public class WebDriverProvider {
     public void initDriver() {
         try {
             driver = webDriverFactory.newWebDriver();
-        } catch (MalformedURLException e) {
+    } catch (MalformedURLException e) {
             e.printStackTrace();
         }
         driver.manage().deleteAllCookies();

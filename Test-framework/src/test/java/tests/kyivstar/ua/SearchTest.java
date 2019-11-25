@@ -10,11 +10,11 @@ public class SearchTest extends BaseTest {
     private HomePageSteps homePageSteps = new HomePageSteps();
 
     @Test(description = "Check valid search list size after searching.", dataProvider = "search_data", dataProviderClass = KyivstarDataProvider.class)
-    public void validSearchListSize(String searchText) {
+    public void validSearchListSize(String searchText, int searchValuesCount) {
         homePageSteps.openHomePage()
                 .clickOnSearchIcon()
                 .enterSearch(searchText)
-                .checkSearchResultsListSize(searchText);
+                .checkSearchResultsListSize(searchValuesCount);
     }
 
 }

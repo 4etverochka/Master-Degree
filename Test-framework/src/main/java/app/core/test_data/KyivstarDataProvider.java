@@ -3,8 +3,9 @@ package app.core.test_data;
 import org.testng.annotations.DataProvider;
 
 public class KyivstarDataProvider {
-    private static final int COUNT_BEFORE_SELECT_CHECKBOX=4;
-    private static final int COUNT_AFTER_SELECT_CHECKBOX=1;
+    private static final int COUNT_BEFORE_SELECT_CHECKBOX=5;
+    private static final int COUNT_AFTER_SELECT_CHECKBOX=2;
+    private static final int SEARCH_VALUES_COUNT=10;
 
     private static final String SEARCH_TEXT="магазин";
 
@@ -15,7 +16,7 @@ public class KyivstarDataProvider {
 
     @DataProvider(name = "search_data")
     public static Object[][] searchData() {
-        return new Object[][]{{SEARCH_TEXT}};
+        return new Object[][]{{SEARCH_TEXT, SEARCH_VALUES_COUNT}};
     }
 
 }

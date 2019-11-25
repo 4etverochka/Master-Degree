@@ -14,15 +14,15 @@ import static org.testng.AssertJUnit.assertTrue;
 public class HomePageSteps {
     private HomePage homePage;
 
-    public HomePageSteps(){
-        homePage=new HomePage();
+    public HomePageSteps() {
+        homePage = new HomePage();
     }
 
     @Step("Open home page.")
     public HomePageSteps openHomePage() {
         log.info("Open home page.");
         open(PAGE_URL);
-        homePage=new HomePage();
+        homePage = new HomePage();
 
         return this;
     }
@@ -39,7 +39,7 @@ public class HomePageSteps {
 
     @Step("Enter search with {text} text.")
     public HomePageSteps enterSearch(String text) {
-        log.info("Enter search with "+text+" text.");
+        log.info("Enter search with " + text + " text.");
         homePage.getSearchField()
                 .shouldBe(visible)
                 .sendKeys(text);
@@ -62,14 +62,14 @@ public class HomePageSteps {
     }
 
     @Step("Check search results list size.")
-    public HomePageSteps checkSearchResultsListSize(String expectedText) {
+    public HomePageSteps checkSearchResultsListSize(int expectedSize) {
         log.info("Check search results list size.");
-
-        for(int i=0;i< homePage.getSearchResultFragment().getSearchResults().size();i++){
+        for (int i = 0; i < homePage.getSearchResultFragment().getSearchResults().size(); i++) {
             log.info(homePage.getSearchResultFragment().getSearchResults().get(i).text());
-            assertTrue(homePage.getSearchResultFragment().getSearchResults().get(i).text().toLowerCase().contains(expectedText));
         }
-
+        homePage.getSearchResultFragment()
+                .getSearchResults()
+                .shouldHave(sizeGreaterThanOrEqual(expectedSize));
         return this;
     }
 }

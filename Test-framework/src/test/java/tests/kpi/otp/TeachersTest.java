@@ -28,6 +28,6 @@ public class TeachersTest extends BaseTest {
                 .returnToHomePage()
                 .changeLanguageToEnglish(changeLanguageLinkNumber)
                 .clickOnTeachersLink(teachersLinkNumberOnEngLocale)
-                .checkCountTeachers(changeLanguageLinkNumber+2);
+                .checkCountTeachers(12);
     }
 }

@@ -20,7 +20,6 @@ public class ConcrateTeacherPageSteps {
     public ConcrateTeacherPageSteps checkTeachersFio(String expectedFio){
         log.info("Check teacher's fio.");
         assertThat("Invalid fio!",concrateTeacherPage.getFio().shouldBe(visible).getText(),equalTo(expectedFio));
-
         return this;
     }
 }

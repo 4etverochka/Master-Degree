@@ -3,8 +3,8 @@ package app.core.test_data;
 import org.testng.annotations.DataProvider;
 
 public class EbayDataProvider {
-    private static final String VALID_EMAIL = "testing019238@gmail.com";
-    private static final String VALID_PASSWORD = "Testing123!";
+    private static final String VALID_EMAIL = "mytest0202@i.ua";
+    private static final String VALID_PASSWORD = "Testing123";
     private static final String USERNAME = "Oleksii";
     private static final String INVALID_PASSWORD_ERROR_MESSAGE = "Oops, that's not a match.";
 
