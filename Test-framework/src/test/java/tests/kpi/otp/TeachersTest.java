@@ -6,18 +6,31 @@ import tests.BaseTest;
 import tests.kpi.otp.steps.HomePageSteps;
 
 public class TeachersTest extends BaseTest {
-    HomePageSteps homePageSteps=new HomePageSteps();
+    HomePageSteps homePageSteps = new HomePageSteps();
 
     @Test(description = "Check valid teacher's fio.", dataProvider = "teacher_fio", dataProviderClass = KpiDataProvider.class)
-    public void checkValidTeachersFio(int teachersLinkNumber, int teacherFromLinkNumber, String fio){
+    public void checkValidTeachersFio(int teachersLinkNumber,
+                                      int teacherFromLinkNumber,
+                                      int changeLanguageLinkNumber,
+                                      String fio_rus,
+                                      String fio_ukr) {
         homePageSteps.openPage()
                 .clickOnTeachersLink(teachersLinkNumber)
                 .clickOnTeacher(teacherFromLinkNumber)
-                .checkTeachersFio(fio);
+                .checkTeachersFio(fio_rus)
+                .changeLanguageToUkrainian(changeLanguageLinkNumber)
+                .clickOnTeachersLink(teachersLinkNumber)
+                .clickOnTeacher(teacherFromLinkNumber)
+                .checkTeachersFio(fio_ukr);
     }
 
-    @Test(description = "Check teachers count on different site versions.", dataProvider = "teachers_count", dataProviderClass = KpiDataProvider.class)
-    public void checkTeachersCountOnDifferentSiteVersions(int teachersLinkNumber, int countOfTeachers, int changeLanguageLinkNumber, int teachersLinkNumberOnEngLocale){
+    @Test(description = "Check teachers count on different site versions.",
+            dataProvider = "teachers_count",
+            dataProviderClass = KpiDataProvider.class)
+    public void checkTeachersCountOnDifferentSiteVersions(int teachersLinkNumber,
+                                                          int countOfTeachers,
+                                                          int changeLanguageLinkNumber,
+                                                          int teachersLinkNumberOnEngLocale) {
         homePageSteps.openPage()
                 .clickOnTeachersLink(teachersLinkNumber)
                 .checkCountTeachers(countOfTeachers)

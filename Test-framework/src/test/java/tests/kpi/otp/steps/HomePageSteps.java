@@ -25,26 +25,42 @@ public class HomePageSteps {
         log.info("Open home page.");
         open(HOME_PAGE);
         homePage = new HomePage();
-
         return this;
     }
 
-    @Step("Click on 'teachers' link.")
+    @Step("Click on 'Teachers' link.")
     public TeachersPageSteps clickOnTeachersLink(int linkNumber) {
-        log.info("Click on 'teachers' link.");
+        log.info("Click on 'Teachers' link.");
         homePage.getHeaderLinks()
                 .get(linkNumber)
                 .shouldBe(visible)
                 .click();
-
         return new TeachersPageSteps();
+    }
+
+    @Step("Click on 'Employment' link.")
+    public EmploymentPageSteps clickOnEmploymentLink(int linkNumber) {
+        log.info("Click on 'Employment' link.");
+        homePage.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible)
+                .click();
+        return new EmploymentPageSteps();
+    }
+
+    @Step("Return to home page.")
+    public HomePageSteps returnToHomePage() {
+        log.info("Return to home page.");
+        homePage.getLogo()
+                .shouldBe(visible)
+                .click();
+        return new HomePageSteps();
     }
 
     @Step("Change language to English.")
     public HomePageSteps changeLanguageToEnglish(int linkNumber) {
         log.info("Change language to English.");
         Actions action = new Actions(WebDriverRunner.getWebDriver());
-
         action.moveToElement(homePage.getHeaderLinks()
                 .get(linkNumber)
                 .shouldBe(visible))
@@ -53,7 +69,6 @@ public class HomePageSteps {
         homePage.getEnglishLanguage()
                 .shouldBe(visible)
                 .click();
-
         return this;
     }
 
@@ -61,15 +76,12 @@ public class HomePageSteps {
     public HomePageSteps changeLanguageToRussian(int linkNumber) {
         log.info("Change language to Russian.");
         Actions action = new Actions(WebDriverRunner.getWebDriver());
-
         action.moveToElement(homePage.getHeaderLinks()
                 .get(linkNumber))
                 .perform();
-
         homePage.getRussianLanguage()
                 .shouldBe(visible)
                 .click();
-
         return this;
     }
 
@@ -77,15 +89,12 @@ public class HomePageSteps {
     public HomePageSteps changeLanguageToUkrainian(int linkNumber) {
         log.info("Change language to Ukrainian.");
         Actions action = new Actions(WebDriverRunner.getWebDriver());
-
         action.moveToElement(homePage.getHeaderLinks()
                 .get(linkNumber))
                 .perform();
-
         homePage.getUkrainianLanguage()
                 .shouldBe(visible)
                 .click();
-
         return this;
     }
 }

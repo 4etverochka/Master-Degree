@@ -4,8 +4,8 @@
 
     <test name="Teachers page test">
         <classes>
-            <class name="tests.kpi.otp.TeachersTest">
-            </class>
+            <class name="tests.kpi.otp.TeachersTest"></class>
+            <class name="tests.kpi.otp.InfoPagesTest"></class>
         </classes>
     </test>
 

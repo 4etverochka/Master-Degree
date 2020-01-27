@@ -65,9 +65,7 @@ dependencies {
 
 test {
     useTestNG() {
-        suites("src/test/resources/EbayTestSuit.xml",
-        "src/test/resources/KpiOtpTestSuit.xml",
-        "src/test/resources/KyivstarTestSuit.xml")
+        suites("src/test/resources/KpiOtpTestSuit.xml")
     }
     scanForTestClasses = true
     testLogging.showStandardStreams = true

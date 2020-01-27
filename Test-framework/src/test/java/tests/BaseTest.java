@@ -1,10 +1,10 @@
 package tests;
 
 import app.core.driver.WebDriverProvider;
+import lombok.SneakyThrows;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -25,20 +25,14 @@ public class BaseTest {
         setWebDriver(driverProvider.getDriver());
     }
 
+    @SneakyThrows
     @AfterMethod
     public void tearDown() {
-        getWebDriver().close();
-    }
-
-    @AfterMethod
-    public void makeScreenshot() {
         screenshot("test-result");
         Path content = get(".\\build\\reports\\tests\\test-result.png");
-
-        try (InputStream is = Files.newInputStream(content)) {
-            addAttachment("Screenshot", is);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        InputStream newScreenshot = Files.newInputStream(content);
+        addAttachment("Screenshot", newScreenshot);
+        newScreenshot.close();
+        getWebDriver().close();
     }
 }
