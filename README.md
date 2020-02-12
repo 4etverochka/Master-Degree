@@ -1,3 +1,5 @@
-# diploma_test_framework project
-# version 1.1
-# made by Oleksii Korshun
+GLOBAL INFO
+------------
+diploma work project
+version 2.0
+made by Oleksii Korshun
