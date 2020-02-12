@@ -1,8 +1,8 @@
-GLOBAL INFO
+GLOBAL PROJECT INFO
 ------------
 
-diploma work project
+*Diploma Project*
 
-version 2.0
+*Project Version:* 2.0
 
-made by Oleksii Korshun
+*Author:* Oleksii Korshun
