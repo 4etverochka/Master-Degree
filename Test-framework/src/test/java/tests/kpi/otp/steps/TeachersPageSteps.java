@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Condition.text;
 
 @Log4j2
-public class TeachersPageSteps extends HomePageSteps{
+public class TeachersPageSteps extends HomePageSteps {
     TeachersPage teachersPage;
 
     public TeachersPageSteps() {
@@ -32,9 +32,9 @@ public class TeachersPageSteps extends HomePageSteps{
         return this;
     }
 
-    @Step("Check teacher's fio.")
+    @Step("Check teacher's full name.")
     public HomePageSteps checkTeachersFio(String expectedFio) {
-        log.info("Check teacher's fio.");
+        log.info("Check teacher's full name.");
         teachersPage.getHeaderFragment()
                 .getTitle()
                 .shouldBe(visible)

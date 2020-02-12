@@ -1,12 +1,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
 <suite name="KPI">
-
     <test name="Teachers page test">
         <classes>
             <class name="tests.kpi.otp.TeachersTest"></class>
             <class name="tests.kpi.otp.InfoPagesTest"></class>
+            <class name="tests.kpi.otp.ContactPageTest"></class>
+            <class name="tests.kpi.otp.SearchResultTest"></class>
+            <class name="tests.kpi.otp.DepartmentTodayPageTest"></class>
+            <class name="tests.kpi.otp.ContactUsPageTest"></class>
+            <class name="tests.kpi.otp.HomePageTest"></class>
+            <class name="tests.kpi.otp.HeadOfDepartmentTest"></class>
         </classes>
     </test>
-
 </suite>
