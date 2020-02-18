@@ -11,8 +11,8 @@ import static com.codeborne.selenide.Selenide.$x;
 public class DepartmentTodayPage {
     private HeaderFragment headerFragment;
     private SelenideElement departmentTodayHeadline = $x("//article/h2");
-    private By headOfDepartmentLink = By.xpath("(//div[@id='content']//p//a)[2]");
-    private By headOfDepartmentLinkEn = By.xpath("//div[@id='content']//a");
+    private SelenideElement headOfDepartmentLink = $x("(//div[@id='content']//p//a)[2]");
+    private SelenideElement headOfDepartmentLinkEn = $x("//div[@id='content']//a");
 
     public DepartmentTodayPage() {
         headerFragment = new HeaderFragment();

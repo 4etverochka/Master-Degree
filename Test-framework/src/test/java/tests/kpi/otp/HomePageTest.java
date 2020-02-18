@@ -11,8 +11,7 @@ public class HomePageTest extends BaseTest {
     @Test(description = "Check copyright info on different languages.",
             dataProvider = "copyright_info",
             dataProviderClass = KpiDataProvider.class)
-    public void checkCopyrightInfoOnDifferentLanguages(String copyright,
-                                                       int changeLanguageLinkNumber) {
+    public void checkCopyrightInfoOnDifferentLanguages(String copyright, int changeLanguageLinkNumber) {
         homePageSteps.openPage()
                 .checkCopyrightInfo(copyright)
                 .changeLanguageToUkrainian(changeLanguageLinkNumber)

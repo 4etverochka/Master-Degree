@@ -17,7 +17,7 @@ public class ContactsPageSteps extends HomePageSteps {
     }
 
     @Step("Check Head of Department full name.")
-    public ContactsPageSteps checkHeadOfDepartmentFullName (String fullName) {
+    public ContactsPageSteps checkHeadOfDepartmentFullName(String fullName) {
         log.info("Check Head of Department full name.");
         contactsPage.getHeadOfDepartmentFullName()
                 .shouldBe(visible)
@@ -26,7 +26,7 @@ public class ContactsPageSteps extends HomePageSteps {
     }
 
     @Step("Check phone number on Contact page")
-    public ContactsPageSteps checkPhoneNumber (String contactNumberOne, String contactNumberTwo) {
+    public ContactsPageSteps checkPhoneNumber(String contactNumberOne, String contactNumberTwo) {
         log.info("Check phone number on Contact page");
         contactsPage.getPhoneNumbers()
                 .get(0)
@@ -43,7 +43,8 @@ public class ContactsPageSteps extends HomePageSteps {
     public ContactsPageSteps checkAddressOnTheMap(String expectedMap) {
         log.info("Check address on the map");
         assertTrue(contactsPage.getAddressImage()
-                .shouldBe(visible).getAttribute("src")
+                .shouldBe(visible)
+                .getAttribute("src")
                 .equals(expectedMap));
         return new ContactsPageSteps();
     }

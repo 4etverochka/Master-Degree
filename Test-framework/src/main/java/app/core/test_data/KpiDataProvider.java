@@ -4,20 +4,14 @@ import org.testng.annotations.DataProvider;
 
 public class KpiDataProvider {
     private static final int NUMBER_ZERO = 0;
-    private static final int NUMBER_ONE = 1;
     private static final int NUMBER_TWO = 2;
-    private static final int NUMBER_THREE = 3;
     private static final int NUMBER_FOUR = 4;
-    private static final int NUMBER_FIVE = 5;
     private static final int NUMBER_SIX = 6;
-    private static final int NUMBER_SEVEN = 7;
     private static final int NUMBER_EIGHT = 8;
-    private static final int NUMBER_NINE = 9;
-    private static final int NUMBER_TEN = 10;
 
     private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_EIGHT;
-    private static final int COUNT_OF_TEACHERS = 35;
-    private static final int TEACHER_FROM_LIST_NUMBER = 14;
+    private static final int COUNT_OF_TEACHERS = 36;
+    private static final int TEACHER_FROM_LIST_NUMBER = 15;
 
     private static final String TEACHER_FIO_RUS = "КУЧУК ГЕОРГИЙ АНАТОЛЬЕВИЧ";
     private static final String TEACHER_FIO_UKR = "КУЧУК ГЕОРГІЙ АНАТОЛІЙОВИЧ";
@@ -116,45 +110,95 @@ public class KpiDataProvider {
 
     @DataProvider(name = "teachers_count")
     public static Object[][] teachersCountData() {
-        return new Object[][]{{NUMBER_FOUR, COUNT_OF_TEACHERS, CHANGE_LANGUAGE_LINK_NUMBER, NUMBER_TWO}};
+        return new Object[][]{{
+                NUMBER_FOUR,
+                COUNT_OF_TEACHERS,
+                CHANGE_LANGUAGE_LINK_NUMBER,
+                NUMBER_TWO
+        }};
     }
 
     @DataProvider(name = "contacts_info")
     public static Object[][] contactsData() {
-        return new Object[][]{{NUMBER_ZERO, HEAD_OF_DEPARTMENT_FULL_NAME, PHONE_NUMBER_ONE, PHONE_NUMBER_TWO, ADDRESS_IMAGE}};
+        return new Object[][]{{
+                NUMBER_ZERO,
+                HEAD_OF_DEPARTMENT_FULL_NAME,
+                PHONE_NUMBER_ONE,
+                PHONE_NUMBER_TWO,
+                ADDRESS_IMAGE
+        }};
     }
 
     @DataProvider(name = "search_result")
     public static Object[][] searchResultValidData() {
-        return new Object[][]{{VALID_SEARCH_DATA, VALID_SEARCH_DATA, INVALID_SEARCH_DATA, ERROR_MESSAGE}};
+        return new Object[][]{{
+                VALID_SEARCH_DATA,
+                VALID_SEARCH_DATA,
+                INVALID_SEARCH_DATA,
+                ERROR_MESSAGE
+        }};
     }
 
     @DataProvider(name = "department_today_info")
     public static Object[][] departmentTodayInfo() {
-        return new Object[][]{{NUMBER_ZERO, CHANGE_LANGUAGE_LINK_NUMBER, DEPARTMENT_TODAY_RU, DEPARTMENT_TODAY_UKR, DEPARTMENT_TODAY_EN}};
+        return new Object[][]{{
+                NUMBER_ZERO,
+                CHANGE_LANGUAGE_LINK_NUMBER,
+                DEPARTMENT_TODAY_RU,
+                DEPARTMENT_TODAY_UKR,
+                DEPARTMENT_TODAY_EN
+        }};
     }
 
     @DataProvider(name = "copyright_info")
     public static Object[][] copyrightInfo() {
-        return new Object[][]{{COPYRIGHT, CHANGE_LANGUAGE_LINK_NUMBER}};
+        return new Object[][]{{
+                COPYRIGHT,
+                CHANGE_LANGUAGE_LINK_NUMBER
+        }};
     }
 
     @DataProvider(name = "contact_us_info")
     public static Object[][] contactsForCommunicationInfo() {
-        return new Object[][]{{HEAD_OF_DEPARTMENT_FULL_NAME_ON_CONTACT_US_PAGE, HEAD_OF_DEPARTMENT_PHONE_NUMBER_ONE_ON_CONTACT_US_PAGE,
-                HEAD_OF_DEPARTMENT_PHONE_NUMBER_TWO_ON_CONTACT_US_PAGE, DEPARTMENT_ADDRESS_ON_CONTACT_US_PAGE,
-                DEPARTMENT_PHONE_NUMBER_ON_CONTACT_US_PAGE, DEPARTMENT_EMAIL_ON_CONTACT_US_PAGE, CHANGE_LANGUAGE_LINK_NUMBER}};
+        return new Object[][]{{
+                HEAD_OF_DEPARTMENT_FULL_NAME_ON_CONTACT_US_PAGE,
+                HEAD_OF_DEPARTMENT_PHONE_NUMBER_ONE_ON_CONTACT_US_PAGE,
+                HEAD_OF_DEPARTMENT_PHONE_NUMBER_TWO_ON_CONTACT_US_PAGE,
+                DEPARTMENT_ADDRESS_ON_CONTACT_US_PAGE,
+                DEPARTMENT_PHONE_NUMBER_ON_CONTACT_US_PAGE,
+                DEPARTMENT_EMAIL_ON_CONTACT_US_PAGE,
+                CHANGE_LANGUAGE_LINK_NUMBER
+        }};
     }
 
     @DataProvider(name = "social_networks_info")
     public static Object[][] socialNetworksInfo() {
-        return new Object[][]{{FACEBOOK_KPI, TWITTER_KPI, LINK_KPI, INSTAGRAM_KPI, YOUTUBE_KPI}};
+        return new Object[][]{{
+                FACEBOOK_KPI,
+                TWITTER_KPI,
+                LINK_KPI,
+                INSTAGRAM_KPI,
+                YOUTUBE_KPI
+        }};
     }
 
     @DataProvider(name = "redirection_to_head_of_department")
     public static Object[][] headOfDepartmentInfo() {
-        return new Object[][]{{NUMBER_ZERO, CHANGE_LANGUAGE_LINK_NUMBER, HEAD_OF_DEPARTMENT_PAGE_TITLE_RU, POSITION_RU, SCIENTIFIC_DEGREE_RU, SCIENTIFIC_TITLE_RU,
-                HEAD_OF_DEPARTMENT_PAGE_TITLE_UKR, POSITION_UKR, SCIENTIFIC_DEGREE_UKR, SCIENTIFIC_TITLE_UKR,
-                HEAD_OF_DEPARTMENT_PAGE_TITLE_EN, POSITION_EN, SCIENTIFIC_DEGREE_EN, SCIENTIFIC_TITLE_EN}};
+        return new Object[][]{{
+                NUMBER_ZERO,
+                CHANGE_LANGUAGE_LINK_NUMBER,
+                HEAD_OF_DEPARTMENT_PAGE_TITLE_RU,
+                POSITION_RU,
+                SCIENTIFIC_DEGREE_RU,
+                SCIENTIFIC_TITLE_RU,
+                HEAD_OF_DEPARTMENT_PAGE_TITLE_UKR,
+                POSITION_UKR,
+                SCIENTIFIC_DEGREE_UKR,
+                SCIENTIFIC_TITLE_UKR,
+                HEAD_OF_DEPARTMENT_PAGE_TITLE_EN,
+                POSITION_EN,
+                SCIENTIFIC_DEGREE_EN,
+                SCIENTIFIC_TITLE_EN
+        }};
     }
 }

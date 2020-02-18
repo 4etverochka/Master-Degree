@@ -8,7 +8,9 @@ import tests.kpi.otp.steps.HomePageSteps;
 public class TeachersTest extends BaseTest {
     HomePageSteps homePageSteps = new HomePageSteps();
 
-    @Test(description = "Check valid teacher's full name.", dataProvider = "teacher_full_name", dataProviderClass = KpiDataProvider.class)
+    @Test(description = "Check valid teacher's full name.",
+            dataProvider = "teacher_full_name",
+            dataProviderClass = KpiDataProvider.class)
     public void checkValidTeachersFio(int teachersLinkNumber,
                                       int teacherFromLinkNumber,
                                       int changeLanguageLinkNumber,

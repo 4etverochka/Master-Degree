@@ -14,22 +14,38 @@ public class HeadOfDepartmentTest extends BaseTest {
     public void redirectToHeadOfDepartmentPage(int departmentTodayLinkNumber,
                                                int changeLanguageLinkNumber,
                                                String headOfDepartmentTitleRu,
-                                               String positionRu, String scientificDegreeRu,
-                                               String scientificTitleRu, String headOfDepartmentTitleUkr,
-                                               String positionUkr, String scientificDegreeUkr,
-                                               String scientificTitleUkr, String headOfDepartmentTitleEn,
-                                               String positionEn, String scientificDegreeEn,
+                                               String positionRu,
+                                               String scientificDegreeRu,
+                                               String scientificTitleRu,
+                                               String headOfDepartmentTitleUkr,
+                                               String positionUkr,
+                                               String scientificDegreeUkr,
+                                               String scientificTitleUkr,
+                                               String headOfDepartmentTitleEn,
+                                               String positionEn,
+                                               String scientificDegreeEn,
                                                String scientificTitleEn) {
-
         homePageSteps.openPage()
                 .clickOnDepartmentTodayLink(departmentTodayLinkNumber)
-                .openHeadOfDepartmentPageInNewTab()
-                .checkRuInfoOnHeadOfDepartmentPage(headOfDepartmentTitleRu, positionRu, scientificDegreeRu, scientificTitleRu)
+                .openHeadOfDepartmentPageInNewTab(false)
+                .checkRuInfoOnHeadOfDepartmentPage(
+                        headOfDepartmentTitleRu,
+                        positionRu,
+                        scientificDegreeRu,
+                        scientificTitleRu)
                 .changeLanguageToUkrainian(changeLanguageLinkNumber)
-                .openHeadOfDepartmentPageInNewTab()
-                .checkUkrInfoOnHeadOfDepartmentPage(headOfDepartmentTitleUkr, positionUkr, scientificDegreeUkr, scientificTitleUkr)
+                .openHeadOfDepartmentPageInNewTab(false)
+                .checkUkrInfoOnHeadOfDepartmentPage(
+                        headOfDepartmentTitleUkr,
+                        positionUkr,
+                        scientificDegreeUkr,
+                        scientificTitleUkr)
                 .changeLanguageToEnglish(changeLanguageLinkNumber)
-                .openHeadOfDepartmentPageInNewTabEn()
-                .checkEnInfoOnHeadOfDepartmentPage(headOfDepartmentTitleEn, positionEn, scientificDegreeEn, scientificTitleEn);
+                .openHeadOfDepartmentPageInNewTab(true)
+                .checkEnInfoOnHeadOfDepartmentPage(
+                        headOfDepartmentTitleEn,
+                        positionEn,
+                        scientificDegreeEn,
+                        scientificTitleEn);
     }
 }

@@ -16,7 +16,6 @@ public class ContactPageTest extends BaseTest {
                                         String phoneNumberOne,
                                         String phoneNumberTwo,
                                         String addressImage) {
-
         homePageSteps.openPage()
                 .clickOnContactsLink(contactsLinkNumber)
                 .checkHeadOfDepartmentFullName(headOfDepartmentFullName)

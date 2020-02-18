@@ -13,4 +13,5 @@ out/
 .idea_modules/
 
 .gradle
+.allure
 /build

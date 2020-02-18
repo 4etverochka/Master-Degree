@@ -16,7 +16,6 @@ public class DepartmentTodayPageTest extends BaseTest {
                                                String departmentToday_ru,
                                                String departmentToday_ukr,
                                                String departmentToday_eng) {
-
         homePageSteps.openPage()
                 .clickOnDepartmentTodayLink(departmentTodayLinkNumber)
                 .checkValidResultOnDepartmentTodayPage(departmentToday_ru)

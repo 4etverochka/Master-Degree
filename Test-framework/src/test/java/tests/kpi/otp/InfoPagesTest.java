@@ -25,12 +25,11 @@ public class InfoPagesTest extends BaseTest {
                                                             String insart_logo,
                                                             String global_logic_logo,
                                                             int employmentLinkNumber,
-                                                            int changeLanguageLinkNumber
-    ) {
+                                                            int changeLanguageLinkNumber) {
         homePageSteps.openPage()
                 .clickOnEmploymentLink(employmentLinkNumber)
                 .checkEmploymentPageTitle(title_rus)
-                .checkPartnersTitle(partners_rus,false)
+                .checkPartnersTitle(partners_rus, false)
                 .checkRoomsInfo(roomsInfo_rus)
                 .checkPartnerLogo(epam_logo, 0)
                 .checkPartnerLogo(nix_logo, 1)
@@ -40,7 +39,7 @@ public class InfoPagesTest extends BaseTest {
                 .changeLanguageToUkrainian(changeLanguageLinkNumber)
                 .clickOnEmploymentLink(employmentLinkNumber)
                 .checkEmploymentPageTitle(title_ukr)
-                .checkPartnersTitle(partners_ukr,false)
+                .checkPartnersTitle(partners_ukr, false)
                 .checkRoomsInfo(roomsInfo_ukr)
                 .checkPartnerLogo(epam_logo, 0)
                 .checkPartnerLogo(nix_logo, 1)
@@ -50,7 +49,7 @@ public class InfoPagesTest extends BaseTest {
                 .changeLanguageToEnglish(changeLanguageLinkNumber)
                 .clickOnEmploymentLink(employmentLinkNumber - 2)
                 .checkEmploymentPageTitle(title_eng)
-                .checkPartnersTitle(partners_eng,true)
+                .checkPartnersTitle(partners_eng, true)
                 .checkPartnerLogo(epam_logo, 0)
                 .checkPartnerLogo(nix_logo, 1)
                 .checkPartnerLogo(global_logic_logo, 2)

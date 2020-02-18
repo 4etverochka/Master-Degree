@@ -61,24 +61,19 @@ public class DepartmentTodaySteps extends HomePageSteps {
     }
 
     @Step("Open Head of Department page in new tab.")
-    public HeadOfDepartmentSteps openHeadOfDepartmentPageInNewTab() {
-        log.info("Open Head of Department page in new tab.");
-        WebElement link = WebDriverRunner.getWebDriver().findElement(departmentTodayPage.getHeadOfDepartmentLink());
+    public HeadOfDepartmentSteps openHeadOfDepartmentPageInNewTab(boolean isEng) {
         JavascriptExecutor js = (JavascriptExecutor) WebDriverRunner.getWebDriver();
         String script = "return arguments[0].target='_blank'";
-        Object result = js.executeScript(script, link);
-        link.click();
-        return new HeadOfDepartmentSteps();
-    }
-
-    @Step("Open Head of Department page En in new tab.")
-    public HeadOfDepartmentSteps openHeadOfDepartmentPageInNewTabEn() {
-        log.info("Open Head of Department page En in new tab.");
-        WebElement link = WebDriverRunner.getWebDriver().findElement(departmentTodayPage.getHeadOfDepartmentLinkEn());
-        JavascriptExecutor js = (JavascriptExecutor) WebDriverRunner.getWebDriver();
-        String script = "return arguments[0].target='_blank'";
-        Object result = js.executeScript(script, link);
-        link.click();
+        if (isEng){
+            log.info("Open Head of Department page on English locale in new tab.");
+            js.executeScript(script, departmentTodayPage.getHeadOfDepartmentLinkEn());
+            departmentTodayPage.getHeadOfDepartmentLinkEn().click();
+        }
+        else {
+            log.info("Open Head of Department page on Russian locale in new tab.");
+            js.executeScript(script, departmentTodayPage.getHeadOfDepartmentLink());
+            departmentTodayPage.getHeadOfDepartmentLink().click();
+        }
         return new HeadOfDepartmentSteps();
     }
 }

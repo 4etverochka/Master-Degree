@@ -18,7 +18,6 @@ public class ContactUsPageTest extends BaseTest {
                                                              String departmentPhoneNumber,
                                                              String departmentEmail,
                                                              int changeLanguageLinkNumber) {
-
         homePageSteps.openPage()
                 .clickOnContactUsButton()
                 .checkHeadOfDepartmentFullName(headOfDepartmentFullName)
