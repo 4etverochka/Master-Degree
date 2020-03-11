@@ -11,7 +11,7 @@ public class HeadOfDepartmentTest extends BaseTest {
     @Test(description = "RedirectToHeadOfDepartmentPage.",
             dataProvider = "redirection_to_head_of_department",
             dataProviderClass = KpiDataProvider.class)
-    public void redirectToHeadOfDepartmentPage(int departmentTodayLinkNumber,
+    public void checkRedirectToHeadOfDepartmentPage(int departmentTodayLinkNumber,
                                                int changeLanguageLinkNumber,
                                                String headOfDepartmentTitleRu,
                                                String positionRu,
