@@ -5,8 +5,6 @@ import lombok.Getter;
 import lombok.SneakyThrows;
 import org.openqa.selenium.WebDriver;
 
-import java.net.MalformedURLException;
-
 public class WebDriverProvider {
     @Getter
     private WebDriver driver;

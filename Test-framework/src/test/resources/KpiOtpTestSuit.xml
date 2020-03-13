@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="KPI">
-    <test name="Teachers page test">
+<suite name="KPI tests">
+    <test name="KPI web-services test">
         <classes>
             <class name="tests.kpi.otp.TeachersTest"></class>
             <class name="tests.kpi.otp.InfoPagesTest"></class>
