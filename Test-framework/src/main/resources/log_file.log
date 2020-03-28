@@ -2723,3 +2723,130 @@ https://kyivstar.ua/ru/mm/service/.../kiev-pr-t-vozduhoflotskiy-502
 2020-03-11 22:03:18 INFO  Change language to English.
 2020-03-11 22:03:19 INFO  Open Head of Department page on English locale in new tab.
 2020-03-11 22:03:19 INFO  Check en info on Head of department page.
+2020-03-23 23:31:18 INFO  Open home page.
+2020-03-23 23:31:20 INFO  CLick on 'Contacts' link.
+2020-03-23 23:32:00 INFO  Open home page.
+2020-03-23 23:32:23 INFO  Click on Contact us button.
+2020-03-23 23:32:33 INFO  Click on Contact us button.
+2020-03-23 23:32:41 INFO  Click on Contact us button.
+2020-03-23 23:32:55 INFO  Click on Contact us button.
+2020-03-23 23:32:56 INFO  Check Head of Department full name on Contact us page
+2020-03-23 23:32:57 INFO  Check Head of Department phone number on Contact us page
+2020-03-23 23:32:57 INFO  Check Department address on Contact us page
+2020-03-23 23:32:57 INFO  Check Department phone number on Contact us page
+2020-03-23 23:32:57 INFO  Check Department email on Contact us page.
+2020-03-23 23:32:57 INFO  Return to home page.
+2020-03-23 23:32:58 INFO  Change language to Ukrainian.
+2020-03-23 23:33:08 INFO  Click on Contact us button.
+2020-03-23 23:33:14 INFO  Check Head of Department full name on Contact us page
+2020-03-23 23:33:14 INFO  Check Department address on Contact us page
+2020-03-23 23:33:14 INFO  Check Department phone number on Contact us page
+2020-03-23 23:33:14 INFO  Check Department email on Contact us page.
+2020-03-28 16:37:43 INFO  Open home page.
+2020-03-28 16:37:45 INFO  Click on 'Teachers' link.
+2020-03-28 16:37:47 INFO  Check count teachers.
+2020-03-28 16:37:47 INFO  Return to home page.
+2020-03-28 16:37:48 INFO  Change language to Ukrainian.
+2020-03-28 16:37:50 INFO  Click on 'Teachers' link.
+2020-03-28 16:37:51 INFO  Check count teachers.
+2020-03-28 16:37:51 INFO  Return to home page.
+2020-03-28 16:37:53 INFO  Change language to English.
+2020-03-28 16:37:54 INFO  Click on 'Teachers' link.
+2020-03-28 16:37:55 INFO  Check count teachers.
+2020-03-28 16:38:10 INFO  Open home page.
+2020-03-28 16:38:12 INFO  Click on 'Teachers' link.
+2020-03-28 16:38:14 INFO  Click on 15 teacher.
+2020-03-28 16:38:15 INFO  Check teacher's full name.
+2020-03-28 16:38:15 INFO  Change language to Ukrainian.
+2020-03-28 16:38:17 INFO  Click on 'Teachers' link.
+2020-03-28 16:38:18 INFO  Click on 15 teacher.
+2020-03-28 16:38:20 INFO  Check teacher's full name.
+2020-03-28 16:38:29 INFO  Open home page.
+2020-03-28 16:38:31 INFO  Click on 'Employment' link.
+2020-03-28 16:38:32 INFO  Check employment page title text.
+2020-03-28 16:38:33 INFO  Check partners title.
+2020-03-28 16:38:33 INFO  Check rooms info text.
+2020-03-28 16:38:33 INFO  Check partner logo number 0.
+2020-03-28 16:38:33 INFO  Check partner logo number 1.
+2020-03-28 16:38:33 INFO  Check partner logo number 2.
+2020-03-28 16:38:33 INFO  Check partner logo number 3.
+2020-03-28 16:38:33 INFO  Check partner logo number 4.
+2020-03-28 16:38:33 INFO  Change language to Ukrainian.
+2020-03-28 16:38:34 INFO  Click on 'Employment' link.
+2020-03-28 16:38:35 INFO  Check employment page title text.
+2020-03-28 16:38:35 INFO  Check partners title.
+2020-03-28 16:38:35 INFO  Check rooms info text.
+2020-03-28 16:38:35 INFO  Check partner logo number 0.
+2020-03-28 16:38:35 INFO  Check partner logo number 1.
+2020-03-28 16:38:35 INFO  Check partner logo number 2.
+2020-03-28 16:38:35 INFO  Check partner logo number 3.
+2020-03-28 16:38:35 INFO  Check partner logo number 4.
+2020-03-28 16:38:35 INFO  Change language to English.
+2020-03-28 16:38:36 INFO  Click on 'Employment' link.
+2020-03-28 16:38:36 INFO  Check employment page title text.
+2020-03-28 16:38:36 INFO  Check partners title.
+2020-03-28 16:38:36 INFO  Check partner logo number 0.
+2020-03-28 16:38:36 INFO  Check partner logo number 1.
+2020-03-28 16:38:36 INFO  Check partner logo number 2.
+2020-03-28 16:38:36 INFO  Check partner logo number 3.
+2020-03-28 16:38:36 INFO  Check partner logo number 4.
+2020-03-28 16:38:46 INFO  Open home page.
+2020-03-28 16:38:48 INFO  CLick on 'Contacts' link.
+2020-03-28 16:38:49 INFO  Check Head of Department full name.
+2020-03-28 16:38:49 INFO  Check phone number on Contact page
+2020-03-28 16:38:49 INFO  Check address on the map
+2020-03-28 16:38:59 INFO  Open home page.
+2020-03-28 16:39:02 INFO  Enter valid data to search fragment.
+2020-03-28 16:39:03 INFO  Search result page shows valid result.
+2020-03-28 16:39:03 INFO  Enter invalid data to search fragment.
+2020-03-28 16:39:04 INFO  Search result page shows invalid result.
+2020-03-28 16:39:14 INFO  Open home page.
+2020-03-28 16:39:16 INFO  Click on 'Department today' link.
+2020-03-28 16:39:17 INFO  Department Today page shows valid info.
+2020-03-28 16:39:18 INFO  Return to home page.
+2020-03-28 16:39:19 INFO  Change language to Ukrainian.
+2020-03-28 16:39:20 INFO  Click on 'Department today' link.
+2020-03-28 16:39:21 INFO  Department Today page shows valid info.
+2020-03-28 16:39:21 INFO  Return to home page.
+2020-03-28 16:39:23 INFO  Change language to English.
+2020-03-28 16:39:25 INFO  Click on 'Department today' link in En version.
+2020-03-28 16:39:26 INFO  Department Today page shows valid info.
+2020-03-28 16:39:36 INFO  Open home page.
+2020-03-28 16:39:38 INFO  Click on Contact us button.
+2020-03-28 16:39:39 INFO  Check Head of Department full name on Contact us page
+2020-03-28 16:39:40 INFO  Check Head of Department phone number on Contact us page
+2020-03-28 16:39:40 INFO  Check Department address on Contact us page
+2020-03-28 16:39:40 INFO  Check Department phone number on Contact us page
+2020-03-28 16:39:40 INFO  Check Department email on Contact us page.
+2020-03-28 16:39:40 INFO  Return to home page.
+2020-03-28 16:39:41 INFO  Change language to Ukrainian.
+2020-03-28 16:39:42 INFO  Click on Contact us button.
+2020-03-28 16:39:43 INFO  Check Head of Department full name on Contact us page
+2020-03-28 16:39:44 INFO  Check Department address on Contact us page
+2020-03-28 16:39:44 INFO  Check Department phone number on Contact us page
+2020-03-28 16:39:44 INFO  Check Department email on Contact us page.
+2020-03-28 16:39:53 INFO  Open home page.
+2020-03-28 16:39:55 INFO  Check copyright info.
+2020-03-28 16:40:12 INFO  Open home page.
+2020-03-28 16:40:14 INFO  Click on Facebook button.
+2020-03-28 16:40:14 INFO  Check Twitter page is opened.
+2020-03-28 16:40:18 INFO  Click on Twitter button.
+2020-03-28 16:40:19 INFO  Check Twitter page is opened.
+2020-03-28 16:40:23 INFO  Click on Link KPI button.
+2020-03-28 16:40:23 INFO  Check Official KPI page is opened.
+2020-03-28 16:40:27 INFO  Click on Instagram button.
+2020-03-28 16:40:27 INFO  Check Instagram page is opened.
+2020-03-28 16:40:31 INFO  Click on YouTube button.
+2020-03-28 16:40:32 INFO  Check YouTube page is opened.
+2020-03-28 16:40:46 INFO  Open home page.
+2020-03-28 16:40:48 INFO  Click on 'Department today' link.
+2020-03-28 16:40:49 INFO  Open Head of Department page on Russian locale in new tab.
+2020-03-28 16:40:50 INFO  Check ru info on Head of department page.
+2020-03-28 16:40:54 INFO  Change language to Ukrainian.
+2020-03-28 16:40:55 INFO  Open Head of Department page on Russian locale in new tab.
+2020-03-28 16:40:55 INFO  Check ukr info on Head of department page.
+2020-03-28 16:40:59 INFO  Change language to English.
+2020-03-28 16:41:00 INFO  Open Head of Department page on English locale in new tab.
+2020-03-28 16:41:00 INFO  Check en info on Head of department page.
+2020-03-28 16:46:17 INFO  Open home page.
+2020-03-28 16:46:19 INFO  Check copyright info.

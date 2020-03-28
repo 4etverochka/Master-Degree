@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static app.core.owner.BrowserOwner.BROWSER_CONFIG;
 
 public class LocalChromeInvoker implements WebDriverInvoker {
-
     public WebDriver invokeWebDriver() {
         WebDriverManager.chromedriver().version(BROWSER_CONFIG.getVersion()).setup();
         return new ChromeDriver();
