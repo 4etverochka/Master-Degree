@@ -1,8 +1,13 @@
 package tests;
 
 import app.core.driver.WebDriverProvider;
+import app.core.elements.kpi.otp.pages.HomePage;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.InputStream;
@@ -18,7 +23,7 @@ import static java.nio.file.Paths.get;
 public class BaseTest {
     private WebDriverProvider driverProvider;
 
-    @BeforeMethod
+    @BeforeClass
     public void setUp() {
         driverProvider = driverProvider.getDriverStatusInstance();
         driverProvider.initDriver();

@@ -1,12 +1,14 @@
 package tests.kpi.otp;
 
+import app.core.elements.kpi.otp.pages.HomePage;
 import app.core.test_data.KpiDataProvider;
 import org.testng.annotations.Test;
 import tests.BaseTest;
-import tests.kpi.otp.steps.HomePageSteps;
+
+import static com.codeborne.selenide.Selenide.page;
+
 
 public class ContactPageTest extends BaseTest {
-    HomePageSteps homePageSteps = new HomePageSteps();
 
     @Test(description = "Check contacts info on different site versions.",
             dataProvider = "contacts_info",
@@ -16,7 +18,8 @@ public class ContactPageTest extends BaseTest {
                                         String phoneNumberOne,
                                         String phoneNumberTwo,
                                         String addressImage) {
-        homePageSteps.openPage()
+        page(HomePage.class)
+                .openHomePage()
                 .clickOnContactsLink(contactsLinkNumber)
                 .checkHeadOfDepartmentFullName(headOfDepartmentFullName)
                 .checkPhoneNumber(phoneNumberOne, phoneNumberTwo)

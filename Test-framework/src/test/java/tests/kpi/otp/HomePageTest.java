@@ -1,18 +1,20 @@
 package tests.kpi.otp;
 
+import app.core.elements.kpi.otp.pages.HomePage;
 import app.core.test_data.KpiDataProvider;
 import org.testng.annotations.Test;
 import tests.BaseTest;
-import tests.kpi.otp.steps.HomePageSteps;
+
+import static com.codeborne.selenide.Selenide.page;
 
 public class HomePageTest extends BaseTest {
-    HomePageSteps homePageSteps = new HomePageSteps();
 
     @Test(description = "Check copyright info on different languages.",
             dataProvider = "copyright_info",
             dataProviderClass = KpiDataProvider.class)
     public void checkCopyrightInfoOnDifferentLanguages(String copyright, int changeLanguageLinkNumber) {
-        homePageSteps.openPage()
+        page(HomePage.class)
+                .openHomePage()
                 .checkCopyrightInfo(copyright)
                 .changeLanguageToUkrainian(changeLanguageLinkNumber)
                 .checkCopyrightInfo(copyright)
@@ -28,7 +30,8 @@ public class HomePageTest extends BaseTest {
                                                  String kpiOfficialLink,
                                                  String instagram,
                                                  String youTube) {
-        homePageSteps.openPage()
+        page(HomePage.class)
+                .openHomePage()
                 .clickOnFacebookButton()
                 .checkFacebookPageIsOpened(facebook)
                 .clickOnTwitterButton()

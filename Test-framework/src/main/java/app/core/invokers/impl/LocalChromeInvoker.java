@@ -9,7 +9,7 @@ import static app.core.owner.BrowserOwner.BROWSER_CONFIG;
 
 public class LocalChromeInvoker implements WebDriverInvoker {
     public WebDriver invokeWebDriver() {
-        WebDriverManager.chromedriver().version(BROWSER_CONFIG.getVersion()).setup();
+        WebDriverManager.chromedriver().browserVersion(BROWSER_CONFIG.getVersion()).setup();
         return new ChromeDriver();
     }
 }

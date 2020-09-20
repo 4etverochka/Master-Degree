@@ -1,12 +1,13 @@
 package tests.kpi.otp;
 
+import app.core.elements.kpi.otp.pages.HomePage;
 import app.core.test_data.KpiDataProvider;
 import org.testng.annotations.Test;
 import tests.BaseTest;
-import tests.kpi.otp.steps.HomePageSteps;
+
+import static com.codeborne.selenide.Selenide.page;
 
 public class ContactUsPageTest extends BaseTest {
-    HomePageSteps homePageSteps = new HomePageSteps();
 
     @Test(description = "Check Contact us page on different languages.",
             dataProvider = "contact_us_info",
@@ -18,9 +19,10 @@ public class ContactUsPageTest extends BaseTest {
                                                              String departmentPhoneNumber,
                                                              String departmentEmail,
                                                              int changeLanguageLinkNumber) {
-        homePageSteps.openPage()
+        page(HomePage.class)
+                .openHomePage()
                 .clickOnContactUsButton()
-                .checkHeadOfDepartmentFullName(headOfDepartmentFullName)
+                .checkHeadOfDepartmentFullNameContactUsPage(headOfDepartmentFullName)
                 .checkHeadOfDepartmentPhoneNumbers(headOfDepartmentPhoneNumberOne, headOfDepartmentPhoneNumberTwo)
                 .checkDepartmentAddress(departmentAddress)
                 .checkDepartmentPhoneNumber(departmentPhoneNumber)
@@ -28,7 +30,7 @@ public class ContactUsPageTest extends BaseTest {
                 .returnToHomePage()
                 .changeLanguageToUkrainian(changeLanguageLinkNumber)
                 .clickOnContactUsButton()
-                .checkHeadOfDepartmentFullName(headOfDepartmentFullName)
+                .checkHeadOfDepartmentFullNameContactUsPage(headOfDepartmentFullName)
                 .checkDepartmentAddress(departmentAddress)
                 .checkDepartmentPhoneNumber(departmentPhoneNumber)
                 .checkDepartmentEmail(departmentEmail);

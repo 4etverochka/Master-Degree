@@ -10,7 +10,7 @@ import static app.core.owner.BrowserOwner.BROWSER_CONFIG;
 
 public class LocalFirefoxInvoker implements WebDriverInvoker {
     public WebDriver invokeWebDriver() {
-        WebDriverManager.firefoxdriver().version(BROWSER_CONFIG.getVersion()).setup();
+        WebDriverManager.firefoxdriver().browserVersion(BROWSER_CONFIG.getVersion()).setup();
         return new FirefoxDriver();
     }
 }

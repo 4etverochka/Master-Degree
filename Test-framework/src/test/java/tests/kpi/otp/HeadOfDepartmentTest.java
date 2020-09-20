@@ -1,12 +1,13 @@
 package tests.kpi.otp;
 
+import app.core.elements.kpi.otp.pages.HomePage;
 import app.core.test_data.KpiDataProvider;
 import org.testng.annotations.Test;
 import tests.BaseTest;
-import tests.kpi.otp.steps.HomePageSteps;
+
+import static com.codeborne.selenide.Selenide.page;
 
 public class HeadOfDepartmentTest extends BaseTest {
-    HomePageSteps homePageSteps = new HomePageSteps();
 
     @Test(description = "RedirectToHeadOfDepartmentPage.",
             dataProvider = "redirection_to_head_of_department",
@@ -25,7 +26,8 @@ public class HeadOfDepartmentTest extends BaseTest {
                                                String positionEn,
                                                String scientificDegreeEn,
                                                String scientificTitleEn) {
-        homePageSteps.openPage()
+        page(HomePage.class)
+                .openHomePage()
                 .clickOnDepartmentTodayLink(departmentTodayLinkNumber)
                 .openHeadOfDepartmentPageInNewTab(false)
                 .checkRuInfoOnHeadOfDepartmentPage(

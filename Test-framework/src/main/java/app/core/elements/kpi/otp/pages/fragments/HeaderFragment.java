@@ -1,12 +1,17 @@
 package app.core.elements.kpi.otp.pages.fragments;
 
+import app.core.elements.kpi.otp.pages.BasePage;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
 @Getter
-public class HeaderFragment {
+public class HeaderFragment extends BasePage {
+    private ElementsCollection headerLinks = $$x("//nav[@id='site-navigation']//ul[@class='menu']/li/a");
     private SelenideElement title = $x("//h2[@class='post-title']");
     private SelenideElement search = $x("//input[@type='search']");
     private SelenideElement englishLanguage = $x("//nav[@id='site-navigation']//ul[@class='menu']/li//a[@lang='en-US']");

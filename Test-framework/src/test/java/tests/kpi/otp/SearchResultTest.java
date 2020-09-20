@@ -1,12 +1,13 @@
 package tests.kpi.otp;
 
+import app.core.elements.kpi.otp.pages.HomePage;
 import app.core.test_data.KpiDataProvider;
 import org.testng.annotations.Test;
 import tests.BaseTest;
-import tests.kpi.otp.steps.HomePageSteps;
+
+import static com.codeborne.selenide.Selenide.page;
 
 public class SearchResultTest extends BaseTest {
-    HomePageSteps homePageSteps = new HomePageSteps();
 
     @Test(description = "Check Search Result page shows result after data is entered.",
             dataProvider = "search_result",
@@ -15,7 +16,8 @@ public class SearchResultTest extends BaseTest {
                                                               String resultText,
                                                               String invalidSearchData,
                                                               String errorMessage) {
-        homePageSteps.openPage()
+        page(HomePage.class)
+                .openHomePage()
                 .enterValidDataToSearchFragment(validData)
                 .checkValidResultOnSearchResultPage(resultText)
                 .enterInvalidDataToSearchFragment(invalidSearchData)

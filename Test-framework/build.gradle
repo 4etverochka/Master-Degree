@@ -25,12 +25,12 @@ allure {
 
 dependencies {
     compile(
-            ['org.codehaus.groovy:groovy-all:2.5.6'],
+            //['org.codehaus.groovy:groovy-all:2.5.6'],
             ['ch.qos.logback:logback-classic:1.2.2'],
             ['org.apache.logging.log4j:log4j-api:2.12.0'],
             ['org.apache.logging.log4j:log4j-core:2.12.0'],
-            ['com.codeborne:selenide:5.2.3'],
-            ['org.projectlombok:lombok:1.18.8'],
+            ['com.codeborne:selenide:5.14.2'],
+            ['org.projectlombok:lombok:1.18.12'],
             ['org.apache.commons:commons-text:1.6'],
             ['org.aeonbits.owner:owner:1.0.10'],
             ['io.github.bonigarcia:webdrivermanager:3.6.2'],
@@ -40,24 +40,24 @@ dependencies {
     )
 
     testCompile(
-            ['org.projectlombok:lombok:1.18.8'],
-            ['com.codeborne:selenide:5.2.3'],
+            ['org.projectlombok:lombok:1.18.12'],
+            ['com.codeborne:selenide:5.14.2'],
             ['org.testng:testng:6.14.3'],
             ['io.qameta.allure:allure-testng:2.8.1']
     )
 
     annotationProcessor(
-            ['org.projectlombok:lombok:1.18.8'],
+            ['org.projectlombok:lombok:1.18.12'],
             ['io.qameta.allure:allure-testng:2.8.1']
     )
 
     testAnnotationProcessor(
-            ['org.projectlombok:lombok:1.18.8'],
+            ['org.projectlombok:lombok:1.18.12'],
             ['io.qameta.allure:allure-testng:2.8.1']
     )
 
     testImplementation(
-            ['org.projectlombok:lombok:1.18.8'],
+            ['org.projectlombok:lombok:1.18.12'],
             ['org.hamcrest:hamcrest:2.1'],
             ['io.qameta.allure:allure-testng:2.8.1']
     )

@@ -1,12 +1,13 @@
 package tests.kpi.otp;
 
+import app.core.elements.kpi.otp.pages.HomePage;
 import app.core.test_data.KpiDataProvider;
 import org.testng.annotations.Test;
 import tests.BaseTest;
-import tests.kpi.otp.steps.HomePageSteps;
+
+import static com.codeborne.selenide.Selenide.page;
 
 public class InfoPagesTest extends BaseTest {
-    HomePageSteps homePageSteps = new HomePageSteps();
 
     @Test(description = "Check employment page info on different languages.",
             dataProvider = "employment_info",
@@ -26,7 +27,8 @@ public class InfoPagesTest extends BaseTest {
                                                             String global_logic_logo,
                                                             int employmentLinkNumber,
                                                             int changeLanguageLinkNumber) {
-        homePageSteps.openPage()
+        page(HomePage.class)
+                .openHomePage()
                 .clickOnEmploymentLink(employmentLinkNumber)
                 .checkEmploymentPageTitle(title_rus)
                 .checkPartnersTitle(partners_rus, false)
