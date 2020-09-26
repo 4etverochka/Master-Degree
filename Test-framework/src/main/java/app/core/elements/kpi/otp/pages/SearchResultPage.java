@@ -16,6 +16,7 @@ public class SearchResultPage extends HomePage {
     private SelenideElement validResult = $x("//h1/a[text()='Преподаватели']");
     private SelenideElement invalidResultMessage = $x("//p");
 
+    @Step
     public SearchResultPage checkValidResultOnSearchResultPage(String resultText) {
         log.info("Search result page shows valid result.");
         validResult.shouldBe(visible)
@@ -23,6 +24,7 @@ public class SearchResultPage extends HomePage {
         return page(SearchResultPage.class);
     }
 
+    @Step
     public SearchResultPage checkInvalidResultOnSearchResultPage(String errorMessage) {
         log.info("Search result page shows invalid result.");
         invalidResultMessage.shouldBe(visible)

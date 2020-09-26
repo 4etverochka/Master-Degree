@@ -16,96 +16,33 @@ public class HeadOfDepartmentPage extends HomePage {
     private ElementsCollection headOfDepartmentInfo = $$x("//p/em");
     private ElementsCollection headOfDepartmentEnInfo = $$x("//span/em");
 
-    public DepartmentTodayPage checkRuInfoOnHeadOfDepartmentPage(String headOfDepartmentPageTitleRu,
-                                                                 String positionRu,
-                                                                 String scientificDegreeRu,
-                                                                 String scientificTitleRu) {
+    @Step
+    public DepartmentTodayPage checkInfoOnHeadOfDepartmentPage(String headOfDepartmentPageTitle,
+                                                               String position,
+                                                               String scientificDegree,
+                                                               String scientificTitle) {
         log.info("Check ru info on Head of department page.");
         String parentWindow = WebDriverRunner.getWebDriver().getWindowHandle();
         for (String windowHandle : WebDriverRunner.getWebDriver().getWindowHandles()) {
             if (!windowHandle.equals(parentWindow)) {
-                WebDriverRunner.getWebDriver().switchTo().window(windowHandle);
-
+                WebDriverRunner.getWebDriver()
+                        .switchTo()
+                        .window(windowHandle);
                 headOfDepartmentHeadline.shouldBe(visible)
-                        .shouldHave(text(headOfDepartmentPageTitleRu));
-
+                        .shouldHave(text(headOfDepartmentPageTitle));
                 headOfDepartmentInfo.get(0)
                         .shouldBe(visible)
-                        .shouldHave(text(positionRu));
-
+                        .shouldHave(text(position));
                 headOfDepartmentInfo.get(1)
                         .shouldBe(visible)
-                        .shouldHave(text(scientificDegreeRu));
-
+                        .shouldHave(text(scientificDegree));
                 headOfDepartmentInfo.get(2)
                         .shouldBe(visible)
-                        .shouldHave(text(scientificTitleRu));
-
+                        .shouldHave(text(scientificTitle));
                 WebDriverRunner.getWebDriver().close();
-                WebDriverRunner.getWebDriver().switchTo().window(parentWindow);
-            }
-        }
-        return page(DepartmentTodayPage.class);
-    }
-
-    public DepartmentTodayPage checkUkrInfoOnHeadOfDepartmentPage(String headOfDepartmentPageTitleUkr,
-                                                                  String positionUkr,
-                                                                  String scientificDegreeUkr,
-                                                                  String scientificTitleUkr) {
-        log.info("Check ukr info on Head of department page.");
-        String parentWindow = WebDriverRunner.getWebDriver().getWindowHandle();
-        for (String windowHandle : WebDriverRunner.getWebDriver().getWindowHandles()) {
-            if (!windowHandle.equals(parentWindow)) {
-                WebDriverRunner.getWebDriver().switchTo().window(windowHandle);
-
-                headOfDepartmentHeadline.shouldBe(visible)
-                        .shouldHave(text(headOfDepartmentPageTitleUkr));
-
-                headOfDepartmentInfo.get(0)
-                        .shouldBe(visible)
-                        .shouldHave(text(positionUkr));
-
-                headOfDepartmentInfo.get(1)
-                        .shouldBe(visible)
-                        .shouldHave(text(scientificDegreeUkr));
-
-                headOfDepartmentInfo.get(2)
-                        .shouldBe(visible)
-                        .shouldHave(text(scientificTitleUkr));
-                WebDriverRunner.getWebDriver().close();
-                WebDriverRunner.getWebDriver().switchTo().window(parentWindow);
-            }
-        }
-        return page(DepartmentTodayPage.class);
-    }
-
-    public DepartmentTodayPage checkEnInfoOnHeadOfDepartmentPage(String headOfDepartmentPageTitleEn,
-                                                                 String positionEn,
-                                                                 String scientificDegreeEn,
-                                                                 String scientificTitleEn) {
-        log.info("Check en info on Head of department page.");
-        String parentWindow = WebDriverRunner.getWebDriver().getWindowHandle();
-        for (String windowHandle : WebDriverRunner.getWebDriver().getWindowHandles()) {
-            if (!windowHandle.equals(parentWindow)) {
-                WebDriverRunner.getWebDriver().switchTo().window(windowHandle);
-
-                headOfDepartmentHeadline.shouldBe(visible)
-                        .shouldHave(text(headOfDepartmentPageTitleEn));
-
-                headOfDepartmentInfo.get(0)
-                        .shouldBe(visible)
-                        .shouldHave(text(positionEn));
-
-                headOfDepartmentInfo.get(1)
-                        .shouldBe(visible)
-                        .shouldHave(text(scientificDegreeEn));
-
-                headOfDepartmentInfo.get(2)
-                        .shouldBe(visible)
-                        .shouldHave(text(scientificTitleEn));
-
-                WebDriverRunner.getWebDriver().close();
-                WebDriverRunner.getWebDriver().switchTo().window(parentWindow);
+                WebDriverRunner.getWebDriver()
+                        .switchTo()
+                        .window(parentWindow);
             }
         }
         return page(DepartmentTodayPage.class);

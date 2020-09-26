@@ -1,14 +1,9 @@
 package tests;
 
 import app.core.driver.WebDriverProvider;
-import app.core.elements.kpi.otp.pages.HomePage;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import lombok.SneakyThrows;
-import org.testng.annotations.AfterMethod;
+import lombok.*;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -21,7 +16,11 @@ import static io.qameta.allure.Allure.addAttachment;
 import static java.nio.file.Paths.get;
 
 public class BaseTest {
+    private static final String SCREENSHOT_FOLDER = ".\\build\\reports\\tests\\test-result.png";
+    private static final String SCREENSHOT_NAME = "test-result";
+    private static final String SCREENSHOT_PROPERTY = "Screenshot";
     private WebDriverProvider driverProvider;
+    private Path content;
 
     @BeforeClass
     public void setUp() {
@@ -31,13 +30,12 @@ public class BaseTest {
     }
 
     @SneakyThrows
-    @AfterMethod
+    @AfterClass
     public void tearDown() {
-        screenshot("test-result");
-        Path content = get(".\\build\\reports\\tests\\test-result.png");
-        InputStream newScreenshot = Files.newInputStream(content);
-        addAttachment("Screenshot", newScreenshot);
-        newScreenshot.close();
-        getWebDriver().close();
+        screenshot(SCREENSHOT_NAME);
+        content = get(SCREENSHOT_FOLDER);
+        @Cleanup InputStream newScreenshot = Files.newInputStream(content);
+        addAttachment(SCREENSHOT_PROPERTY, newScreenshot);
+        getWebDriver().quit();
     }
 }

@@ -33,14 +33,14 @@ public class HomePageTest extends BaseTest {
         page(HomePage.class)
                 .openHomePage()
                 .clickOnFacebookButton()
-                .checkFacebookPageIsOpened(facebook)
+                .checkPageIsOpenedInNewTab(facebook)
                 .clickOnTwitterButton()
-                .checkTwitterPageIsOpened(twitter)
+                .checkPageIsOpenedInNewTab(twitter)
                 .clickOnLinkKPIButton()
-                .checkLinkKPIPageIsOpened(kpiOfficialLink)
+                .checkPageIsOpenedInNewTab(kpiOfficialLink)
                 .clickOnInstagramButton()
-                .checkInstagramPageIsOpened(instagram)
+                .checkPageIsOpenedInNewTab(instagram)
                 .clickOnYouTubeButton()
-                .checkYouTubePageIsOpened(youTube);
+                .checkPageIsOpenedInNewTab(youTube);
     }
 }

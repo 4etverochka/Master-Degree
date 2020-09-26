@@ -2,9 +2,9 @@ package app.core.elements.kpi.otp.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
+import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.interactions.Actions;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -16,6 +16,7 @@ public class DepartmentTodayPage extends HomePage {
     private SelenideElement headOfDepartmentLink = $x("(//div[@id='content']//p//a)[2]");
     private SelenideElement headOfDepartmentLinkEn = $x("//div[@id='content']//a");
 
+    @Step
     public DepartmentTodayPage checkValidResultOnDepartmentTodayPage(String departmentToday) {
         log.info("Department Today page shows valid info.");
         departmentTodayHeadline.shouldBe(visible)
@@ -23,9 +24,9 @@ public class DepartmentTodayPage extends HomePage {
         return page(DepartmentTodayPage.class);
     }
 
+    @Step
     public DepartmentTodayPage changeLanguageToUkrainian(int linkNumber) {
         log.info("Change language to Ukrainian.");
-
         actions().moveToElement(headerFragment.getHeaderLinks()
                 .get(linkNumber))
                 .perform();
@@ -35,10 +36,10 @@ public class DepartmentTodayPage extends HomePage {
         return page(DepartmentTodayPage.class);
     }
 
+    @Step
     public DepartmentTodayPage changeLanguageToEnglish(int linkNumber) {
         log.info("Change language to English.");
-        Actions action = new Actions(WebDriverRunner.getWebDriver());
-        action.moveToElement(headerFragment.getHeaderLinks()
+        actions().moveToElement(headerFragment.getHeaderLinks()
                 .get(linkNumber)
                 .shouldBe(visible))
                 .perform();
@@ -48,6 +49,7 @@ public class DepartmentTodayPage extends HomePage {
         return page(DepartmentTodayPage.class);
     }
 
+    @Step
     public HeadOfDepartmentPage openHeadOfDepartmentPageInNewTab(boolean isEng) {
         JavascriptExecutor js = (JavascriptExecutor) WebDriverRunner.getWebDriver();
         String script = "return arguments[0].target='_blank'";

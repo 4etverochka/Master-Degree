@@ -48,7 +48,7 @@ public class KpiDataProvider {
     private static final String DEPARTMENT_TODAY_UKR = "кафедра сьогодні";
     private static final String DEPARTMENT_TODAY_EN = "DEPARTMENT TODAY";
 
-    private static final String COPYRIGHT = "© 2020 кафедра \"ВТП\" Разработка: Антонюк В.В.";
+    private static final String COPYRIGHT = "© 2016 кафедра \"ВТП\" Разработка: Антонюк В.В.";
 
     private static final String HEAD_OF_DEPARTMENT_FULL_NAME_ON_CONTACT_US_PAGE = "д. т. н. Семенов Сергей Геннадьевич";
     private static final String HEAD_OF_DEPARTMENT_PHONE_NUMBER_ONE_ON_CONTACT_US_PAGE = "тел. 067-579-30-82";

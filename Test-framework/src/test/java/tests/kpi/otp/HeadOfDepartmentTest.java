@@ -30,21 +30,21 @@ public class HeadOfDepartmentTest extends BaseTest {
                 .openHomePage()
                 .clickOnDepartmentTodayLink(departmentTodayLinkNumber)
                 .openHeadOfDepartmentPageInNewTab(false)
-                .checkRuInfoOnHeadOfDepartmentPage(
+                .checkInfoOnHeadOfDepartmentPage(
                         headOfDepartmentTitleRu,
                         positionRu,
                         scientificDegreeRu,
                         scientificTitleRu)
                 .changeLanguageToUkrainian(changeLanguageLinkNumber)
                 .openHeadOfDepartmentPageInNewTab(false)
-                .checkUkrInfoOnHeadOfDepartmentPage(
+                .checkInfoOnHeadOfDepartmentPage(
                         headOfDepartmentTitleUkr,
                         positionUkr,
                         scientificDegreeUkr,
                         scientificTitleUkr)
                 .changeLanguageToEnglish(changeLanguageLinkNumber)
                 .openHeadOfDepartmentPageInNewTab(true)
-                .checkEnInfoOnHeadOfDepartmentPage(
+                .checkInfoOnHeadOfDepartmentPage(
                         headOfDepartmentTitleEn,
                         positionEn,
                         scientificDegreeEn,

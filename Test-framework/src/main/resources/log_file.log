@@ -3078,3 +3078,146 @@ https://kyivstar.ua/ru/mm/service/.../kiev-pr-t-vozduhoflotskiy-502
 2020-09-20 17:07:58 INFO  Click on 'Employment' link.
 2020-09-20 17:07:58 INFO  Check employment page title text.
 2020-09-20 17:07:58 INFO  Check partners title.
+2020-09-20 17:08:09 INFO  Open home page.
+2020-09-20 17:08:11 INFO  CLick on 'Contacts' link.
+2020-09-20 17:08:12 INFO  Check Head of Department full name.
+2020-09-20 17:08:12 INFO  Check phone number on Contact page
+2020-09-20 17:08:12 INFO  Check address on the map
+2020-09-20 17:08:18 INFO  Open home page.
+2020-09-20 17:08:20 INFO  Enter valid data to search fragment.
+2020-09-20 17:08:22 INFO  Search result page shows valid result.
+2020-09-20 17:08:22 INFO  Enter invalid data to search fragment.
+2020-09-20 17:08:23 INFO  Search result page shows invalid result.
+2020-09-20 17:08:29 INFO  Open home page.
+2020-09-20 17:08:31 INFO  Click on 'Department today' link.
+2020-09-20 17:08:33 INFO  Department Today page shows valid info.
+2020-09-20 17:08:33 INFO  Return to home page.
+2020-09-20 17:08:34 INFO  Change language to Ukrainian.
+2020-09-20 17:08:36 INFO  Click on 'Department today' link.
+2020-09-20 17:08:37 INFO  Department Today page shows valid info.
+2020-09-20 17:08:37 INFO  Return to home page.
+2020-09-20 17:08:39 INFO  Change language to English.
+2020-09-20 17:08:40 INFO  Click on 'Department today' link in En version.
+2020-09-20 17:08:41 INFO  Department Today page shows valid info.
+2020-09-20 17:08:47 INFO  Open home page.
+2020-09-20 17:08:49 INFO  Click on Contact us button.
+2020-09-20 17:08:50 INFO  Check Head of Department full name.
+2020-09-20 17:08:50 INFO  Check Head of Department phone number on Contact us page
+2020-09-20 17:08:50 INFO  Check Department address on Contact us page
+2020-09-20 17:08:50 INFO  Check Department phone number on Contact us page
+2020-09-20 17:08:50 INFO  Check Department email on Contact us page.
+2020-09-20 17:08:50 INFO  Return to home page.
+2020-09-20 17:08:52 INFO  Change language to Ukrainian.
+2020-09-20 17:08:53 INFO  Click on Contact us button.
+2020-09-20 17:08:54 INFO  Check Head of Department full name.
+2020-09-20 17:08:54 INFO  Check Department address on Contact us page
+2020-09-20 17:08:55 INFO  Check Department phone number on Contact us page
+2020-09-20 17:08:55 INFO  Check Department email on Contact us page.
+2020-09-20 17:09:00 INFO  Open home page.
+2020-09-20 17:09:03 INFO  Check copyright info.
+2020-09-20 17:09:10 INFO  Open home page.
+2020-09-20 17:09:18 INFO  Click on Facebook button.
+2020-09-20 17:09:18 INFO  Check Twitter page is opened.
+2020-09-20 17:09:20 INFO  Click on Twitter button.
+2020-09-20 17:09:20 INFO  Check Twitter page is opened.
+2020-09-20 17:09:23 INFO  Click on Link KPI button.
+2020-09-20 17:09:23 INFO  Check Official KPI page is opened.
+2020-09-20 17:09:25 INFO  Click on Instagram button.
+2020-09-20 17:09:25 INFO  Check Instagram page is opened.
+2020-09-20 17:09:27 INFO  Click on YouTube button.
+2020-09-20 17:09:27 INFO  Check YouTube page is opened.
+2020-09-20 17:09:35 INFO  Open home page.
+2020-09-20 17:09:37 INFO  Click on 'Department today' link.
+2020-09-20 17:09:39 INFO  Open Head of Department page on Russian locale in new tab.
+2020-09-20 17:09:39 INFO  Check ru info on Head of department page.
+2020-09-26 16:35:16 INFO  Open home page.
+2020-09-26 16:35:19 INFO  Click on 'Department today' link.
+2020-09-26 16:35:21 INFO  Open Head of Department page on Russian locale in new tab.
+2020-09-26 16:35:21 INFO  Check ru info on Head of department page.
+2020-09-26 16:47:10 INFO  Open home page.
+2020-09-26 16:47:12 INFO  Click on Facebook button.
+2020-09-26 16:47:12 INFO  Check YouTube page is opened.
+2020-09-26 16:47:16 INFO  Click on Twitter button.
+2020-09-26 16:47:16 INFO  Check YouTube page is opened.
+2020-09-26 16:47:18 INFO  Click on Link KPI button.
+2020-09-26 16:47:18 INFO  Check YouTube page is opened.
+2020-09-26 16:47:21 INFO  Click on Instagram button.
+2020-09-26 16:47:21 INFO  Check YouTube page is opened.
+2020-09-26 16:47:23 INFO  Click on YouTube button.
+2020-09-26 16:47:23 INFO  Check YouTube page is opened.
+2020-09-26 16:50:06 INFO  Open home page.
+2020-09-26 16:50:09 INFO  Click on 'Department today' link.
+2020-09-26 16:50:11 INFO  Open Head of Department page on Russian locale in new tab.
+2020-09-26 16:50:11 INFO  Check ru info on Head of department page.
+2020-09-26 16:52:22 INFO  Open home page.
+2020-09-26 16:52:24 INFO  Click on 'Department today' link.
+2020-09-26 16:52:26 INFO  Open Head of Department page on Russian locale in new tab.
+2020-09-26 16:52:26 INFO  Check ru info on Head of department page.
+2020-09-26 16:53:04 INFO  Open home page.
+2020-09-26 16:53:06 INFO  Click on 'Department today' link.
+2020-09-26 16:53:08 INFO  Open Head of Department page on Russian locale in new tab.
+2020-09-26 16:53:08 INFO  Check ru info on Head of department page.
+2020-09-26 17:00:26 INFO  Open home page.
+2020-09-26 17:00:29 INFO  Click on Facebook button.
+2020-09-26 17:00:30 INFO  Check page is opened.
+2020-09-26 17:00:32 INFO  Click on Twitter button.
+2020-09-26 17:00:32 INFO  Check page is opened.
+2020-09-26 17:00:34 INFO  Click on Link KPI button.
+2020-09-26 17:00:35 INFO  Check page is opened.
+2020-09-26 17:00:37 INFO  Click on Instagram button.
+2020-09-26 17:00:37 INFO  Check page is opened.
+2020-09-26 17:00:39 INFO  Click on YouTube button.
+2020-09-26 17:00:39 INFO  Check page is opened.
+2020-09-26 17:06:53 INFO  Open home page.
+2020-09-26 17:06:56 INFO  Click on 'Department today' link.
+2020-09-26 17:06:58 INFO  Open Head of Department page on Russian locale in new tab.
+2020-09-26 17:06:58 INFO  Check ru info on Head of department page.
+2020-09-26 17:08:29 INFO  Open home page.
+2020-09-26 17:08:31 INFO  Check copyright info.
+2020-09-26 17:08:37 INFO  Open home page.
+2020-09-26 17:08:38 INFO  Click on Facebook button.
+2020-09-26 17:08:38 INFO  Check page is opened.
+2020-09-26 17:08:41 INFO  Click on Twitter button.
+2020-09-26 17:08:41 INFO  Check page is opened.
+2020-09-26 17:08:43 INFO  Click on Link KPI button.
+2020-09-26 17:08:43 INFO  Check page is opened.
+2020-09-26 17:08:45 INFO  Click on Instagram button.
+2020-09-26 17:08:45 INFO  Check page is opened.
+2020-09-26 17:08:47 INFO  Click on YouTube button.
+2020-09-26 17:08:48 INFO  Check page is opened.
+2020-09-26 17:09:12 INFO  Open home page.
+2020-09-26 17:09:15 INFO  Check copyright info.
+2020-09-26 17:09:15 INFO  Change language to Ukrainian.
+2020-09-26 17:09:17 INFO  Check copyright info.
+2020-09-26 17:09:17 INFO  Change language to English.
+2020-09-26 17:09:18 INFO  Check copyright info.
+2020-09-26 17:09:19 INFO  Open home page.
+2020-09-26 17:09:20 INFO  Click on Facebook button.
+2020-09-26 17:09:20 INFO  Check page is opened.
+2020-09-26 17:09:23 INFO  Click on Twitter button.
+2020-09-26 17:09:23 INFO  Check page is opened.
+2020-09-26 17:09:25 INFO  Click on Link KPI button.
+2020-09-26 17:09:25 INFO  Check page is opened.
+2020-09-26 17:09:27 INFO  Click on Instagram button.
+2020-09-26 17:09:27 INFO  Check page is opened.
+2020-09-26 17:09:30 INFO  Click on YouTube button.
+2020-09-26 17:09:30 INFO  Check page is opened.
+2020-09-26 17:10:27 INFO  Open home page.
+2020-09-26 17:10:30 INFO  Click on 'Teachers' link.
+2020-09-26 17:10:32 INFO  Check count teachers.
+2020-09-26 17:10:32 INFO  Return to home page.
+2020-09-26 17:10:33 INFO  Change language to Ukrainian.
+2020-09-26 17:10:35 INFO  Click on 'Teachers' link.
+2020-09-26 17:10:36 INFO  Check count teachers.
+2020-09-26 17:10:37 INFO  Return to home page.
+2020-09-26 17:10:38 INFO  Change language to English.
+2020-09-26 17:10:39 INFO  Click on 'Teachers' link.
+2020-09-26 17:10:41 INFO  Check count teachers.
+2020-09-26 17:10:47 INFO  Open home page.
+2020-09-26 17:10:48 INFO  Click on 'Teachers' link.
+2020-09-26 17:10:49 INFO  Click on 15 teacher.
+2020-09-26 17:10:51 INFO  Check teacher's full name.
+2020-09-26 17:10:51 INFO  Change language to Ukrainian.
+2020-09-26 17:10:52 INFO  Click on 'Teachers' link.
+2020-09-26 17:10:54 INFO  Click on 15 teacher.
+2020-09-26 17:10:55 INFO  Check teacher's full name.
