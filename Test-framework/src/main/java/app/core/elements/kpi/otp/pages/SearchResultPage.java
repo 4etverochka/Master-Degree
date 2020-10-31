@@ -1,9 +1,7 @@
 package app.core.elements.kpi.otp.pages;
 
-import app.core.elements.kpi.otp.pages.fragments.HeaderFragment;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
 
 import static com.codeborne.selenide.Condition.text;

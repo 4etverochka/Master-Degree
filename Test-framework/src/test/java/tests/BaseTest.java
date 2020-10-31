@@ -1,9 +1,11 @@
 package tests;
 
 import app.core.driver.WebDriverProvider;
+import app.core.listeners.TestResultsListener;
 import lombok.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -15,6 +17,7 @@ import static com.codeborne.selenide.WebDriverRunner.setWebDriver;
 import static io.qameta.allure.Allure.addAttachment;
 import static java.nio.file.Paths.get;
 
+@Listeners(TestResultsListener.class)
 public class BaseTest {
     private static final String SCREENSHOT_FOLDER = ".\\build\\reports\\tests\\test-result.png";
     private static final String SCREENSHOT_NAME = "test-result";

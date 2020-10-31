@@ -1,5 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="KPI tests">
+<!--    <listeners>-->
+<!--        <listener class-name="app.core.listeners.TestResultsListener"></listener>-->
+<!--    </listeners>-->
     <test name="KPI web-services test">
         <classes>
             <class name="tests.kpi.otp.TeachersTest"></class>
