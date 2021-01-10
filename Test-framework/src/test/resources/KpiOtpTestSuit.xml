@@ -1,9 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="KPI tests">
-<!--    <listeners>-->
-<!--        <listener class-name="app.core.listeners.TestResultsListener"></listener>-->
-<!--    </listeners>-->
-    <test name="KPI web-services test">
+    <test name="KPI web-services test" parallel="classes" thread-count="4">
         <classes>
             <class name="tests.kpi.otp.TeachersTest"></class>
             <class name="tests.kpi.otp.InfoPagesTest"></class>

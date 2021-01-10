@@ -9,24 +9,24 @@ public class WebDriverProvider {
     @Getter
     private WebDriver driver;
 
-    private static WebDriverProvider webDriverProviderInstance;
     private static WebDriverFactory webDriverFactory;
+
+    private static class WebDriverProviderInit {
+        static WebDriverProvider INSTANCE = new WebDriverProvider();
+    }
 
     private WebDriverProvider() {
         webDriverFactory = new WebDriverFactory();
     }
 
     @SneakyThrows
-    public void initDriver() {
+    public synchronized void initDriver() {
         driver = webDriverFactory.newWebDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
     }
 
-    public static WebDriverProvider getDriverStatusInstance() {
-        if (webDriverProviderInstance == null) {
-            webDriverProviderInstance = new WebDriverProvider();
-        }
-        return webDriverProviderInstance;
+    public static WebDriverProvider getWebDriverProviderInstance() {
+        return WebDriverProviderInit.INSTANCE;
     }
 }

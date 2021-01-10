@@ -20,7 +20,7 @@ public class ContactUsPageTest extends BaseTest {
                                                              String departmentEmail,
                                                              int changeLanguageLinkNumber) {
         page(HomePage.class)
-                .openHomePage()
+                .openPage()
                 .clickOnContactUsButton()
                 .checkHeadOfDepartmentFullNameContactUsPage(headOfDepartmentFullName)
                 .checkHeadOfDepartmentPhoneNumbers(headOfDepartmentPhoneNumberOne, headOfDepartmentPhoneNumberTwo)

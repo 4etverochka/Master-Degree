@@ -2,6 +2,7 @@ package tests.kpi.otp;
 
 import app.core.elements.kpi.otp.pages.HomePage;
 import app.core.test_data.KpiDataProvider;
+import io.qameta.allure.Step;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
@@ -17,7 +18,7 @@ public class SearchResultTest extends BaseTest {
                                                               String invalidSearchData,
                                                               String errorMessage) {
         page(HomePage.class)
-                .openHomePage()
+                .openPage()
                 .enterValidDataToSearchFragment(validData)
                 .checkValidResultOnSearchResultPage(resultText)
                 .enterInvalidDataToSearchFragment(invalidSearchData)

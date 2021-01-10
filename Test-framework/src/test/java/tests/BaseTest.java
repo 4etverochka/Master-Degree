@@ -1,7 +1,9 @@
 package tests;
 
 import app.core.driver.WebDriverProvider;
+import app.core.listeners.AllureSelenideListener;
 import app.core.listeners.TestResultsListener;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import lombok.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -19,26 +21,18 @@ import static java.nio.file.Paths.get;
 
 @Listeners(TestResultsListener.class)
 public class BaseTest {
-    private static final String SCREENSHOT_FOLDER = ".\\build\\reports\\tests\\test-result.png";
-    private static final String SCREENSHOT_NAME = "test-result";
-    private static final String SCREENSHOT_PROPERTY = "Screenshot";
     private WebDriverProvider driverProvider;
-    private Path content;
 
     @BeforeClass
     public void setUp() {
-        driverProvider = driverProvider.getDriverStatusInstance();
+        SelenideLogger.addListener("allure", new AllureSelenideListener());
+        driverProvider = driverProvider.getWebDriverProviderInstance();
         driverProvider.initDriver();
         setWebDriver(driverProvider.getDriver());
     }
 
-    @SneakyThrows
     @AfterClass
     public void tearDown() {
-        screenshot(SCREENSHOT_NAME);
-        content = get(SCREENSHOT_FOLDER);
-        @Cleanup InputStream newScreenshot = Files.newInputStream(content);
-        addAttachment(SCREENSHOT_PROPERTY, newScreenshot);
         getWebDriver().quit();
     }
 }

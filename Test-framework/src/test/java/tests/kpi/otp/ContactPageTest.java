@@ -19,7 +19,7 @@ public class ContactPageTest extends BaseTest {
                                         String phoneNumberTwo,
                                         String addressImage) {
         page(HomePage.class)
-                .openHomePage()
+                .openPage()
                 .clickOnContactsLink(contactsLinkNumber)
                 .checkHeadOfDepartmentFullName(headOfDepartmentFullName)
                 .checkPhoneNumber(phoneNumberOne, phoneNumberTwo)

@@ -28,7 +28,7 @@ public class InfoPagesTest extends BaseTest {
                                                             int employmentLinkNumber,
                                                             int changeLanguageLinkNumber) {
         page(HomePage.class)
-                .openHomePage()
+                .openPage()
                 .clickOnEmploymentLink(employmentLinkNumber)
                 .checkEmploymentPageTitle(title_rus)
                 .checkPartnersTitle(partners_rus, false)

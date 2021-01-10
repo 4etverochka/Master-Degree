@@ -14,7 +14,7 @@ public class HomePageTest extends BaseTest {
             dataProviderClass = KpiDataProvider.class)
     public void checkCopyrightInfoOnDifferentLanguages(String copyright, int changeLanguageLinkNumber) {
         page(HomePage.class)
-                .openHomePage()
+                .openPage()
                 .checkCopyrightInfo(copyright)
                 .changeLanguageToUkrainian(changeLanguageLinkNumber)
                 .checkCopyrightInfo(copyright)
@@ -31,7 +31,7 @@ public class HomePageTest extends BaseTest {
                                                  String instagram,
                                                  String youTube) {
         page(HomePage.class)
-                .openHomePage()
+                .openPage()
                 .clickOnFacebookButton()
                 .checkPageIsOpenedInNewTab(facebook)
                 .clickOnTwitterButton()

@@ -18,7 +18,7 @@ public class TeachersTest extends BaseTest {
                                       String fio_rus,
                                       String fio_ukr) {
         page(HomePage.class)
-                .openHomePage()
+                .openPage()
                 .clickOnTeachersLink(teachersLinkNumber)
                 .clickOnTeacher(teacherFromLinkNumber)
                 .checkTeachersFio(fio_rus)
@@ -36,7 +36,7 @@ public class TeachersTest extends BaseTest {
                                                           int changeLanguageLinkNumber,
                                                           int teachersLinkNumberOnEngLocale) {
         page(HomePage.class)
-                .openHomePage()
+                .openPage()
                 .clickOnTeachersLink(teachersLinkNumber)
                 .checkCountTeachers(countOfTeachers)
                 .returnToHomePage()

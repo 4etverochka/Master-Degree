@@ -27,7 +27,7 @@ public class HeadOfDepartmentTest extends BaseTest {
                                                String scientificDegreeEn,
                                                String scientificTitleEn) {
         page(HomePage.class)
-                .openHomePage()
+                .openPage()
                 .clickOnDepartmentTodayLink(departmentTodayLinkNumber)
                 .openHeadOfDepartmentPageInNewTab(false)
                 .checkInfoOnHeadOfDepartmentPage(

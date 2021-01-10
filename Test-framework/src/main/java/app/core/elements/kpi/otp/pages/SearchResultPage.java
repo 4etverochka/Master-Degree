@@ -1,7 +1,6 @@
 package app.core.elements.kpi.otp.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 
 import static com.codeborne.selenide.Condition.text;
@@ -14,17 +13,13 @@ public class SearchResultPage extends HomePage {
     private SelenideElement validResult = $x("//h1/a[text()='Преподаватели']");
     private SelenideElement invalidResultMessage = $x("//p");
 
-    @Step
     public SearchResultPage checkValidResultOnSearchResultPage(String resultText) {
-        log.info("Search result page shows valid result.");
         validResult.shouldBe(visible)
                 .shouldHave(text(resultText));
         return page(SearchResultPage.class);
     }
 
-    @Step
     public SearchResultPage checkInvalidResultOnSearchResultPage(String errorMessage) {
-        log.info("Search result page shows invalid result.");
         invalidResultMessage.shouldBe(visible)
                 .shouldHave(text(errorMessage));
         return page(SearchResultPage.class);
