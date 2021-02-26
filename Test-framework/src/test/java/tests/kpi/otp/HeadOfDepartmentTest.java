@@ -5,49 +5,55 @@ import app.core.test_data.KpiDataProvider;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
+import static app.core.test_data.KpiIntConstants.NUMBER_EIGHT;
+import static app.core.test_data.KpiIntConstants.NUMBER_ZERO;
+import static app.core.test_data.KpiStringConstants.*;
 import static com.codeborne.selenide.Selenide.page;
 
 public class HeadOfDepartmentTest extends BaseTest {
 
-    @Test(description = "RedirectToHeadOfDepartmentPage.",
-            dataProvider = "redirection_to_head_of_department",
-            dataProviderClass = KpiDataProvider.class)
-    public void checkRedirectToHeadOfDepartmentPage(int departmentTodayLinkNumber,
-                                               int changeLanguageLinkNumber,
-                                               String headOfDepartmentTitleRu,
-                                               String positionRu,
-                                               String scientificDegreeRu,
-                                               String scientificTitleRu,
-                                               String headOfDepartmentTitleUkr,
-                                               String positionUkr,
-                                               String scientificDegreeUkr,
-                                               String scientificTitleUkr,
-                                               String headOfDepartmentTitleEn,
-                                               String positionEn,
-                                               String scientificDegreeEn,
-                                               String scientificTitleEn) {
+    private static final int ZERO = NUMBER_ZERO.getValue();
+    private static final int LANGUAGE_LINK_NUMBER = NUMBER_EIGHT.getValue();
+
+    private static final String HEAD_OF_DEPARTMENT_TITLE_RU = HEAD_OF_DEPARTMENT_PAGE_TITLE_RU.getValue();
+    private static final String POSITION_IN_RU = POSITION_RU.getValue();
+    private static final String SCIENTIFIC_DEGREE_IN_RU = SCIENTIFIC_DEGREE_RU.getValue();
+    private static final String SCIENTIFIC_TITLE_IN_RU = SCIENTIFIC_TITLE_RU.getValue();
+
+    private static final String HEAD_OF_DEPARTMENT_TITLE_UKR = HEAD_OF_DEPARTMENT_PAGE_TITLE_UKR.getValue();
+    private static final String POSITION_IN_UKR = POSITION_UKR.getValue();
+    private static final String SCIENTIFIC_DEGREE_IN_UKR = SCIENTIFIC_DEGREE_UKR.getValue();
+    private static final String SCIENTIFIC_TITLE_IN_UKR = SCIENTIFIC_TITLE_UKR.getValue();
+
+    private static final String HEAD_OF_DEPARTMENT_TITLE_EN = HEAD_OF_DEPARTMENT_PAGE_TITLE_EN.getValue();
+    private static final String POSITION_IN_EN = POSITION_EN.getValue();
+    private static final String SCIENTIFIC_DEGREE_IN_EN = SCIENTIFIC_DEGREE_EN.getValue();
+    private static final String SCIENTIFIC_TITLE_IN_EN = SCIENTIFIC_TITLE_EN.getValue();
+
+    @Test(description = "RedirectToHeadOfDepartmentPage.")
+    public void checkRedirectToHeadOfDepartmentPage() {
         page(HomePage.class)
                 .openPage()
-                .clickOnDepartmentTodayLink(departmentTodayLinkNumber)
-                .openHeadOfDepartmentPageInNewTab(false)
+                .clickOnDepartmentTodayLink(ZERO)
+                .openHeadOfDepartmentPageInNewTab(false, true)
                 .checkInfoOnHeadOfDepartmentPage(
-                        headOfDepartmentTitleRu,
-                        positionRu,
-                        scientificDegreeRu,
-                        scientificTitleRu)
-                .changeLanguageToUkrainian(changeLanguageLinkNumber)
-                .openHeadOfDepartmentPageInNewTab(false)
+                        HEAD_OF_DEPARTMENT_TITLE_RU,
+                        POSITION_IN_RU,
+                        SCIENTIFIC_DEGREE_IN_RU,
+                        SCIENTIFIC_TITLE_IN_RU)
+                .changeLanguageToUkrainian(LANGUAGE_LINK_NUMBER)
+                .openHeadOfDepartmentPageInNewTab(false, false)
                 .checkInfoOnHeadOfDepartmentPage(
-                        headOfDepartmentTitleUkr,
-                        positionUkr,
-                        scientificDegreeUkr,
-                        scientificTitleUkr)
-                .changeLanguageToEnglish(changeLanguageLinkNumber)
-                .openHeadOfDepartmentPageInNewTab(true)
+                        HEAD_OF_DEPARTMENT_TITLE_UKR,
+                        POSITION_IN_UKR,
+                        SCIENTIFIC_DEGREE_IN_UKR,
+                        SCIENTIFIC_TITLE_IN_UKR)
+                .changeLanguageToEnglish(LANGUAGE_LINK_NUMBER)
+                .openHeadOfDepartmentPageInNewTab(true, false)
                 .checkInfoOnHeadOfDepartmentPage(
-                        headOfDepartmentTitleEn,
-                        positionEn,
-                        scientificDegreeEn,
-                        scientificTitleEn);
+                        HEAD_OF_DEPARTMENT_TITLE_EN,
+                        POSITION_IN_EN,
+                        SCIENTIFIC_DEGREE_IN_EN,
+                        SCIENTIFIC_TITLE_IN_EN);
     }
 }

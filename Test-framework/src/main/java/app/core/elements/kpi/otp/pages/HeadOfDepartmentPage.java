@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class HeadOfDepartmentPage extends HomePage {
     private SelenideElement headOfDepartmentHeadline = $x("//article/h2");
-    private ElementsCollection headOfDepartmentInfo = $$x("//p/em");
+    private ElementsCollection headOfDepartmentInfo = $$x("//p//em");
     private ElementsCollection headOfDepartmentEnInfo = $$x("//span/em");
 
     public DepartmentTodayPage checkInfoOnHeadOfDepartmentPage(String headOfDepartmentPageTitle,
