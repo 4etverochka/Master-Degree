@@ -10,7 +10,8 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class DepartmentTodayPage extends HomePage {
     private SelenideElement departmentTodayHeadline = $x("//article/h2");
-    private SelenideElement headOfDepartmentLink = $x("(//div[@id='content']//p//a)[2]");
+    private SelenideElement headOfDepartmentLinkRu = $x("(//div[@id='content']//a)[1]");
+    private SelenideElement headOfDepartmentLinkUkr = $x("(//div[@id='content']//a)[2]");
     private SelenideElement headOfDepartmentLinkEn = $x("//div[@id='content']//a");
 
     public DepartmentTodayPage checkValidResultOnDepartmentTodayPage(String departmentToday) {
@@ -40,15 +41,18 @@ public class DepartmentTodayPage extends HomePage {
         return page(DepartmentTodayPage.class);
     }
 
-    public HeadOfDepartmentPage openHeadOfDepartmentPageInNewTab(boolean isEng) {
+    public HeadOfDepartmentPage openHeadOfDepartmentPageInNewTab(boolean isEng, boolean isRu) {
         JavascriptExecutor js = (JavascriptExecutor) WebDriverRunner.getWebDriver();
         String script = "return arguments[0].target='_blank'";
         if (isEng) {
             js.executeScript(script, headOfDepartmentLinkEn);
             headOfDepartmentLinkEn.should(visible).click();
+        } else if (isRu){
+            js.executeScript(script, headOfDepartmentLinkRu);
+            headOfDepartmentLinkRu.should(visible).click();
         } else {
-            js.executeScript(script, headOfDepartmentLink);
-            headOfDepartmentLink.should(visible).click();
+            js.executeScript(script, headOfDepartmentLinkUkr);
+            headOfDepartmentLinkUkr.should(visible).click();
         }
         return page(HeadOfDepartmentPage.class);
     }
