@@ -4,6 +4,8 @@ import io.qameta.allure.Allure;
 import io.qameta.allure.AllureLifecycle;
 import io.qameta.allure.model.Status;
 import io.qameta.allure.model.StepResult;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -11,8 +13,6 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Objects;
 import java.util.UUID;
@@ -26,7 +26,7 @@ import static io.qameta.allure.util.ResultsUtils.getStatusDetails;
 @Aspect
 public class StepsAspect {
     private static AllureLifecycle lifecycle;
-    private static final Logger LOGGER = LoggerFactory.getLogger("Test Step:");
+    private static final Logger LOGGER = LogManager.getLogger("Test Step:");
 
     @After("execution(* app.core.elements.kpi.otp.pages..*.*(..)) " +
             "&& !execution(* app.core.elements.kpi.otp.pages.fragments..*.*(..))")

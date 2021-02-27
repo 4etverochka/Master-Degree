@@ -2,14 +2,12 @@ package app.core.elements.kpi.otp.pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import lombok.extern.log4j.Log4j2;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static org.testng.Assert.assertTrue;
 
-@Log4j2
 public class ContactsPage extends HomePage {
     private SelenideElement headOfDepartmentPhoneNumbers = $x("//p[contains(text(),'. 0')]");
     private SelenideElement departmentAddress = $x("//div[@id='content']//p[4]");

@@ -12,7 +12,7 @@
                 filePattern="src/main/log_file.%i.log.gz"
                 ignoreExceptions="false">
             <PatternLayout>
-                <Pattern>%d{yyyy-MM-dd HH:mm:ss}%t %-5p %m%n</Pattern>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>
             </PatternLayout>
 
             <Policies>

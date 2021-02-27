@@ -1,18 +1,15 @@
 package app.core.elements.kpi.otp.pages;
 
 import app.core.elements.kpi.otp.pages.fragments.HeaderFragment;
-import app.core.helpers.MethodsHelper;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
-import lombok.extern.log4j.Log4j2;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static org.testng.AssertJUnit.assertTrue;
 
-@Log4j2
 public class HomePage extends BasePage {
     protected HeaderFragment headerFragment = page(HeaderFragment.class);
     private ElementsCollection aboutUsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[1]/li/a");

@@ -1,19 +1,20 @@
 package app.core.listeners;
 
 import app.core.utils.CalendarUtils;
-import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-@Log4j2
 public class TestResultsListener implements ITestListener {
+    private static final Logger LOGGER = LogManager.getLogger("TestResultsListener:");
     private CalendarUtils calendarUtils = new CalendarUtils();
     private String testExecutionTime;
 
     @Override
     public void onTestStart(ITestResult result) {
-        log.info(result.getTestClass().getName() + " was started.");
+        LOGGER.info(getSimpleClassName(result.getTestClass().getName()) + " was started.");
     }
 
     @Override
@@ -21,8 +22,8 @@ public class TestResultsListener implements ITestListener {
         testExecutionTime = calendarUtils.convertMilliSecondsToFormattedDate(result.getEndMillis()
                 - result.getStartMillis());
 
-        log.info(result.getTestClass() + "was finished with success.");
-        log.info("Test execution duration: " + testExecutionTime);
+        LOGGER.info(getSimpleClassName(result.getTestClass().getName()) + " was finished with success.");
+        LOGGER.info("Test execution duration: " + testExecutionTime);
     }
 
     @Override
@@ -30,16 +31,16 @@ public class TestResultsListener implements ITestListener {
         testExecutionTime = calendarUtils.convertMilliSecondsToFormattedDate(result.getEndMillis()
                 - result.getStartMillis());
 
-        log.info(result.getTestClass().getName()
+        LOGGER.error(getSimpleClassName(result.getTestClass().getName())
                 + " was failed on the "
                 + result.getMethod().getMethodName()
                 + " test method.");
-        log.info("Test execution duration: " + testExecutionTime);
+        LOGGER.error("Test execution duration: " + testExecutionTime);
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        log.info(result.getTestClass() + " test was skipped");
+        LOGGER.warn(getSimpleClassName(result.getTestClass().getName()) + " was skipped");
     }
 
     @Override
@@ -53,5 +54,9 @@ public class TestResultsListener implements ITestListener {
     @Override
     public void onFinish(ITestContext context) {
 
+    }
+
+    private String getSimpleClassName(String classNameWithPackage) {
+        return classNameWithPackage.substring(classNameWithPackage.lastIndexOf('.') + 1);
     }
 }
