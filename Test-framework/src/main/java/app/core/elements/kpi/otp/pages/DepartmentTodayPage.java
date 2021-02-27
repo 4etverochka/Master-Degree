@@ -47,7 +47,7 @@ public class DepartmentTodayPage extends HomePage {
         if (isEng) {
             js.executeScript(script, headOfDepartmentLinkEn);
             headOfDepartmentLinkEn.should(visible).click();
-        } else if (isRu){
+        } else if (isRu) {
             js.executeScript(script, headOfDepartmentLinkRu);
             headOfDepartmentLinkRu.should(visible).click();
         } else {
