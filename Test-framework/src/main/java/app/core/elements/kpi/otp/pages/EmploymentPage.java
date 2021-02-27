@@ -10,6 +10,7 @@ import static org.testng.Assert.assertTrue;
 
 public class EmploymentPage extends HomePage {
     private SelenideElement partnersTitle = $x("//p[contains(@style,'text-align')]/strong");
+    private SelenideElement partnersTitleEng = $x("(//p[contains(@style,'text-align')]//strong)[1]");
     private SelenideElement roomsInfo = $x("(//p[contains(@style,'text-align: center')]/span)[1]");
     private ElementsCollection images = $$x("//p//img");
 
@@ -25,7 +26,7 @@ public class EmploymentPage extends HomePage {
             partnersTitle.shouldBe(visible)
                     .shouldHave(text(expectedTitle));
         } else {
-            partnersTitle.shouldBe(visible)
+            partnersTitleEng.shouldBe(visible)
                     .shouldHave(text(expectedTitle));
         }
         return page(EmploymentPage.class);

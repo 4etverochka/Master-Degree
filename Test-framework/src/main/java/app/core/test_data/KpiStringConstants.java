@@ -16,9 +16,9 @@ public enum KpiStringConstants {
     PARTNERS_ENG("Our partners:") ,
 
     INFO_UKR("Фірми EPAM (аудиторія 313 вк) " +
-                     "та GlobalLogic (аудиторія 305 вк) проводять тренінги для наших студентів."),
+            "та GlobalLogic (аудиторія 305 вк) проводять тренінги для наших студентів."),
     INFO_RUS("Фирмы EPAM (аудитория 313 вк) " +
-                     "и  GlobalLogic (аудитория 305 вк) проводят тренинги для наших студентов."),
+            "и  GlobalLogic (аудитория 305 вк) проводят тренинги для наших студентов."),
 
     EPAM_LOGO ("http://web.kpi.kharkov.ua/otp/wp-content/uploads/sites/152/2015/12/epam1.jpg"),
     NIX_LOGO("http://web.kpi.kharkov.ua/otp/wp-content/uploads/sites/152/2015/12/nix1-300x82.jpg"),
@@ -65,7 +65,19 @@ public enum KpiStringConstants {
     HEAD_OF_DEPARTMENT_PAGE_TITLE_EN("SEMENOV SERHII GENNADIEVICH"),
     POSITION_EN("Head of Department of Computer Engineering and Programming"),
     SCIENTIFIC_DEGREE_EN("doctor of technical sciences"),
-    SCIENTIFIC_TITLE_EN("Senior Researcher in the specialty 05.13.03 “Systems and Control Processes”");
+    SCIENTIFIC_TITLE_EN("Senior Researcher in the specialty 05.13.03 “Systems and Control Processes”"),
+
+    EDUCATIONAL_AND_PROFESSIONAL_PROGRAM_URL("http://web.kpi.kharkov.ua/otp/wp-content/"),
+    EDUCATIONAL_DISCIPLINES_URL("http://web.kpi.kharkov.ua/otp/en/educational-disciplines/"),
+    STUDENTS_TIMETABLE_URL("http://web.kpi.kharkov.ua/otp/en/timetable-of-students/"),
+    GROUP_CURATORS_URL("http://web.kpi.kharkov.ua/otp/en/surators/"),
+    DISCIPLINES_DURING_THE_QUARANTINE_TIME_URL("https://drive.google.com/drive"),
+
+    GALLERY_PAGE_TITLE("Gallery"),
+    GALLERY_PAGE_URL("http://web.kpi.kharkov.ua/otp/en/gallery"),
+
+    IT_SQUARE_OF_UNIVERSITY_TITLE("IT-SQUARE OF UNIVERSITY"),
+    IT_SQUARE_OF_UNIVERSITY_URL("http://web.kpi.kharkov.ua/otp/en/it-square-of-university/");
 
     @Getter
     private final String value;

@@ -1,61 +1,63 @@
 package tests.kpi.otp;
 
 import app.core.elements.kpi.otp.pages.HomePage;
-import app.core.test_data.KpiDataProvider;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
+import static app.core.test_data.KpiIntConstants.NUMBER_EIGHT;
+import static app.core.test_data.KpiIntConstants.NUMBER_SIX;
+import static app.core.test_data.KpiStringConstants.*;
 import static com.codeborne.selenide.Selenide.page;
 
 public class InfoPagesTest extends BaseTest {
 
-    @Test(description = "Check employment page info on different languages.",
-            dataProvider = "employment_info",
-            dataProviderClass = KpiDataProvider.class)
-    public void checkEmploymentPageInfoOnDifferentLanguages(String title_ukr,
-                                                            String title_rus,
-                                                            String title_eng,
-                                                            String partners_ukr,
-                                                            String partners_rus,
-                                                            String partners_eng,
-                                                            String roomsInfo_ukr,
-                                                            String roomsInfo_rus,
-                                                            String epam_logo,
-                                                            String nix_logo,
-                                                            String soft_serve_logo,
-                                                            String insart_logo,
-                                                            String global_logic_logo,
-                                                            int employmentLinkNumber,
-                                                            int changeLanguageLinkNumber) {
+    private static final String TITLE_IN_UKR = TITLE_UKR.getValue();
+    private static final String TITLE_IN_RUS = TITLE_RUS.getValue();
+    private static final String TITLE_IN_ENG = TITLE_ENG.getValue();
+    private static final String PARTNERS_IN_UKR = PARTNERS_UKR.getValue();
+    private static final String PARTNERS_IN_RUS = PARTNERS_RUS.getValue();
+    private static final String PARTNERS_IN_ENG = PARTNERS_ENG.getValue();
+    private static final String INFO_IN_UKR = INFO_UKR.getValue();
+    private static final String INFO_IN_RUS = INFO_RUS.getValue();
+    private static final String EPAM = EPAM_LOGO.getValue();
+    private static final String NIX = NIX_LOGO.getValue();
+    private static final String SOFT_SERVE = SOFT_SERVE_LOGO.getValue();
+    private static final String INSART = INSART_LOGO.getValue();
+    private static final String GLOBAL_LOGIC = GLOBAL_LOGIC_LOGO.getValue();
+    private static final int CHANGE_EMPLOYMENT_LINK_NUMBER = NUMBER_SIX.getValue();
+    private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_EIGHT.getValue();
+
+    @Test(description = "Check employment page info on different languages.")
+    public void checkEmploymentPageInfoOnDifferentLanguages() {
         page(HomePage.class)
                 .openPage()
-                .clickOnEmploymentLink(employmentLinkNumber)
-                .checkEmploymentPageTitle(title_rus)
-                .checkPartnersTitle(partners_rus, false)
-                .checkRoomsInfo(roomsInfo_rus)
-                .checkPartnerLogo(epam_logo, 0)
-                .checkPartnerLogo(nix_logo, 1)
-                .checkPartnerLogo(global_logic_logo, 2)
-                .checkPartnerLogo(soft_serve_logo, 3)
-                .checkPartnerLogo(insart_logo, 4)
-                .changeLanguageToUkrainian(changeLanguageLinkNumber)
-                .clickOnEmploymentLink(employmentLinkNumber)
-                .checkEmploymentPageTitle(title_ukr)
-                .checkPartnersTitle(partners_ukr, false)
-                .checkRoomsInfo(roomsInfo_ukr)
-                .checkPartnerLogo(epam_logo, 0)
-                .checkPartnerLogo(nix_logo, 1)
-                .checkPartnerLogo(global_logic_logo, 2)
-                .checkPartnerLogo(soft_serve_logo, 3)
-                .checkPartnerLogo(insart_logo, 4)
-                .changeLanguageToEnglish(changeLanguageLinkNumber)
-                .clickOnEmploymentLink(employmentLinkNumber - 2)
-                .checkEmploymentPageTitle(title_eng)
-                .checkPartnersTitle(partners_eng, true)
-                .checkPartnerLogo(epam_logo, 0)
-                .checkPartnerLogo(nix_logo, 1)
-                .checkPartnerLogo(global_logic_logo, 2)
-                .checkPartnerLogo(soft_serve_logo, 3)
-                .checkPartnerLogo(insart_logo, 4);
+                .clickOnEmploymentLink(CHANGE_EMPLOYMENT_LINK_NUMBER)
+                .checkEmploymentPageTitle(TITLE_IN_RUS)
+                .checkPartnersTitle(PARTNERS_IN_RUS, false)
+                .checkRoomsInfo(INFO_IN_RUS)
+                .checkPartnerLogo(EPAM, 0)
+                .checkPartnerLogo(NIX, 1)
+                .checkPartnerLogo(GLOBAL_LOGIC, 2)
+                .checkPartnerLogo(SOFT_SERVE, 3)
+                .checkPartnerLogo(INSART, 4)
+                .changeLanguageToUkrainian(CHANGE_LANGUAGE_LINK_NUMBER )
+                .clickOnEmploymentLink(CHANGE_EMPLOYMENT_LINK_NUMBER)
+                .checkEmploymentPageTitle(TITLE_IN_UKR)
+                .checkPartnersTitle(PARTNERS_IN_UKR, false)
+                .checkRoomsInfo(INFO_IN_UKR)
+                .checkPartnerLogo(EPAM, 0)
+                .checkPartnerLogo(NIX, 1)
+                .checkPartnerLogo(GLOBAL_LOGIC, 2)
+                .checkPartnerLogo(SOFT_SERVE, 3)
+                .checkPartnerLogo(INSART, 4)
+                .changeLanguageToEnglish(CHANGE_LANGUAGE_LINK_NUMBER )
+                .clickOnEmploymentLink(CHANGE_EMPLOYMENT_LINK_NUMBER - 2)
+                .checkEmploymentPageTitle(TITLE_IN_ENG)
+                .checkPartnersTitle(PARTNERS_IN_ENG, true)
+                .checkPartnerLogo(EPAM, 0)
+                .checkPartnerLogo(NIX, 1)
+                .checkPartnerLogo(GLOBAL_LOGIC, 2)
+                .checkPartnerLogo(SOFT_SERVE, 3)
+                .checkPartnerLogo(INSART, 4);
     }
 }

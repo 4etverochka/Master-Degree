@@ -1,6 +1,7 @@
 package app.core.elements.kpi.otp.pages;
 
 import app.core.elements.kpi.otp.pages.fragments.HeaderFragment;
+import app.core.helpers.MethodsHelper;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
@@ -15,7 +16,10 @@ import static org.testng.AssertJUnit.assertTrue;
 public class HomePage extends BasePage {
     protected HeaderFragment headerFragment = page(HeaderFragment.class);
     private ElementsCollection aboutUsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[1]/li/a");
+    private ElementsCollection educationalProcessSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[2]/li/a");
+    private SelenideElement eventSubMenuEng = $x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[3]/li/a");
     private SelenideElement departmentTodayEn = $x("(//nav[@id='site-navigation']//ul/li/a)[2]");
+    private SelenideElement galleryEn = $x("(//nav[@id='site-navigation']//ul/li/a)[2]");
     private SelenideElement logo = $x("//img[@id='sc_logo']");
     private SelenideElement copyright = $x("//div[contains(@class,'left')]");
     private SelenideElement contactUs = $x("//div[@id='footer-callout']//a");
@@ -66,6 +70,14 @@ public class HomePage extends BasePage {
         departmentTodayEn.shouldBe(visible)
                 .click();
         return page(DepartmentTodayPage.class);
+    }
+
+    public GalleryPage clickOnGalleryLinkInEnVersion(int linkNumber) {
+        headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible)
+                .click();
+        return page(GalleryPage.class);
     }
 
     public HomePage returnToHomePage() {
@@ -156,6 +168,83 @@ public class HomePage extends BasePage {
                 .shouldBe(visible)
                 .click();
         return page(HomePage.class);
+    }
+
+    public HomePage clickOnEducationalAndProfessionalProgramLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber))
+                .perform();
+        educationalProcessSubMenus
+                .get(0)
+                .shouldBe(visible)
+                .click();
+        return page(HomePage.class);
+    }
+
+    public HomePage clickOnEducationalDisciplinesLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber))
+                .perform();
+        educationalProcessSubMenus
+                .get(1)
+                .shouldBe(visible)
+                .click();
+        return page(HomePage.class);
+    }
+
+    public HomePage clickOnTimetableOfStudentsLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber))
+                .perform();
+        educationalProcessSubMenus
+                .get(2)
+                .shouldBe(visible)
+                .click();
+        return page(HomePage.class);
+    }
+
+    public HomePage clickOnBachelorsWorkTopicsLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber))
+                .perform();
+        educationalProcessSubMenus
+                .get(3)
+                .shouldBe(visible)
+                .click();
+        return page(HomePage.class);
+    }
+
+    public HomePage clickOnGroupCuratorsLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber))
+                .perform();
+        educationalProcessSubMenus
+                .get(4)
+                .shouldBe(visible)
+                .click();
+        return page(HomePage.class);
+    }
+
+    public HomePage clickOnDisciplinesDuringTheQuarantineLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber))
+                .perform();
+        educationalProcessSubMenus
+                .get(5)
+                .shouldBe(visible)
+                .click();
+        return page(HomePage.class);
+    }
+
+    public ITSquareOfUniversityPage clickOnITSquareOfUniversityLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        eventSubMenuEng
+                .shouldBe(visible)
+                .click();
+        return page(ITSquareOfUniversityPage.class);
     }
 
     public HomePage checkPageIsOpenedInNewTab(String expectedUrlPart) {
