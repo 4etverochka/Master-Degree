@@ -1,10 +1,10 @@
 package tests.kpi.otp;
 
 import app.core.elements.kpi.otp.pages.HomePage;
-import app.core.helpers.MethodsHelper;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
+import static app.core.helpers.MethodsHelper.checkUrl;
 import static app.core.test_data.KpiIntConstants.NUMBER_EIGHT;
 import static app.core.test_data.KpiIntConstants.NUMBER_THREE;
 import static app.core.test_data.KpiStringConstants.GALLERY_PAGE_TITLE;
@@ -25,6 +25,6 @@ public class GalleryPageTest extends BaseTest {
                 .changeLanguageToEnglish(LINK_NUMBER_EIGHT)
                 .clickOnGalleryLinkInEnVersion(LINK_NUMBER_THREE)
                 .checkGalleryPageTitle(GALLERY_TITLE);
-        MethodsHelper.checkUrl(GALLERY_URL);
+        checkUrl(GALLERY_URL);
     }
 }

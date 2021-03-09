@@ -1,11 +1,12 @@
 package tests.kpi.otp;
 
 import app.core.elements.kpi.otp.pages.HomePage;
-import app.core.helpers.MethodsHelper;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static app.core.test_data.KpiIntConstants.*;
+import static app.core.helpers.MethodsHelper.checkUrl;
+import static app.core.test_data.KpiIntConstants.NUMBER_EIGHT;
+import static app.core.test_data.KpiIntConstants.NUMBER_FOUR;
 import static app.core.test_data.KpiStringConstants.IT_SQUARE_OF_UNIVERSITY_TITLE;
 import static app.core.test_data.KpiStringConstants.IT_SQUARE_OF_UNIVERSITY_URL;
 import static com.codeborne.selenide.Selenide.page;
@@ -24,6 +25,6 @@ public class ITSquareOfUniversityPageTest extends BaseTest {
                 .changeLanguageToEnglish(LINK_NUMBER_EIGHT)
                 .clickOnITSquareOfUniversityLink(LINK_NUMBER_FOUR)
                 .checkITSquareOfUniversityPageTitle(UNIVERSITY_IT_SQUARE_TITLE);
-        MethodsHelper.checkUrl(UNIVERSITY_IT_SQUARE_URL);
+        checkUrl(UNIVERSITY_IT_SQUARE_URL);
     }
 }

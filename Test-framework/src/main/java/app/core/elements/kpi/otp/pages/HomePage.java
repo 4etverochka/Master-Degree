@@ -14,6 +14,7 @@ public class HomePage extends BasePage {
     protected HeaderFragment headerFragment = page(HeaderFragment.class);
     private ElementsCollection aboutUsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[1]/li/a");
     private ElementsCollection educationalProcessSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[2]/li/a");
+    private ElementsCollection classesTimetableSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[3]/li/a");
     private SelenideElement eventSubMenuEng = $x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[3]/li/a");
     private SelenideElement departmentTodayEn = $x("(//nav[@id='site-navigation']//ul/li/a)[2]");
     private SelenideElement galleryEn = $x("(//nav[@id='site-navigation']//ul/li/a)[2]");
@@ -242,6 +243,67 @@ public class HomePage extends BasePage {
                 .shouldBe(visible)
                 .click();
         return page(ITSquareOfUniversityPage.class);
+    }
+
+    public DepartmentHistoryPage clickOnDepartmentHistoryLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        aboutUsSubMenus.get(0)
+                .shouldBe(visible)
+                .click();
+        return page(DepartmentHistoryPage.class);
+    }
+
+    public HomePage clickOnFeedbackLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        aboutUsSubMenus.get(2)
+                .shouldBe(visible)
+                .click();
+        return page(HomePage.class);
+    }
+
+    public EducationalScheduleProcessPage clickOnEducationalScheduleProcessLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        educationalProcessSubMenus.get(0)
+                .shouldBe(visible)
+                .click();
+        return page(EducationalScheduleProcessPage.class);
+    }
+
+    public StudentsSchedulePage clickOnStudentsScheduleLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        educationalProcessSubMenus.get(1)
+                .shouldBe(visible)
+                .hover();
+        classesTimetableSubMenus.get(0)
+                .shouldBe(visible)
+                .click();
+        return page(StudentsSchedulePage.class);
+    }
+
+    public TeachersSchedulePage clickOnTeachersScheduleLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        educationalProcessSubMenus.get(1)
+                .shouldBe(visible)
+                .hover();
+        classesTimetableSubMenus.get(1)
+                .shouldBe(visible)
+                .click();
+        return page(TeachersSchedulePage.class);
     }
 
     public HomePage checkPageIsOpenedInNewTab(String expectedUrlPart) {
