@@ -76,8 +76,27 @@ public enum KpiStringConstants {
     GALLERY_PAGE_TITLE("Gallery"),
     GALLERY_PAGE_URL("http://web.kpi.kharkov.ua/otp/en/gallery"),
 
+    FEEDBACK_URL("Pismo-iz-Mongolii"),
+
+    DEPARTMENT_HISTORY_PAGE_TITLE_RU("Краткая история кафедры"),
+    DEPARTMENT_HISTORY_PAGE_TITLE_UKR("Коротка історія кафедри"),
+    DEPARTMENT_HISTORY_PAGE_URL("istoriya"),
+
     IT_SQUARE_OF_UNIVERSITY_TITLE("IT-SQUARE OF UNIVERSITY"),
-    IT_SQUARE_OF_UNIVERSITY_URL("http://web.kpi.kharkov.ua/otp/en/it-square-of-university/");
+    IT_SQUARE_OF_UNIVERSITY_URL("http://web.kpi.kharkov.ua/otp/en/it-square-of-university/"),
+
+    DOWNLOAD_PATH("C:\\Users\\vlad\\Downloads"),
+    FILE_DAYTIME_SCHEDULE("Denna"),
+
+    EDUCATIONAL_PROCESS_SCHEDULE_RU("ГРАФИК УЧЕБНОГО ПРОЦЕССА"),
+    EDUCATIONAL_PROCESS_SCHEDULE_UKR("ГРАФІК НАВЧАЛЬНОГО ПРОЦЕСУ"),
+    EXTRAMURAL_STUDY_SCHEDULE_LINK("GRAFIK__ZACHNA"),
+
+    STUDENTS_SCHEDULE_RUS("Расписание занятий студентов"),
+    STUDENTS_SCHEDULE_UKR("Розклад занять студентів"),
+
+    TEACHERS_SCHEDULE_TITLE("РОЗКЛАД ЗАНЯТЬ ВИКЛАДАЧIВ"),
+    TEACHERS_SCHEDULE_URL("PrepodList");
 
     @Getter
     private final String value;
