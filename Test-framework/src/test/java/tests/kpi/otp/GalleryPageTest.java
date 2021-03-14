@@ -5,26 +5,42 @@ import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static app.core.helpers.MethodsHelper.checkUrl;
-import static app.core.test_data.KpiIntConstants.NUMBER_EIGHT;
-import static app.core.test_data.KpiIntConstants.NUMBER_THREE;
-import static app.core.test_data.KpiStringConstants.GALLERY_PAGE_TITLE;
-import static app.core.test_data.KpiStringConstants.GALLERY_PAGE_URL;
+import static app.core.test_data.KpiIntConstants.*;
+import static app.core.test_data.KpiStringConstants.*;
 import static com.codeborne.selenide.Selenide.page;
 
 public class GalleryPageTest extends BaseTest {
 
+    private static final int LINK_NUMBER_SEVEN= NUMBER_SEVEN.getValue();
     private static final int LINK_NUMBER_EIGHT = NUMBER_EIGHT.getValue();
     private static final int LINK_NUMBER_THREE = NUMBER_THREE.getValue();
-    private static final String GALLERY_TITLE = GALLERY_PAGE_TITLE.getValue();
-    private static final String GALLERY_URL = GALLERY_PAGE_URL.getValue();
+    private static final String EXPECTED_GALLERY_TITLE_ENG = GALLERY_PAGE_TITLE_ENG.getValue();
+    private static final String EXPECTED_GALLERY_TITLE = GALLERY_PAGE_TITLE.getValue();
+    private static final String EXPECTED_GALLERY_URL_RUS = GALLERY_PAGE_URL_RUS.getValue();
+    private static final String EXPECTED_GALLERY_PAGE_URL_UKR = GALLERY_PAGE_URL_UKR.getValue();
+    private static final String EXPECTED_GALLERY_PAGE_URL_ENG = GALLERY_PAGE_URL_ENG.getValue();
 
-    @Test(description = "Check Gallery page.")
-    public void checkGalleryPage() {
+    @Test(description = "Check Gallery page in eng version.")
+    public void checkGalleryPageInEngVersion() {
         page(HomePage.class)
                 .openPage()
                 .changeLanguageToEnglish(LINK_NUMBER_EIGHT)
                 .clickOnGalleryLinkInEnVersion(LINK_NUMBER_THREE)
-                .checkGalleryPageTitle(GALLERY_TITLE);
-        checkUrl(GALLERY_URL);
+                .checkGalleryPageTitle(EXPECTED_GALLERY_TITLE_ENG);
+        checkUrl(EXPECTED_GALLERY_PAGE_URL_ENG);
+    }
+
+    @Test(description = "Check Gallery page in different site versions.")
+    public void checkGalleryPageInRusVersion() {
+        page(HomePage.class)
+                .openPage()
+                .clickOnGalleryPageLink(LINK_NUMBER_SEVEN)
+                .checkGalleryPageTitle(EXPECTED_GALLERY_TITLE);
+        checkUrl(EXPECTED_GALLERY_URL_RUS);
+        page(HomePage.class)
+                .changeLanguageToUkrainian(LINK_NUMBER_EIGHT)
+                .clickOnGalleryPageLink(LINK_NUMBER_SEVEN)
+                .checkGalleryPageTitle(EXPECTED_GALLERY_TITLE);
+        checkUrl(EXPECTED_GALLERY_PAGE_URL_UKR);
     }
 }

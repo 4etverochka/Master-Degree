@@ -13,7 +13,6 @@ public class EducationalScheduleProcessPage extends HomePage {
 
     private SelenideElement daytimeStudyForm = $x("(//div[contains(@class,'page-content')]//span/a[contains(@href,'DENNA')])[1]");
     private SelenideElement extramuralStudyForm = $x("//div[contains(@class,'page-content')]//span/a[contains(@href,'ZACHNA')]");
-    private String fileName = "Grafik-navch.-protsesu_DENNA_2020_2021_zmini_fizichne-vihovannya-1";
 
     public EducationalScheduleProcessPage checkEducationalScheduleProcessTitle(String expectedTitle) {
         headerFragment.getTitle()
