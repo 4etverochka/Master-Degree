@@ -73,8 +73,11 @@ public enum KpiStringConstants {
     GROUP_CURATORS_URL("http://web.kpi.kharkov.ua/otp/en/surators/"),
     DISCIPLINES_DURING_THE_QUARANTINE_TIME_URL("https://drive.google.com/drive"),
 
-    GALLERY_PAGE_TITLE("Gallery"),
-    GALLERY_PAGE_URL("http://web.kpi.kharkov.ua/otp/en/gallery"),
+    GALLERY_PAGE_TITLE("ГАЛЕРЕЯ"),
+    GALLERY_PAGE_TITLE_ENG("Gallery"),
+    GALLERY_PAGE_URL_RUS("galerry"),
+    GALLERY_PAGE_URL_UKR("galereya"),
+    GALLERY_PAGE_URL_ENG("gallery"),
 
     FEEDBACK_URL("Pismo-iz-Mongolii"),
 
@@ -82,11 +85,12 @@ public enum KpiStringConstants {
     DEPARTMENT_HISTORY_PAGE_TITLE_UKR("Коротка історія кафедри"),
     DEPARTMENT_HISTORY_PAGE_URL("istoriya"),
 
-    IT_SQUARE_OF_UNIVERSITY_TITLE("IT-SQUARE OF UNIVERSITY"),
-    IT_SQUARE_OF_UNIVERSITY_URL("http://web.kpi.kharkov.ua/otp/en/it-square-of-university/"),
-
-    DOWNLOAD_PATH("C:\\Users\\vlad\\Downloads"),
-    FILE_DAYTIME_SCHEDULE("Denna"),
+    IT_SQUARE_OF_UNIVERSITY_TITLE_RUS("IT-СКВЕР УНИВЕРСИТЕТА"),
+    IT_SQUARE_OF_UNIVERSITY_TITLE_UKR("IT-СКВЕР УНІВЕРСИТЕТУ"),
+    IT_SQUARE_OF_UNIVERSITY_TITLE_ENG("IT-SQUARE OF UNIVERSITY"),
+    IT_SQUARE_OF_UNIVERSITY_URL_RUS("http://web.kpi.kharkov.ua/otp/ru/4725-2/"),
+    IT_SQUARE_OF_UNIVERSITY_URL_UKR("it-skver-universitetu"),
+    IT_SQUARE_OF_UNIVERSITY_URL_ENG("http://web.kpi.kharkov.ua/otp/en/it-square-of-university/"),
 
     EDUCATIONAL_PROCESS_SCHEDULE_RU("ГРАФИК УЧЕБНОГО ПРОЦЕССА"),
     EDUCATIONAL_PROCESS_SCHEDULE_UKR("ГРАФІК НАВЧАЛЬНОГО ПРОЦЕСУ"),
@@ -96,7 +100,54 @@ public enum KpiStringConstants {
     STUDENTS_SCHEDULE_UKR("Розклад занять студентів"),
 
     TEACHERS_SCHEDULE_TITLE("РОЗКЛАД ЗАНЯТЬ ВИКЛАДАЧIВ"),
-    TEACHERS_SCHEDULE_URL("PrepodList");
+    TEACHERS_SCHEDULE_URL("PrepodList"),
+
+    CURATORS_PAGE_TITLE_RU("КУРАТОРЫ"),
+    CURATORS_PAGE_TITLE_UKR("КУРАТОРИ"),
+    CURATORS_PAGE_URL_RU("kuratory"),
+    CURATORS_PAGE_URL_UKR("kuratori"),
+
+    METHODOLOGICAL_MATERIALS_URL("drive.google.com"),
+
+    SCIENTIFIC_SCHOOLS_DEPARTMENTS_PAGE_TITLE_RU("Научные школы кафедры"),
+    SCIENTIFIC_SCHOOLS_DEPARTMENTS_PAGE_TITLE_UKR("Наукові школи кафедри"),
+    SCIENTIFIC_SCHOOLS_DEPARTMENTS_PAGE_URL_RU("nauchnye-shkoly-kafedry"),
+    SCIENTIFIC_SCHOOLS_DEPARTMENTS_PAGE_URL_UKR("naukovi-shkoli-kafedri"),
+
+    CONFERENCES_AND_PUBLISHING_ACTIVITIES_PAGE_TITLE_RU("Конференции и издательская деятельность"),
+    CONFERENCES_AND_PUBLISHING_ACTIVITIES_PAGE_TITLE_UKR("Конференції та видавнича діяльність"),
+    CONFERENCES_AND_PUBLISHING_ACTIVITIES_PAGE_URL_RU("konferentsii-i-izdatelskaya-deyatelnost"),
+    CONFERENCES_AND_PUBLISHING_ACTIVITIES_PAGE_URL_UKR("konferentsiyi-ta-vidavnicha-diyalnist"),
+
+    ROBOFEST_PAGE_TITLE("RoboFest-2020"),
+    ROBOFEST_PAGE_URL("robofest-2020"),
+
+    ENROLLEE_PAGE_TITLE_RU("Абитуриенту"),
+    ENROLLEE_PAGE_TITLE_UKR("Абітурієнту"),
+    ENROLLEE_PAGE_URL("abiturientu"),
+
+    ADMISSION_RULES_21_URL("pravyla-pryiomu-ntu-khpi-2021"),
+
+    SELECTION_COMMITTEE_URL("pravyla_pryiomu_do_ntu_khpi_v_2020"),
+
+    VIRTUAL_TOUR_PAGE_TITLE_RU("Виртуальная экскурсия"),
+    VIRTUAL_TOUR_PAGE_TITLE_UKR("Віртуальна екскурсія"),
+    VIRTUAL_TOUR_PAGE_URL("ekskursiya"),
+
+    ELITE_SCHOOL_PAGE_URL("polytechnik"),
+
+    IT_KIDS_SCHOOL_PAGE_URL("it-kids"),
+
+    GAMES_3D_PAGE_TITLE("Школа компьютерных инженеров"),
+    GAMES_3D_PAGE_URL("http://www.kozina.com.ua/"),
+
+    GLOBALLOGIC_INNOVATIVE_LABORATORY_PAGE_TITLE_RUS("Инновационная учебная embedded-лаборатория от компании GlobalLogic"),
+    GLOBALLOGIC_INNOVATIVE_LABORATORY_PAGE_TITLE_UKR("Інноваційна навчальна embedded-лабораторія від компанії GlobalLogic"),
+    GLOBALLOGIC_INNOVATIVE_LABORATORY_PAGE_URL("globallogic"),
+
+    GIULIANI_SECURITY_AND_SAFETY_LLC_PAGE_TITLE_RUS("ВИЗИТ КОМПАНИИ «GIULIANI SECURITY & SAFETY LLC» (США)"),
+    GIULIANI_SECURITY_AND_SAFETY_LLC_PAGE_TITLE_UKR("ВІЗИТ КОМПАНІЇ «GIULIANI SECURITY & SAFETY LLC» (США)"),
+    GIULIANI_SECURITY_AND_SAFETY_LLC_PAGE_URL("giuliani-security-amp-safety-llc-ssha");
 
     @Getter
     private final String value;

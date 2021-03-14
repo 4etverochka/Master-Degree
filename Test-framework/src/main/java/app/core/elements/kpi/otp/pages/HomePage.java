@@ -14,10 +14,21 @@ public class HomePage extends BasePage {
     protected HeaderFragment headerFragment = page(HeaderFragment.class);
     private ElementsCollection aboutUsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[1]/li/a");
     private ElementsCollection educationalProcessSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[2]/li/a");
-    private ElementsCollection classesTimetableSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[3]/li/a");
+    private ElementsCollection scientificActivitySubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[16]/li/a");
+    private ElementsCollection olympiadsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[17]/li/a");
+    private ElementsCollection ukrainianOlympiadSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[18]/li");
+    private ElementsCollection internationalOlympiadSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[19]/li");
+    private ElementsCollection classesTimetableSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[4]/li/a");
+    private ElementsCollection diplomaTopicsSubMenus = $$x("((//nav[@id='site-navigation']//ul[@class='menu']//ul)[2]/li/ul)[2]/li/a");
+    private ElementsCollection springSemester20SubMenus = $$x("(//a[contains(text(),'2019/2020')])[2]/../ul/li");
+    private ElementsCollection autumnSemester21SubMenus = $$x("(((//a[contains(text(),'2019/2020')])[2]/ancestor::li)[2]//ul)[3]/li");
+    private ElementsCollection springSemester21SubMenus = $$x("(//a[contains(text(),'2020/2021')])[2]/../ul/li");
+    private ElementsCollection educationalAndMethodologicalSupportSubMenus = $$x("((//nav[@id='site-navigation']//ul[@class='menu']//ul)[2]/li)[5]/ul/li");
+    private ElementsCollection educationalDisciplinesSubMenus = $$x("((//nav[@id='site-navigation']//ul[@class='menu']//ul)[2]/li)[5]/ul/li[1]/ul/li");
+    private ElementsCollection enrolleeSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[20]/li");
+    private ElementsCollection eventsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[21]/li");
     private SelenideElement eventSubMenuEng = $x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[3]/li/a");
     private SelenideElement departmentTodayEn = $x("(//nav[@id='site-navigation']//ul/li/a)[2]");
-    private SelenideElement galleryEn = $x("(//nav[@id='site-navigation']//ul/li/a)[2]");
     private SelenideElement logo = $x("//img[@id='sc_logo']");
     private SelenideElement copyright = $x("//div[contains(@class,'left')]");
     private SelenideElement contactUs = $x("//div[@id='footer-callout']//a");
@@ -68,6 +79,17 @@ public class HomePage extends BasePage {
         departmentTodayEn.shouldBe(visible)
                 .click();
         return page(DepartmentTodayPage.class);
+    }
+
+    public GalleryPage clickOnGalleryPageLink(int linkNumber) {
+        headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible)
+                .click();
+        eventsSubMenus.get(0)
+                .shouldHave(visible)
+                .click();
+        return page(GalleryPage.class);
     }
 
     public GalleryPage clickOnGalleryLinkInEnVersion(int linkNumber) {
@@ -234,7 +256,19 @@ public class HomePage extends BasePage {
         return page(HomePage.class);
     }
 
-    public ITSquareOfUniversityPage clickOnITSquareOfUniversityLink(int linkNumber) {
+
+    public ITSquareOfUniversityPage clickOnITSquareOfUniversityPageLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        eventsSubMenus.get(2)
+                .shouldBe(visible)
+                .click();
+        return page(ITSquareOfUniversityPage.class);
+    }
+
+    public ITSquareOfUniversityPage clickOnITSquareOfUniversityPageLinkEng(int linkNumber) {
         actions().moveToElement(headerFragment.getHeaderLinks()
                 .get(linkNumber)
                 .shouldBe(visible))
@@ -304,6 +338,247 @@ public class HomePage extends BasePage {
                 .shouldBe(visible)
                 .click();
         return page(TeachersSchedulePage.class);
+    }
+
+    public CuratorsPage clickOnCuratorsLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        educationalProcessSubMenus.get(2)
+                .shouldBe(visible)
+                .click();
+        return page(CuratorsPage.class);
+    }
+
+    public HomePage checkDiplomaSpringSemester20(int linkNumber, int expectedSize) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        educationalProcessSubMenus.get(3)
+                .shouldBe(visible)
+                .hover();
+        diplomaTopicsSubMenus.get(0)
+                .shouldBe(visible)
+                .hover();
+        springSemester20SubMenus.shouldHaveSize(expectedSize);
+        return page(HomePage.class);
+    }
+
+    public HomePage checkDiplomaAutumnSemester20(int linkNumber, int expectedSize) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        educationalProcessSubMenus.get(3)
+                .shouldBe(visible)
+                .hover();
+        diplomaTopicsSubMenus.get(1)
+                .shouldBe(visible)
+                .hover();
+        autumnSemester21SubMenus.shouldHaveSize(expectedSize);
+        return page(HomePage.class);
+    }
+
+    public HomePage checkDiplomaSpringSemester21(int linkNumber, int expectedSize) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        educationalProcessSubMenus.get(3)
+                .shouldBe(visible)
+                .hover();
+        diplomaTopicsSubMenus.get(2)
+                .shouldBe(visible)
+                .hover();
+        springSemester21SubMenus.shouldHaveSize(expectedSize);
+        return page(HomePage.class);
+    }
+
+    public HomePage checkEducationalDisciplines(int linkNumber, int expectedSize) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        educationalProcessSubMenus.get(4)
+                .shouldBe(visible)
+                .hover();
+        educationalAndMethodologicalSupportSubMenus.get(0)
+                .shouldBe(visible)
+                .hover();
+        educationalDisciplinesSubMenus.shouldHaveSize(expectedSize);
+        return page(HomePage.class);
+    }
+
+    public HomePage clickMethodologicalMaterialsForDiplomaLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        educationalProcessSubMenus.get(4)
+                .shouldBe(visible)
+                .hover();
+        educationalAndMethodologicalSupportSubMenus.get(1)
+                .shouldBe(visible)
+                .click();
+        return page(HomePage.class);
+    }
+
+    public ScientificSchoolsDepartmentsPage clickOnScientificSchoolsDepartmentsLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        scientificActivitySubMenus.get(0)
+                .shouldBe(visible)
+                .click();
+        return page(ScientificSchoolsDepartmentsPage.class);
+    }
+
+    public ConferencesAndPublishingActivitiesPage clickOnConferencesAndPublishingActivitiesLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        scientificActivitySubMenus.get(1)
+                .shouldBe(visible)
+                .click();
+        return page(ConferencesAndPublishingActivitiesPage.class);
+    }
+
+    public HomePage checkUkrainianStudentsProgrammingOlympiadArchive(int linkNumber, int expectedSize) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        olympiadsSubMenus.get(0)
+                .shouldBe(visible)
+                .hover();
+        ukrainianOlympiadSubMenus.shouldHaveSize(expectedSize);
+        return page(HomePage.class);
+    }
+
+    public HomePage checkInternationalOlympiadArchive(int linkNumber, int expectedSize) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        olympiadsSubMenus.get(1)
+                .shouldBe(visible)
+                .hover();
+        internationalOlympiadSubMenus.shouldHaveSize(expectedSize);
+        return page(HomePage.class);
+    }
+
+    public RoboFestPage clickOnRoboFestLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        olympiadsSubMenus.get(2)
+                .shouldBe(visible)
+                .click();
+        return page(RoboFestPage.class);
+    }
+
+    public EnrolleePage clickOnEnrolleePageLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        enrolleeSubMenus.get(0)
+                .shouldBe(visible)
+                .click();
+        return page(EnrolleePage.class);
+    }
+
+    public HomePage clickOnAdmissionRules21Link(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        enrolleeSubMenus.get(1)
+                .shouldBe(visible)
+                .click();
+        return page(HomePage.class);
+    }
+
+    public HomePage clickOnSelectionCommitteeLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        enrolleeSubMenus.get(2)
+                .shouldBe(visible)
+                .click();
+        return page(HomePage.class);
+    }
+
+    public VirtualTourPage clickOnVirtualTourLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        enrolleeSubMenus.get(3)
+                .shouldBe(visible)
+                .click();
+        return page(VirtualTourPage.class);
+    }
+
+    public EliteSchoolPage clickOnEliteSchoolPageLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        enrolleeSubMenus.get(4)
+                .shouldBe(visible)
+                .click();
+        return page(EliteSchoolPage.class);
+    }
+
+    public ITKidsSchoolPage clickOnITKidsSchoolPageLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        enrolleeSubMenus.get(5)
+                .shouldBe(visible)
+                .click();
+        return page(ITKidsSchoolPage.class);
+    }
+
+    public Games3DPage clickOnGames3DPageLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        enrolleeSubMenus.get(6)
+                .shouldBe(visible)
+                .click();
+        return page(Games3DPage.class);
+    }
+
+    public ScotoLogicInnovativeLaboratoryPage clickOnScotoLogicInnovativeLaboratoryPageLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        eventsSubMenus.get(1)
+                .shouldBe(visible)
+                .click();
+        return page(ScotoLogicInnovativeLaboratoryPage.class);
+    }
+
+    public GiulianiSecurityAndSafetyLLCPage clickOnGiulianiSecurityAndSafetyLLCPageLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        eventsSubMenus.get(3)
+                .shouldBe(visible)
+                .click();
+        return page(GiulianiSecurityAndSafetyLLCPage.class);
     }
 
     public HomePage checkPageIsOpenedInNewTab(String expectedUrlPart) {
