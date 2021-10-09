@@ -10,7 +10,6 @@ import static app.core.test_data.KpiStringConstants.*;
 import static com.codeborne.selenide.Selenide.page;
 
 public class CuratorsPageTest extends BaseTest {
-
     private static final int LINK_NUMBER_ONE = NUMBER_ONE.getValue();
     private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_SEVEN.getValue();
     private static final String CURATORS_TITLE_RU = CURATORS_PAGE_TITLE_RU.getValue();

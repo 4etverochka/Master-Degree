@@ -11,7 +11,6 @@ import static app.core.test_data.KpiStringConstants.*;
 import static com.codeborne.selenide.Selenide.page;
 
 public class HomePageTest extends BaseTest {
-
     private static final int LINK_NUMBER_ZERO = NUMBER_ZERO.getValue();
     private static final int LINK_NUMBER_ONE = NUMBER_ONE.getValue();
     private static final int LINK_NUMBER_TWO = NUMBER_TWO.getValue();
@@ -127,31 +126,12 @@ public class HomePageTest extends BaseTest {
         checkUrl(EXPECTED_FEEDBACK_URL);
     }
 
-    @Test(description = "Check Diploma spring Semester 2020 in different site versions.")
-    public void checkDiplomaSpringSemester20() {
-        page(HomePage.class)
-                .openPage()
-                .checkDiplomaSpringSemester20(LINK_NUMBER_ONE, LINK_NUMBER_FOUR)
-                .changeLanguageToUkrainian(CHANGE_LANGUAGE_LINK_NUMBER)
-                .checkDiplomaSpringSemester20(LINK_NUMBER_ONE, LINK_NUMBER_FOUR);
-    }
-
-    @Test(description = "Check Diploma autumn Semester 2020 in different site versions.")
-    public void checkDiplomaAutumnSemester20() {
-        page(HomePage.class)
-                .openPage()
-                .checkDiplomaAutumnSemester20(LINK_NUMBER_ONE, LINK_NUMBER_FOUR)
-                .changeLanguageToUkrainian(CHANGE_LANGUAGE_LINK_NUMBER)
-                .checkDiplomaAutumnSemester20(LINK_NUMBER_ONE, LINK_NUMBER_FOUR);
-    }
-
-    @Test(description = "Check Diploma spring Semester 2021 in different site versions.")
+    @Test(description = "Check Diploma autumn Semester 2021 in different site versions.")
     public void checkDiplomaSpringSemester21() {
         page(HomePage.class)
                 .openPage()
-                .checkDiplomaSpringSemester21(LINK_NUMBER_ONE, LINK_NUMBER_FIVE)
-                .changeLanguageToUkrainian(CHANGE_LANGUAGE_LINK_NUMBER)
-                .checkDiplomaSpringSemester21(LINK_NUMBER_ONE, LINK_NUMBER_FIVE);
+                .openDiplomaAutumnSemester21(LINK_NUMBER_ONE, LINK_NUMBER_FIVE);
+        checkUrl(DIPLOMAS_URL.getValue());
     }
 
     @Test(description = "Check educational disciplines in different site versions.")
@@ -171,29 +151,29 @@ public class HomePageTest extends BaseTest {
         checkUrl(EXPECTED_METHODOLOGICAL_MATERIALS_URL);
     }
 
-    @Test(description = "Check ukrainian students programming olympiad archive in different site versions.")
-    public void checkUkrainianStudentsProgrammingOlympiadArchive() {
+    @Test(description = "Check All-Ukrainian Olympiad in System Programming in different site versions.")
+    public void checkAllUkrainianOlympiadInSystemProgramming() {
         page(HomePage.class)
                 .openPage()
-                .checkUkrainianStudentsProgrammingOlympiadArchive(LINK_NUMBER_THREE, LINK_NUMBER_TWO)
+                .checkAllUkrainianOlympiadInSystemProgramming(LINK_NUMBER_THREE, LINK_NUMBER_TWO)
                 .changeLanguageToUkrainian(CHANGE_LANGUAGE_LINK_NUMBER)
-                .checkUkrainianStudentsProgrammingOlympiadArchive(LINK_NUMBER_THREE, LINK_NUMBER_TWO);
+                .checkAllUkrainianOlympiadInSystemProgramming(LINK_NUMBER_THREE, LINK_NUMBER_TWO);
     }
 
-    @Test(description = "Check international olympiad archive in different site versions.")
-    public void checkInternationalOlympiadArchive() {
+    @Test(description = "Check international olympiad in different site versions.")
+    public void checkInternationalOlympiad() {
         page(HomePage.class)
                 .openPage()
-                .checkInternationalOlympiadArchive(LINK_NUMBER_THREE, LINK_NUMBER_THREE)
+                .checkInternationalOlympiad(LINK_NUMBER_THREE, LINK_NUMBER_THREE)
                 .changeLanguageToUkrainian(CHANGE_LANGUAGE_LINK_NUMBER)
-                .checkInternationalOlympiadArchive(LINK_NUMBER_THREE, LINK_NUMBER_THREE);
+                .checkInternationalOlympiad(LINK_NUMBER_THREE, LINK_NUMBER_THREE);
     }
 
-    @Test(description = "Check international olympiad archive in rus.")
+    @Test(description = "Check admission rules 2021 in rus.")
     public void checkAdmissionRules21RedirectionInRus() {
         page(HomePage.class)
                 .openPage()
-                .clickOnAdmissionRules21Link(LINK_NUMBER_FIVE);
+                .clickOnAdmissionRules21Link(LINK_NUMBER_FOUR);
         checkUrl(EXPECTED_ADMISSION_RULES_21_URL);
     }
 
@@ -202,7 +182,7 @@ public class HomePageTest extends BaseTest {
         page(HomePage.class)
                 .openPage()
                 .changeLanguageToUkrainian(CHANGE_LANGUAGE_LINK_NUMBER)
-                .clickOnAdmissionRules21Link(LINK_NUMBER_FIVE);
+                .clickOnAdmissionRules21Link(LINK_NUMBER_FOUR);
         checkUrl(EXPECTED_ADMISSION_RULES_21_URL);
     }
 
@@ -210,7 +190,7 @@ public class HomePageTest extends BaseTest {
     public void checkSelectionCommitteeRedirectionInRus() {
         page(HomePage.class)
                 .openPage()
-                .clickOnSelectionCommitteeLink(LINK_NUMBER_FIVE);
+                .clickOnSelectionCommitteeLink(LINK_NUMBER_FOUR);
         checkUrl(EXPECTED_SELECTION_COMMITTEE_URL);
     }
 
@@ -219,7 +199,7 @@ public class HomePageTest extends BaseTest {
         page(HomePage.class)
                 .openPage()
                 .changeLanguageToUkrainian(CHANGE_LANGUAGE_LINK_NUMBER)
-                .clickOnSelectionCommitteeLink(LINK_NUMBER_FIVE);
+                .clickOnSelectionCommitteeLink(LINK_NUMBER_FOUR);
         checkUrl(EXPECTED_SELECTION_COMMITTEE_URL);
     }
 }

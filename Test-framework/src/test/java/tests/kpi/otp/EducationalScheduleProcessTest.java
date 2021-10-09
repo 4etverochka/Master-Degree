@@ -10,7 +10,6 @@ import static app.core.test_data.KpiStringConstants.*;
 import static com.codeborne.selenide.Selenide.page;
 
 public class EducationalScheduleProcessTest extends BaseTest {
-
     private static final int LINK_NUMBER_ONE = NUMBER_ONE.getValue();
     private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_SEVEN.getValue();
     private static final String SCHEDULE_OF_THE_EDUCATIONAL_PROCESS_RU = EDUCATIONAL_PROCESS_SCHEDULE_RU.getValue();

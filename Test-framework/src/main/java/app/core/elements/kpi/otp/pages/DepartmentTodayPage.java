@@ -30,6 +30,16 @@ public class DepartmentTodayPage extends HomePage {
         return page(DepartmentTodayPage.class);
     }
 
+    public HeadOfDepartmentPage changeLanguageToUkrainianWithoutRedirect(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber))
+                .perform();
+        headerFragment.getUkrainianLanguage()
+                .shouldBe(visible)
+                .click();
+        return page(HeadOfDepartmentPage.class);
+    }
+
     public DepartmentTodayPage changeLanguageToEnglish(int linkNumber) {
         actions().moveToElement(headerFragment.getHeaderLinks()
                 .get(linkNumber)
@@ -39,6 +49,17 @@ public class DepartmentTodayPage extends HomePage {
                 .shouldBe(visible)
                 .click();
         return page(DepartmentTodayPage.class);
+    }
+
+    public HeadOfDepartmentPage changeLanguageToEnglishWithoutRedirect(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        headerFragment.getEnglishLanguage()
+                .shouldBe(visible)
+                .click();
+        return page(HeadOfDepartmentPage.class);
     }
 
     public HeadOfDepartmentPage openHeadOfDepartmentPageInNewTab(boolean isEng, boolean isRu) {

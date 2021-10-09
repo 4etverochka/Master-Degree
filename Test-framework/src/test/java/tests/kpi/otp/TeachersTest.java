@@ -10,10 +10,9 @@ import static app.core.test_data.KpiStringConstants.TEACHER_FIO_UKR;
 import static com.codeborne.selenide.Selenide.page;
 
 public class TeachersTest extends BaseTest {
-
     private static final int LINK_NUMBER_TWO = NUMBER_TWO.getValue();
-    private static final int LINK_NUMBER_FOUR = NUMBER_FOUR.getValue();
-    private static final int LINK_NUMBER_EIGHT = NUMBER_EIGHT.getValue();
+    private static final int LINK_NUMBER_ZERO = NUMBER_ZERO.getValue();
+    private static final int LINK_NUMBER_SEVEN = NUMBER_SEVEN.getValue();
     private static final int TEACHERS_COUNT = COUNT_OF_TEACHERS.getValue();
     private static final int TEACHERS_COUNT_ENG_VERSION = COUNT_OF_TEACHERS_ENG.getValue();
     private static final int EXPECTED_TEACHER_FROM_LIST_NUMBER = TEACHER_FROM_LIST_NUMBER.getValue();
@@ -24,11 +23,11 @@ public class TeachersTest extends BaseTest {
     public void checkValidTeachersFio() {
         page(HomePage.class)
                 .openPage()
-                .clickOnTeachersLink(LINK_NUMBER_FOUR)
+                .clickOnTeachersLink(LINK_NUMBER_ZERO)
                 .clickOnTeacher(EXPECTED_TEACHER_FROM_LIST_NUMBER)
                 .checkTeachersFio(TEACHER_FIO_IN_RUS)
-                .changeLanguageToUkrainian(LINK_NUMBER_EIGHT)
-                .clickOnTeachersLink(LINK_NUMBER_FOUR)
+                .changeLanguageToUkrainian(LINK_NUMBER_SEVEN)
+                .clickOnTeachersLink(LINK_NUMBER_ZERO)
                 .clickOnTeacher(EXPECTED_TEACHER_FROM_LIST_NUMBER)
                 .checkTeachersFio(TEACHER_FIO_IN_UKR);
     }
@@ -37,15 +36,15 @@ public class TeachersTest extends BaseTest {
     public void checkTeachersCountOnDifferentSiteVersions() {
         page(HomePage.class)
                 .openPage()
-                .clickOnTeachersLink(LINK_NUMBER_FOUR)
+                .clickOnTeachersLink(LINK_NUMBER_ZERO)
                 .checkCountTeachers(TEACHERS_COUNT)
                 .returnToHomePage()
-                .changeLanguageToUkrainian(LINK_NUMBER_EIGHT)
-                .clickOnTeachersLink(LINK_NUMBER_FOUR)
+                .changeLanguageToUkrainian(LINK_NUMBER_SEVEN)
+                .clickOnTeachersLink(LINK_NUMBER_ZERO)
                 .checkCountTeachers(TEACHERS_COUNT)
                 .returnToHomePage()
-                .changeLanguageToEnglish(LINK_NUMBER_EIGHT)
-                .clickOnTeachersLink(LINK_NUMBER_TWO)
+                .changeLanguageToEnglish(LINK_NUMBER_SEVEN)
+                .clickOnTeachersLinkEng(LINK_NUMBER_TWO)
                 .checkCountTeachers(TEACHERS_COUNT_ENG_VERSION);
     }
 }

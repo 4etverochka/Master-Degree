@@ -11,7 +11,6 @@ import static app.core.test_data.KpiStringConstants.TEACHERS_SCHEDULE_URL;
 import static com.codeborne.selenide.Selenide.page;
 
 public class TeachersSchedulePageTest extends BaseTest {
-
     private static final int LINK_NUMBER_ONE = NUMBER_ONE.getValue();
     private static final String TEACHERS_SCHEDULE_PAGE_TITLE = TEACHERS_SCHEDULE_TITLE.getValue();
     private static final String TEACHERS_SCHEDULE_PAGE_URL = TEACHERS_SCHEDULE_URL.getValue();

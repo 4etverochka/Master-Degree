@@ -10,7 +10,6 @@ import static com.codeborne.selenide.Selenide.page;
 
 
 public class ContactPageTest extends BaseTest {
-
     private static final int ZERO = NUMBER_ZERO.getValue();
     private static final String HEAD_OF_DEPARTMENT_NAME = HEAD_OF_DEPARTMENT_FULL_NAME.getValue();
     private static final String PHONE_NUMBER_1 = PHONE_NUMBER_ONE.getValue();

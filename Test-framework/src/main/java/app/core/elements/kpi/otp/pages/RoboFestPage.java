@@ -4,7 +4,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.page;
 
-public class RoboFestPage extends HomePage{
+public class RoboFestPage extends HomePage {
 
     public RoboFestPage checkRoboFestPageTitle(String expectedTitle) {
         headerFragment.getTitle()

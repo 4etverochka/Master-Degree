@@ -4,13 +4,11 @@ import app.core.elements.kpi.otp.pages.HomePage;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static app.core.test_data.KpiIntConstants.NUMBER_SEVEN;
-import static app.core.test_data.KpiIntConstants.NUMBER_SIX;
+import static app.core.test_data.KpiIntConstants.*;
 import static app.core.test_data.KpiStringConstants.*;
 import static com.codeborne.selenide.Selenide.page;
 
 public class InfoPagesTest extends BaseTest {
-
     private static final String TITLE_IN_UKR = TITLE_UKR.getValue();
     private static final String TITLE_IN_RUS = TITLE_RUS.getValue();
     private static final String TITLE_IN_ENG = TITLE_ENG.getValue();
@@ -24,7 +22,7 @@ public class InfoPagesTest extends BaseTest {
     private static final String SOFT_SERVE = SOFT_SERVE_LOGO.getValue();
     private static final String INSART = INSART_LOGO.getValue();
     private static final String GLOBAL_LOGIC = GLOBAL_LOGIC_LOGO.getValue();
-    private static final int CHANGE_EMPLOYMENT_LINK_NUMBER = NUMBER_SIX.getValue();
+    private static final int CHANGE_EMPLOYMENT_LINK_NUMBER = NUMBER_FIVE.getValue();
     private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_SEVEN.getValue();
 
     @Test(description = "Check employment page info on different languages.")
@@ -40,7 +38,7 @@ public class InfoPagesTest extends BaseTest {
                 .checkPartnerLogo(GLOBAL_LOGIC, 2)
                 .checkPartnerLogo(SOFT_SERVE, 3)
                 .checkPartnerLogo(INSART, 4)
-                .changeLanguageToUkrainian(CHANGE_LANGUAGE_LINK_NUMBER )
+                .changeLanguageToUkrainian(CHANGE_LANGUAGE_LINK_NUMBER)
                 .clickOnEmploymentLink(CHANGE_EMPLOYMENT_LINK_NUMBER)
                 .checkEmploymentPageTitle(TITLE_IN_UKR)
                 .checkPartnersTitle(PARTNERS_IN_UKR, false)
@@ -50,8 +48,8 @@ public class InfoPagesTest extends BaseTest {
                 .checkPartnerLogo(GLOBAL_LOGIC, 2)
                 .checkPartnerLogo(SOFT_SERVE, 3)
                 .checkPartnerLogo(INSART, 4)
-                .changeLanguageToEnglish(CHANGE_LANGUAGE_LINK_NUMBER )
-                .clickOnEmploymentLink(CHANGE_EMPLOYMENT_LINK_NUMBER - 2)
+                .changeLanguageToEnglish(CHANGE_LANGUAGE_LINK_NUMBER)
+                .clickOnEmploymentLink(CHANGE_EMPLOYMENT_LINK_NUMBER)
                 .checkEmploymentPageTitle(TITLE_IN_ENG)
                 .checkPartnersTitle(PARTNERS_IN_ENG, true)
                 .checkPartnerLogo(EPAM, 0)

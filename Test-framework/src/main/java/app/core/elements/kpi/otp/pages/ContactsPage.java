@@ -11,7 +11,7 @@ public class ContactsPage extends HomePage {
     private SelenideElement headOfDepartmentPhoneNumbers = $x("//p[contains(text(),'. 0')]");
     private SelenideElement departmentAddress = $x("//div[@id='content']//p[4]");
     private SelenideElement departmentPhoneNumber = $x("//div[@id='content']//p[4]");
-    private SelenideElement departmentEmail = $x("//div[@id='content']//p[6]");
+    private SelenideElement departmentEmail = $x("//div[@id='content']//p[4]");
     private SelenideElement headOfDepartmentFullName = $x("//p//span/a");
     private ElementsCollection phoneNumbers = $$x("//li/span[@style]");
     private SelenideElement addressImage = $x("//img[@class]");
@@ -69,7 +69,7 @@ public class ContactsPage extends HomePage {
 
     public ContactsPage checkDepartmentEmail(String email) {
         departmentEmail.shouldBe(visible)
-                .shouldHave(text(email));
+                .shouldHave(matchText(email));
         return page(ContactsPage.class);
     }
 }

@@ -7,8 +7,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.page;
 
-public class EliteSchoolPage extends HomePage{
-
+public class EliteSchoolPage extends HomePage {
     private SelenideElement title = $x("//a[@class='navbar-brand']");
 
     public EliteSchoolPage checkEliteSchoolPageTitle() {

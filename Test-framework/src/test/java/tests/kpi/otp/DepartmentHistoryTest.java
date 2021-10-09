@@ -10,7 +10,6 @@ import static app.core.test_data.KpiStringConstants.*;
 import static com.codeborne.selenide.Selenide.page;
 
 public class DepartmentHistoryTest extends BaseTest {
-
     private static final int LINK_NUMBER_ZERO = NUMBER_ZERO.getValue();
     private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_SEVEN.getValue();
     private static final String DEPARTMENT_HISTORY_TITLE_RU = DEPARTMENT_HISTORY_PAGE_TITLE_RU.getValue();

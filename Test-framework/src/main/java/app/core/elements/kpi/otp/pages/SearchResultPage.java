@@ -8,8 +8,8 @@ import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.page;
 
 public class SearchResultPage extends HomePage {
-    private SelenideElement validResult = $x("//h1/a[text()='Преподаватели']");
-    private SelenideElement invalidResultMessage = $x("//p");
+    private SelenideElement validResult = $x("//h1/span");
+    private SelenideElement invalidResultMessage = $x("//h3");
 
     public SearchResultPage checkValidResultOnSearchResultPage(String resultText) {
         validResult.shouldBe(visible)

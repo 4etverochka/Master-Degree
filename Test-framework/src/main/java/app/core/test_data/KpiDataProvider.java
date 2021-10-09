@@ -2,23 +2,16 @@ package app.core.test_data;
 
 import org.testng.annotations.DataProvider;
 
+import static app.core.test_data.KpiIntConstants.NUMBER_SEVEN;
+
 public class KpiDataProvider {
-    private static final int NUMBER_TWO = 2;
-    private static final int NUMBER_FOUR = 4;
-    private static final int NUMBER_SIX = 6;
-    private static final int NUMBER_EIGHT = 8;
-
-    private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_EIGHT;
-    private static final int COUNT_OF_TEACHERS = 41;
-
+    private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_SEVEN.getValue();
     private static final String VALID_SEARCH_DATA = "Преподаватели";
     private static final String INVALID_SEARCH_DATA = "123D12";
-    private static final String ERROR_MESSAGE = "Sorry, but nothing matched your search terms. Please try again with some different keywords.";
-
-    private static final String COPYRIGHT = "© 2020 кафедра \"ВТП\" Разработка: Антонюк В.В.";
-
+    private static final String ERROR_MESSAGE = "Nothing Found";
+    private static final String COPYRIGHT = "© 2016 кафедра \"ОТП\" Розробка: Антонюк В.В.";
     private static final String FACEBOOK_KPI = "https://www.facebook.com/ntu.xpi/";
-    private static final String TWITTER_KPI = "https://twitter.com/ntu_xpi";
+    private static final String TWITTER_KPI = "https://twitter.com/OTP_NTU_KHPI";
     private static final String LINK_KPI = "http://www.kpi.kharkov.ua/ukr/";
     private static final String INSTAGRAM_KPI = "https://www.instagram.com/otp_ntu_khpi/";
     private static final String YOUTUBE_KPI = "youtube.com";

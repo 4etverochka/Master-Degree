@@ -10,9 +10,8 @@ import static app.core.test_data.KpiStringConstants.*;
 import static com.codeborne.selenide.Selenide.page;
 
 public class ScientificSchoolsDepartmentsPageTest extends BaseTest {
-
     private static final int LINK_NUMBER_TWO = NUMBER_TWO.getValue();
-    private static final int CHANGE_LANGUAGE_TO_UKRAINIAN = NUMBER_EIGHT.getValue();
+    private static final int CHANGE_LANGUAGE_TO_UKRAINIAN = NUMBER_SEVEN.getValue();
     private static final String SCIENTIFIC_SCHOOLS_DEPARTMENTS_TITLE_RU = SCIENTIFIC_SCHOOLS_DEPARTMENTS_PAGE_TITLE_RU.getValue();
     private static final String SCIENTIFIC_SCHOOLS_DEPARTMENTS_TITLE_UKR = SCIENTIFIC_SCHOOLS_DEPARTMENTS_PAGE_TITLE_UKR.getValue();
     private static final String SCIENTIFIC_SCHOOLS_DEPARTMENTS_URL_RU = SCIENTIFIC_SCHOOLS_DEPARTMENTS_PAGE_URL_RU.getValue();

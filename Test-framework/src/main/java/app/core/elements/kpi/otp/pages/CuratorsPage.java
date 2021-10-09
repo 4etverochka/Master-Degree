@@ -4,7 +4,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.page;
 
-public class CuratorsPage extends HomePage{
+public class CuratorsPage extends HomePage {
 
     public CuratorsPage checkCuratorsPageTitle(String expectedTitle) {
         headerFragment.getTitle()

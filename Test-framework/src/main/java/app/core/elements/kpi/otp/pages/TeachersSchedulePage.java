@@ -7,8 +7,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.page;
 
-public class TeachersSchedulePage extends HomePage{
-
+public class TeachersSchedulePage extends HomePage {
     private SelenideElement title = $x("(//div/h3)[1]");
 
     public StudentsSchedulePage checkTeachersSchedulePageTitle(String expectedTitle) {

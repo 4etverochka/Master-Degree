@@ -5,8 +5,7 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static org.testng.AssertJUnit.assertTrue;
 
@@ -14,26 +13,31 @@ public class HomePage extends BasePage {
     protected HeaderFragment headerFragment = page(HeaderFragment.class);
     private ElementsCollection aboutUsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[1]/li/a");
     private ElementsCollection educationalProcessSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[2]/li/a");
-    private ElementsCollection scientificActivitySubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[14]/li/a");
-    private ElementsCollection olympiadsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[17]/li/a");
-    private ElementsCollection ukrainianOlympiadSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[18]/li");
-    private ElementsCollection internationalOlympiadSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[19]/li");
-    private ElementsCollection classesTimetableSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[4]/li/a");
-    private ElementsCollection diplomaTopicsSubMenus = $$x("((//nav[@id='site-navigation']//ul[@class='menu']//ul)[2]/li/ul)[2]/li/a");
-    private ElementsCollection springSemester20SubMenus = $$x("(//a[contains(text(),'2019/2020')])[2]/../ul/li");
-    private ElementsCollection autumnSemester21SubMenus = $$x("(((//a[contains(text(),'2019/2020')])[2]/ancestor::li)[2]//ul)[3]/li");
-    private ElementsCollection springSemester21SubMenus = $$x("(//a[contains(text(),'2020/2021')])[2]/../ul/li");
-    private ElementsCollection educationalAndMethodologicalSupportSubMenus = $$x("((//nav[@id='site-navigation']//ul[@class='menu']//ul)[2]/li)[5]/ul/li");
-    private ElementsCollection educationalDisciplinesSubMenus = $$x("((//nav[@id='site-navigation']//ul[@class='menu']//ul)[2]/li)[5]/ul/li[1]/ul/li");
-    private ElementsCollection enrolleeSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[20]/li");
-    private ElementsCollection eventsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[21]/li");
-    private SelenideElement eventSubMenuEng = $x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[3]/li/a");
+    private ElementsCollection scientificActivitySubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[11]/li/a");
+    private ElementsCollection olympiadsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[12]/li/a");
+    private static final String UKRAINIAN_OLYMPIAD_SUBMENUS = "(//nav[@id='site-navigation']//ul[@class='menu']//ul)[12]/li[%s]/ul/li";
+    private ElementsCollection educationalAndMethodologicalSupportSubMenus = $$x("((//nav[@id='site-navigation']//ul[@class='menu']//ul)[2]/li)[6]/ul/li/a");
+    private ElementsCollection educationalDisciplinesSubMenus = $$x("((//nav[@id='site-navigation']//ul[@class='menu']//ul)[2]/li)[6]/ul/li/ul/li");
+    private ElementsCollection enrolleeSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[15]/li");
+    private ElementsCollection eventsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[16]/li");
+    private SelenideElement eventSubMenuEng = $x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[4]/li/a");
     private SelenideElement departmentTodayEn = $x("(//nav[@id='site-navigation']//ul/li/a)[2]");
     private SelenideElement logo = $x("//a[@rel='home']");
-    private SelenideElement copyright = $x("//div[contains(@class,'left')]");
+    private SelenideElement copyright = $x("//div[contains(@class,'left')]/span");
     private SelenideElement contactUs = $x("//div[@id='footer-callout']//a");
 
     public TeachersPage clickOnTeachersLink(int linkNumber) {
+        actions().moveToElement(headerFragment.getHeaderLinks()
+                .get(linkNumber)
+                .shouldBe(visible))
+                .perform();
+        aboutUsSubMenus.get(2)
+                .shouldBe(visible)
+                .click();
+        return page(TeachersPage.class);
+    }
+
+    public TeachersPage clickOnTeachersLinkEng(int linkNumber) {
         headerFragment.getHeaderLinks()
                 .get(linkNumber)
                 .shouldBe(visible)
@@ -144,8 +148,8 @@ public class HomePage extends BasePage {
     }
 
     public HomePage checkCopyrightInfo(String expectedCopyright) {
-        copyright.shouldBe(visible)
-                .shouldHave(text(expectedCopyright));
+        copyright.scrollTo().shouldBe(visible)
+                .shouldHave(matchText(expectedCopyright));
         return page(HomePage.class);
     }
 
@@ -228,7 +232,7 @@ public class HomePage extends BasePage {
                 .get(linkNumber))
                 .perform();
         educationalProcessSubMenus
-                .get(3)
+                .get(4)
                 .shouldBe(visible)
                 .click();
         return page(HomePage.class);
@@ -239,7 +243,7 @@ public class HomePage extends BasePage {
                 .get(linkNumber))
                 .perform();
         educationalProcessSubMenus
-                .get(4)
+                .get(5)
                 .shouldBe(visible)
                 .click();
         return page(HomePage.class);
@@ -250,7 +254,7 @@ public class HomePage extends BasePage {
                 .get(linkNumber))
                 .perform();
         educationalProcessSubMenus
-                .get(5)
+                .get(6)
                 .shouldBe(visible)
                 .click();
         return page(HomePage.class);
@@ -295,7 +299,7 @@ public class HomePage extends BasePage {
                 .get(linkNumber)
                 .shouldBe(visible))
                 .perform();
-        aboutUsSubMenus.get(2)
+        aboutUsSubMenus.get(3)
                 .shouldBe(visible)
                 .click();
         return page(HomePage.class);
@@ -319,9 +323,6 @@ public class HomePage extends BasePage {
                 .perform();
         educationalProcessSubMenus.get(1)
                 .shouldBe(visible)
-                .hover();
-        classesTimetableSubMenus.get(0)
-                .shouldBe(visible)
                 .click();
         return page(StudentsSchedulePage.class);
     }
@@ -331,10 +332,7 @@ public class HomePage extends BasePage {
                 .get(linkNumber)
                 .shouldBe(visible))
                 .perform();
-        educationalProcessSubMenus.get(1)
-                .shouldBe(visible)
-                .hover();
-        classesTimetableSubMenus.get(1)
+        educationalProcessSubMenus.get(2)
                 .shouldBe(visible)
                 .click();
         return page(TeachersSchedulePage.class);
@@ -351,48 +349,14 @@ public class HomePage extends BasePage {
         return page(CuratorsPage.class);
     }
 
-    public HomePage checkDiplomaSpringSemester20(int linkNumber, int expectedSize) {
+    public HomePage openDiplomaAutumnSemester21(int linkNumber, int expectedSize) {
         actions().moveToElement(headerFragment.getHeaderLinks()
                 .get(linkNumber)
                 .shouldBe(visible))
                 .perform();
-        educationalProcessSubMenus.get(3)
+        educationalProcessSubMenus.get(4)
                 .shouldBe(visible)
-                .hover();
-        diplomaTopicsSubMenus.get(0)
-                .shouldBe(visible)
-                .hover();
-        springSemester20SubMenus.shouldHaveSize(expectedSize);
-        return page(HomePage.class);
-    }
-
-    public HomePage checkDiplomaAutumnSemester20(int linkNumber, int expectedSize) {
-        actions().moveToElement(headerFragment.getHeaderLinks()
-                .get(linkNumber)
-                .shouldBe(visible))
-                .perform();
-        educationalProcessSubMenus.get(3)
-                .shouldBe(visible)
-                .hover();
-        diplomaTopicsSubMenus.get(1)
-                .shouldBe(visible)
-                .hover();
-        autumnSemester21SubMenus.shouldHaveSize(expectedSize);
-        return page(HomePage.class);
-    }
-
-    public HomePage checkDiplomaSpringSemester21(int linkNumber, int expectedSize) {
-        actions().moveToElement(headerFragment.getHeaderLinks()
-                .get(linkNumber)
-                .shouldBe(visible))
-                .perform();
-        educationalProcessSubMenus.get(3)
-                .shouldBe(visible)
-                .hover();
-        diplomaTopicsSubMenus.get(2)
-                .shouldBe(visible)
-                .hover();
-        springSemester21SubMenus.shouldHaveSize(expectedSize);
+                .hover().click();
         return page(HomePage.class);
     }
 
@@ -401,7 +365,7 @@ public class HomePage extends BasePage {
                 .get(linkNumber)
                 .shouldBe(visible))
                 .perform();
-        educationalProcessSubMenus.get(4)
+        educationalProcessSubMenus.get(5)
                 .shouldBe(visible)
                 .hover();
         educationalAndMethodologicalSupportSubMenus.get(0)
@@ -416,7 +380,7 @@ public class HomePage extends BasePage {
                 .get(linkNumber)
                 .shouldBe(visible))
                 .perform();
-        educationalProcessSubMenus.get(4)
+        educationalProcessSubMenus.get(5)
                 .shouldBe(visible)
                 .hover();
         educationalAndMethodologicalSupportSubMenus.get(1)
@@ -447,7 +411,7 @@ public class HomePage extends BasePage {
         return page(ConferencesAndPublishingActivitiesPage.class);
     }
 
-    public HomePage checkUkrainianStudentsProgrammingOlympiadArchive(int linkNumber, int expectedSize) {
+    public HomePage checkAllUkrainianOlympiadInSystemProgramming(int linkNumber, int expectedSize) {
         actions().moveToElement(headerFragment.getHeaderLinks()
                 .get(linkNumber)
                 .shouldBe(visible))
@@ -455,11 +419,11 @@ public class HomePage extends BasePage {
         olympiadsSubMenus.get(0)
                 .shouldBe(visible)
                 .hover();
-        ukrainianOlympiadSubMenus.shouldHaveSize(expectedSize);
+        $$x(String.format(UKRAINIAN_OLYMPIAD_SUBMENUS, 1)).shouldHaveSize(expectedSize);
         return page(HomePage.class);
     }
 
-    public HomePage checkInternationalOlympiadArchive(int linkNumber, int expectedSize) {
+    public HomePage checkInternationalOlympiad(int linkNumber, int expectedSize) {
         actions().moveToElement(headerFragment.getHeaderLinks()
                 .get(linkNumber)
                 .shouldBe(visible))
@@ -467,7 +431,7 @@ public class HomePage extends BasePage {
         olympiadsSubMenus.get(1)
                 .shouldBe(visible)
                 .hover();
-        internationalOlympiadSubMenus.shouldHaveSize(expectedSize);
+        $$x(String.format(UKRAINIAN_OLYMPIAD_SUBMENUS, 2)).shouldHaveSize(expectedSize);
         return page(HomePage.class);
     }
 
@@ -559,7 +523,7 @@ public class HomePage extends BasePage {
         return page(Games3DPage.class);
     }
 
-    public ScotoLogicInnovativeLaboratoryPage clickOnScotoLogicInnovativeLaboratoryPageLink(int linkNumber) {
+    public GlobalLogicInnovativeLaboratoryPage clickOnGlobalLogicInnovativeLaboratoryPageLink(int linkNumber) {
         actions().moveToElement(headerFragment.getHeaderLinks()
                 .get(linkNumber)
                 .shouldBe(visible))
@@ -567,7 +531,7 @@ public class HomePage extends BasePage {
         eventsSubMenus.get(1)
                 .shouldBe(visible)
                 .click();
-        return page(ScotoLogicInnovativeLaboratoryPage.class);
+        return page(GlobalLogicInnovativeLaboratoryPage.class);
     }
 
     public GiulianiSecurityAndSafetyLLCPage clickOnGiulianiSecurityAndSafetyLLCPageLink(int linkNumber) {

@@ -2,7 +2,6 @@ package tests.kpi.otp;
 
 import app.core.elements.kpi.otp.pages.HomePage;
 import app.core.test_data.KpiDataProvider;
-import io.qameta.allure.Step;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 

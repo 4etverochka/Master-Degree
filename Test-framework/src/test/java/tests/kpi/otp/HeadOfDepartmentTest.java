@@ -1,19 +1,17 @@
 package tests.kpi.otp;
 
 import app.core.elements.kpi.otp.pages.HomePage;
-import app.core.test_data.KpiDataProvider;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static app.core.test_data.KpiIntConstants.NUMBER_EIGHT;
+import static app.core.test_data.KpiIntConstants.NUMBER_SEVEN;
 import static app.core.test_data.KpiIntConstants.NUMBER_ZERO;
 import static app.core.test_data.KpiStringConstants.*;
 import static com.codeborne.selenide.Selenide.page;
 
 public class HeadOfDepartmentTest extends BaseTest {
-
     private static final int ZERO = NUMBER_ZERO.getValue();
-    private static final int LANGUAGE_LINK_NUMBER = NUMBER_EIGHT.getValue();
+    private static final int LANGUAGE_LINK_NUMBER = NUMBER_SEVEN.getValue();
 
     private static final String HEAD_OF_DEPARTMENT_TITLE_RU = HEAD_OF_DEPARTMENT_PAGE_TITLE_RU.getValue();
     private static final String POSITION_IN_RU = POSITION_RU.getValue();
@@ -41,15 +39,13 @@ public class HeadOfDepartmentTest extends BaseTest {
                         POSITION_IN_RU,
                         SCIENTIFIC_DEGREE_IN_RU,
                         SCIENTIFIC_TITLE_IN_RU)
-                .changeLanguageToUkrainian(LANGUAGE_LINK_NUMBER)
-                .openHeadOfDepartmentPageInNewTab(false, false)
+                .changeLanguageToUkrainianWithoutRedirect(LANGUAGE_LINK_NUMBER)
                 .checkInfoOnHeadOfDepartmentPage(
                         HEAD_OF_DEPARTMENT_TITLE_UKR,
                         POSITION_IN_UKR,
                         SCIENTIFIC_DEGREE_IN_UKR,
                         SCIENTIFIC_TITLE_IN_UKR)
-                .changeLanguageToEnglish(LANGUAGE_LINK_NUMBER)
-                .openHeadOfDepartmentPageInNewTab(true, false)
+                .changeLanguageToEnglishWithoutRedirect(LANGUAGE_LINK_NUMBER)
                 .checkInfoOnHeadOfDepartmentPage(
                         HEAD_OF_DEPARTMENT_TITLE_EN,
                         POSITION_IN_EN,

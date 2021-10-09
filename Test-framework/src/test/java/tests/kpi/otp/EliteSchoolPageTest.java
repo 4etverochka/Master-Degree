@@ -10,7 +10,6 @@ import static app.core.test_data.KpiStringConstants.*;
 import static com.codeborne.selenide.Selenide.page;
 
 public class EliteSchoolPageTest extends BaseTest {
-
     private static final int LINK_NUMBER_FOUR = NUMBER_FOUR.getValue();
     private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_SEVEN.getValue();
     private static final String EXPECTED_ELITE_SCHOOL_PAGE_URL = ELITE_SCHOOL_PAGE_URL.getValue();

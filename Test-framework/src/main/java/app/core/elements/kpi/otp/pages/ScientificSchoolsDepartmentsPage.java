@@ -4,7 +4,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.page;
 
-public class ScientificSchoolsDepartmentsPage extends HomePage{
+public class ScientificSchoolsDepartmentsPage extends HomePage {
 
     public ScientificSchoolsDepartmentsPage checkScientificSchoolsDepartmentsPageTitle(String expectedTitle) {
         headerFragment.getTitle()

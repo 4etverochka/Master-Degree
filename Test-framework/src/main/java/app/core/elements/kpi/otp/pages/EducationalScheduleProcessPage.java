@@ -10,7 +10,6 @@ import static com.codeborne.selenide.Selenide.page;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class EducationalScheduleProcessPage extends HomePage {
-
     private SelenideElement daytimeStudyForm = $x("(//div[contains(@class,'page-content')]//span/a[contains(@href,'DENNA')])[1]");
     private SelenideElement extramuralStudyForm = $x("//div[contains(@class,'page-content')]//span/a[contains(@href,'ZAOCHNA')]");
 

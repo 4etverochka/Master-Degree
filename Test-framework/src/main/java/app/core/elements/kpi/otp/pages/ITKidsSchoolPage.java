@@ -7,8 +7,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.page;
 
-public class ITKidsSchoolPage extends HomePage{
-
+public class ITKidsSchoolPage extends HomePage {
     private SelenideElement title = $x("//div[@class='navbar-header']");
 
     public ITKidsSchoolPage checkITKidsSchoolPageTitle() {
