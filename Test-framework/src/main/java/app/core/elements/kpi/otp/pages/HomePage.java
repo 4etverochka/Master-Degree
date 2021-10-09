@@ -14,7 +14,7 @@ public class HomePage extends BasePage {
     protected HeaderFragment headerFragment = page(HeaderFragment.class);
     private ElementsCollection aboutUsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[1]/li/a");
     private ElementsCollection educationalProcessSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[2]/li/a");
-    private ElementsCollection scientificActivitySubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[16]/li/a");
+    private ElementsCollection scientificActivitySubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[14]/li/a");
     private ElementsCollection olympiadsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[17]/li/a");
     private ElementsCollection ukrainianOlympiadSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[18]/li");
     private ElementsCollection internationalOlympiadSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[19]/li");
@@ -29,7 +29,7 @@ public class HomePage extends BasePage {
     private ElementsCollection eventsSubMenus = $$x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[21]/li");
     private SelenideElement eventSubMenuEng = $x("(//nav[@id='site-navigation']//ul[@class='menu']//ul)[3]/li/a");
     private SelenideElement departmentTodayEn = $x("(//nav[@id='site-navigation']//ul/li/a)[2]");
-    private SelenideElement logo = $x("//img[@id='sc_logo']");
+    private SelenideElement logo = $x("//a[@rel='home']");
     private SelenideElement copyright = $x("//div[contains(@class,'left')]");
     private SelenideElement contactUs = $x("//div[@id='footer-callout']//a");
 
@@ -54,7 +54,7 @@ public class HomePage extends BasePage {
                 .get(linkNumber)
                 .shouldBe(visible))
                 .perform();
-        aboutUsSubMenus.get(3)
+        aboutUsSubMenus.get(4)
                 .shouldBe(visible)
                 .click();
         return page(ContactsPage.class);
@@ -150,7 +150,7 @@ public class HomePage extends BasePage {
     }
 
     public ContactsPage clickOnContactUsButton() {
-        contactUs.shouldBe(visible)
+        contactUs.scrollTo().shouldBe(visible)
                 .click();
         return page(ContactsPage.class);
     }
@@ -345,7 +345,7 @@ public class HomePage extends BasePage {
                 .get(linkNumber)
                 .shouldBe(visible))
                 .perform();
-        educationalProcessSubMenus.get(2)
+        educationalProcessSubMenus.get(3)
                 .shouldBe(visible)
                 .click();
         return page(CuratorsPage.class);

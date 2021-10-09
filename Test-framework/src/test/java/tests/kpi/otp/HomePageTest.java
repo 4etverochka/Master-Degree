@@ -19,7 +19,7 @@ public class HomePageTest extends BaseTest {
     private static final int LINK_NUMBER_FOUR = NUMBER_FOUR.getValue();
     private static final int LINK_NUMBER_FIVE = NUMBER_FIVE.getValue();
     private static final int LINK_NUMBER_SEVEN = NUMBER_SEVEN.getValue();
-    private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_EIGHT.getValue();
+    private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_SEVEN.getValue();
     private static final String EXPECTED_EDUCATIONAL_AND_PROFESSIONAL_PROGRAM_URL = EDUCATIONAL_AND_PROFESSIONAL_PROGRAM_URL.getValue();
     private static final String EXPECTED_EDUCATIONAL_DISCIPLINES_URL = EDUCATIONAL_DISCIPLINES_URL.getValue();
     private static final String EXPECTED_STUDENTS_TIMETABLE_URL = STUDENTS_TIMETABLE_URL.getValue();

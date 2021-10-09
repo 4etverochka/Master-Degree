@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$x;
 @Getter
 public class HeaderFragment extends BasePage {
     private ElementsCollection headerLinks = $$x("//nav[@id='site-navigation']//ul[@class='menu']/li/a");
-    private SelenideElement title = $x("//h2[@class='post-title']");
+    private SelenideElement title = $x("//h2[@class='post-title ']");
     private SelenideElement search = $x("//input[@type='search']");
     private SelenideElement englishLanguage = $x("//nav[@id='site-navigation']//ul[@class='menu']/li//a[@lang='en-US']");
     private SelenideElement russianLanguage = $x("//nav[@id='site-navigation']//ul[@class='menu']/li//a[@lang='ru-RU']");

@@ -12,7 +12,7 @@ import static org.testng.AssertJUnit.assertTrue;
 public class EducationalScheduleProcessPage extends HomePage {
 
     private SelenideElement daytimeStudyForm = $x("(//div[contains(@class,'page-content')]//span/a[contains(@href,'DENNA')])[1]");
-    private SelenideElement extramuralStudyForm = $x("//div[contains(@class,'page-content')]//span/a[contains(@href,'ZACHNA')]");
+    private SelenideElement extramuralStudyForm = $x("//div[contains(@class,'page-content')]//span/a[contains(@href,'ZAOCHNA')]");
 
     public EducationalScheduleProcessPage checkEducationalScheduleProcessTitle(String expectedTitle) {
         headerFragment.getTitle()

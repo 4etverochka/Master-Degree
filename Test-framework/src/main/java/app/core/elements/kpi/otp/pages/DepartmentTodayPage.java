@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class DepartmentTodayPage extends HomePage {
-    private SelenideElement departmentTodayHeadline = $x("//article/h2");
+    private SelenideElement departmentTodayHeadline = $x("//article//h2");
     private SelenideElement headOfDepartmentLinkRu = $x("(//div[@id='content']//a)[1]");
     private SelenideElement headOfDepartmentLinkUkr = $x("(//div[@id='content']//a)[2]");
     private SelenideElement headOfDepartmentLinkEn = $x("//div[@id='content']//a");

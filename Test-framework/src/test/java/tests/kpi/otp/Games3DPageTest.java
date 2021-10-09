@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static app.core.helpers.MethodsHelper.checkUrl;
-import static app.core.test_data.KpiIntConstants.NUMBER_EIGHT;
+import static app.core.test_data.KpiIntConstants.NUMBER_SEVEN;
 import static app.core.test_data.KpiIntConstants.NUMBER_FIVE;
 import static app.core.test_data.KpiStringConstants.GAMES_3D_PAGE_TITLE;
 import static app.core.test_data.KpiStringConstants.GAMES_3D_PAGE_URL;
@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.page;
 public class Games3DPageTest extends BaseTest {
 
     private static final int LINK_NUMBER_FIVE = NUMBER_FIVE.getValue();
-    private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_EIGHT.getValue();
+    private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_SEVEN.getValue();
     private static final String EXPECTED_GAMES_3D_PAGE_TITLE = GAMES_3D_PAGE_TITLE.getValue();
     private static final String EXPECTED_GAMES_3D_PAGE_URL = GAMES_3D_PAGE_URL.getValue();
 

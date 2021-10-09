@@ -1,6 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="KPI tests">
-    <test name="KPI web-services test" parallel="classes" thread-count="4">
+<!--    <test name="KPI web-services test" parallel="classes" thread-count="4">-->
+    <test name="KPI web-services test">
         <packages>
             <package name="tests.kpi.otp"/>
         </packages>

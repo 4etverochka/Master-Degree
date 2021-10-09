@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.page;
 public class EnrolleePageTest extends BaseTest {
 
     private static final int LINK_NUMBER_FIVE = NUMBER_FIVE.getValue();
-    private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_EIGHT.getValue();
+    private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_SEVEN.getValue();
     private static final String EXPECTED_ENROLLEE_PAGE_TITLE_RU = ENROLLEE_PAGE_TITLE_RU.getValue();
     private static final String EXPECTED_ENROLLEE_PAGE_TITLE_UKR = ENROLLEE_PAGE_TITLE_UKR.getValue();
     private static final String EXPECTED_ENROLLEE_PAGE_URL = ENROLLEE_PAGE_URL.getValue();

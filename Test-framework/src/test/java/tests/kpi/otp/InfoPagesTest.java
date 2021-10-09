@@ -4,7 +4,7 @@ import app.core.elements.kpi.otp.pages.HomePage;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static app.core.test_data.KpiIntConstants.NUMBER_EIGHT;
+import static app.core.test_data.KpiIntConstants.NUMBER_SEVEN;
 import static app.core.test_data.KpiIntConstants.NUMBER_SIX;
 import static app.core.test_data.KpiStringConstants.*;
 import static com.codeborne.selenide.Selenide.page;
@@ -25,7 +25,7 @@ public class InfoPagesTest extends BaseTest {
     private static final String INSART = INSART_LOGO.getValue();
     private static final String GLOBAL_LOGIC = GLOBAL_LOGIC_LOGO.getValue();
     private static final int CHANGE_EMPLOYMENT_LINK_NUMBER = NUMBER_SIX.getValue();
-    private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_EIGHT.getValue();
+    private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_SEVEN.getValue();
 
     @Test(description = "Check employment page info on different languages.")
     public void checkEmploymentPageInfoOnDifferentLanguages() {

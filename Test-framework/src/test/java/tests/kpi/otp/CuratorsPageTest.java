@@ -5,15 +5,14 @@ import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static app.core.helpers.MethodsHelper.checkUrl;
-import static app.core.test_data.KpiIntConstants.NUMBER_EIGHT;
-import static app.core.test_data.KpiIntConstants.NUMBER_ONE;
+import static app.core.test_data.KpiIntConstants.*;
 import static app.core.test_data.KpiStringConstants.*;
 import static com.codeborne.selenide.Selenide.page;
 
 public class CuratorsPageTest extends BaseTest {
 
     private static final int LINK_NUMBER_ONE = NUMBER_ONE.getValue();
-    private static final int LINK_NUMBER_EIGHT = NUMBER_EIGHT.getValue();
+    private static final int CHANGE_LANGUAGE_LINK_NUMBER = NUMBER_SEVEN.getValue();
     private static final String CURATORS_TITLE_RU = CURATORS_PAGE_TITLE_RU.getValue();
     private static final String CURATORS_TITLE_UKR = CURATORS_PAGE_TITLE_UKR.getValue();
     private static final String CURATORS_PAGE_URL_RU_VER = CURATORS_PAGE_URL_RU.getValue();
@@ -27,7 +26,7 @@ public class CuratorsPageTest extends BaseTest {
                 .checkCuratorsPageTitle(CURATORS_TITLE_RU);
         checkUrl(CURATORS_PAGE_URL_RU_VER);
         page(HomePage.class)
-                .changeLanguageToUkrainian(LINK_NUMBER_EIGHT)
+                .changeLanguageToUkrainian(CHANGE_LANGUAGE_LINK_NUMBER)
                 .clickOnCuratorsLink(LINK_NUMBER_ONE)
                 .checkCuratorsPageTitle(CURATORS_TITLE_UKR);
         checkUrl(CURATORS_PAGE_URL_UKR_VER);

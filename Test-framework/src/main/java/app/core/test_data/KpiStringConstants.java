@@ -29,7 +29,7 @@ public enum KpiStringConstants {
     HEAD_OF_DEPARTMENT_FULL_NAME("Семенов Сергей Геннадьевич"),
     PHONE_NUMBER_ONE("067-579-30-82"),
     PHONE_NUMBER_TWO("050-300-76-47"),
-    ADDRESS_IMAGE("http://web.kpi.kharkov.ua/cit/wp-content/uploads/sites/43/2018/03/fakultetKIT-300x247.png"),
+    ADDRESS_IMAGE("http://web.kpi.kharkov.ua/otp/wp-content/uploads/sites/152/2021/04/Black.gif"),
 
     VALID_SEARCH_DATA("Преподаватели"),
     INVALID_SEARCH_DATA("123D12"),
@@ -44,7 +44,8 @@ public enum KpiStringConstants {
     HEAD_OF_DEPARTMENT_FULL_NAME_ON_CONTACT_US_PAGE("д. т. н. Семенов Сергей Геннадьевич"),
     HEAD_OF_DEPARTMENT_PHONE_NUMBER_ONE_ON_CONTACT_US_PAGE("тел. 067-579-30-82"),
     HEAD_OF_DEPARTMENT_PHONE_NUMBER_TWO_ON_CONTACT_US_PAGE("тел. 050-300-76-47"),
-    DEPARTMENT_PHONE_NUMBER_ON_CONTACT_US_PAGE("тел. 707-61-65"),
+    DEPARTMENT_PHONE_NUMBER_ON_CONTACT_US_PAGE("\n" +
+            "тел. 707-61-65"),
     DEPARTMENT_ADDRESS_ON_CONTACT_US_PAGE("Вечерний корпус, к. 309"),
     DEPARTMENT_EMAIL_ON_CONTACT_US_PAGE("e-mail: kafedra_otp_2016@ukr.net"),
 
@@ -94,7 +95,8 @@ public enum KpiStringConstants {
 
     EDUCATIONAL_PROCESS_SCHEDULE_RU("ГРАФИК УЧЕБНОГО ПРОЦЕССА"),
     EDUCATIONAL_PROCESS_SCHEDULE_UKR("ГРАФІК НАВЧАЛЬНОГО ПРОЦЕСУ"),
-    EXTRAMURAL_STUDY_SCHEDULE_LINK("GRAFIK__ZACHNA"),
+    EXTRAMURAL_STUDY_SCHEDULE_LINK_RU("grafik-uchebnogo-protsessa/"),
+    EXTRAMURAL_STUDY_SCHEDULE_LINK_UA("grafik-navchalnogo-protsesa/"),
 
     STUDENTS_SCHEDULE_RUS("Расписание занятий студентов"),
     STUDENTS_SCHEDULE_UKR("Розклад занять студентів"),

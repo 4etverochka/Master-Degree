@@ -3,15 +3,14 @@ package app.core.elements.kpi.otp.pages;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static org.testng.Assert.assertTrue;
 
 public class ContactsPage extends HomePage {
     private SelenideElement headOfDepartmentPhoneNumbers = $x("//p[contains(text(),'. 0')]");
     private SelenideElement departmentAddress = $x("//div[@id='content']//p[4]");
-    private SelenideElement departmentPhoneNumber = $x("//div[@id='content']//p[5]");
+    private SelenideElement departmentPhoneNumber = $x("//div[@id='content']//p[4]");
     private SelenideElement departmentEmail = $x("//div[@id='content']//p[6]");
     private SelenideElement headOfDepartmentFullName = $x("//p//span/a");
     private ElementsCollection phoneNumbers = $$x("//li/span[@style]");
@@ -64,7 +63,7 @@ public class ContactsPage extends HomePage {
 
     public ContactsPage checkDepartmentPhoneNumber(String phoneNumber) {
         departmentPhoneNumber.shouldBe(visible)
-                .shouldHave(text(phoneNumber));
+                .shouldHave(matchText(phoneNumber));
         return page(ContactsPage.class);
     }
 
