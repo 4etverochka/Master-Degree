@@ -12,6 +12,7 @@ public class LocalChromeInvoker implements WebDriverInvoker {
     public WebDriver invokeWebDriver() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
         WebDriverManager.chromedriver().browserVersion(BROWSER_CONFIG.getVersion()).setup();
         return new ChromeDriver(options);
     }
