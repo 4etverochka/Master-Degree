@@ -24,7 +24,7 @@ public class WebDriverProvider {
 
         driver = webDriverFactory.newWebDriver();
         driver.manage().deleteAllCookies();
-        driver.manage().window().maximize();
+        driver.manage().window().fullscreen();
     }
 
     public static WebDriverProvider getWebDriverProviderInstance() {
