@@ -2,6 +2,7 @@ package tests.kpi.otp;
 
 import app.core.elements.kpi.otp.pages.HomePage;
 import app.core.test_data.KpiDataProvider;
+import org.testng.IRetryAnalyzer;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
@@ -44,7 +45,8 @@ public class HomePageTest extends BaseTest {
 
     @Test(description = "Check redirection to social networks.",
             dataProvider = "social_networks_info",
-            dataProviderClass = KpiDataProvider.class)
+            dataProviderClass = KpiDataProvider.class,
+            retryAnalyzer = IRetryAnalyzer.class)
     public void checkRedirectionToSocialNetworks(String facebook,
                                                  String twitter,
                                                  String kpiOfficialLink,
@@ -64,7 +66,8 @@ public class HomePageTest extends BaseTest {
                 .checkPageIsOpenedInNewTab(youTube);
     }
 
-    @Test(description = "Check educational and professional program redirection.")
+    @Test(description = "Check educational and professional program redirection.",
+            retryAnalyzer = IRetryAnalyzer.class)
     public void checkEducationalAndProfessionalProgramRedirection() {
         page(HomePage.class)
                 .openPage()
@@ -91,7 +94,8 @@ public class HomePageTest extends BaseTest {
         checkUrl(EXPECTED_STUDENTS_TIMETABLE_URL);
     }
 
-    @Test(description = "Check bachelors work topics redirection.")
+    @Test(description = "Check bachelors work topics redirection.",
+            retryAnalyzer = IRetryAnalyzer.class)
     public void checkBachelorsWorkTopicsRedirection() {
         page(HomePage.class)
                 .openPage()
@@ -118,7 +122,8 @@ public class HomePageTest extends BaseTest {
         checkUrl(EXPECTED_DISCIPLINES_DURING_THE_QUARANTINE_TIME_URL);
     }
 
-    @Test(description = "Check feedback redirection.")
+    @Test(description = "Check feedback redirection.",
+            retryAnalyzer = IRetryAnalyzer.class)
     public void checkFeedbackRedirection() {
         page(HomePage.class)
                 .openPage()
@@ -169,7 +174,8 @@ public class HomePageTest extends BaseTest {
                 .checkInternationalOlympiad(LINK_NUMBER_THREE, LINK_NUMBER_THREE);
     }
 
-    @Test(description = "Check admission rules 2021 in rus.")
+    @Test(description = "Check admission rules 2021 in rus.",
+            retryAnalyzer = IRetryAnalyzer.class)
     public void checkAdmissionRules21RedirectionInRus() {
         page(HomePage.class)
                 .openPage()
@@ -177,7 +183,8 @@ public class HomePageTest extends BaseTest {
         checkUrl(EXPECTED_ADMISSION_RULES_21_URL);
     }
 
-    @Test(description = "Check admission rules 2021 redirection in ukr.")
+    @Test(description = "Check admission rules 2021 redirection in ukr.",
+            retryAnalyzer = IRetryAnalyzer.class)
     public void checkAdmissionRules21RedirectionInUkr() {
         page(HomePage.class)
                 .openPage()
@@ -186,7 +193,8 @@ public class HomePageTest extends BaseTest {
         checkUrl(EXPECTED_ADMISSION_RULES_21_URL);
     }
 
-    @Test(description = "Check selection committee redirection in rus.")
+    @Test(description = "Check selection committee redirection in rus.",
+            retryAnalyzer = IRetryAnalyzer.class)
     public void checkSelectionCommitteeRedirectionInRus() {
         page(HomePage.class)
                 .openPage()
@@ -194,7 +202,8 @@ public class HomePageTest extends BaseTest {
         checkUrl(EXPECTED_SELECTION_COMMITTEE_URL);
     }
 
-    @Test(description = "Check selection committee redirection in ukr.")
+    @Test(description = "Check selection committee redirection in ukr.",
+            retryAnalyzer = IRetryAnalyzer.class)
     public void checkSelectionCommitteeRedirectionInUkr() {
         page(HomePage.class)
                 .openPage()
