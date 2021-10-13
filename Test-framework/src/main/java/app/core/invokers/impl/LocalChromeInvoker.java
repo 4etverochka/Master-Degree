@@ -11,7 +11,6 @@ import static app.core.owner.BrowserOwner.BROWSER_CONFIG;
 public class LocalChromeInvoker implements WebDriverInvoker {
     public WebDriver invokeWebDriver() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         options.addArguments("--window-size=1920,1080");
         WebDriverManager.chromedriver().browserVersion(BROWSER_CONFIG.getVersion()).setup();
