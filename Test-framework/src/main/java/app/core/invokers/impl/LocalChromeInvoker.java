@@ -13,6 +13,7 @@ public class LocalChromeInvoker implements WebDriverInvoker {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
+        options.addArguments("--window-size=1920,1080");
         WebDriverManager.chromedriver().browserVersion(BROWSER_CONFIG.getVersion()).setup();
         return new ChromeDriver(options);
     }
