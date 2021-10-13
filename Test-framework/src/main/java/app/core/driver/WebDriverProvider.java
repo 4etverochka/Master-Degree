@@ -21,6 +21,7 @@ public class WebDriverProvider {
 
     @SneakyThrows
     public synchronized void initDriver() {
+
         driver = webDriverFactory.newWebDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
