@@ -3,6 +3,7 @@ package tests.kpi.otp;
 import app.core.elements.kpi.otp.pages.HomePage;
 import app.core.test_data.KpiDataProvider;
 import org.testng.IRetryAnalyzer;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
@@ -43,6 +44,7 @@ public class HomePageTest extends BaseTest {
                 .checkCopyrightInfo(copyright);
     }
 
+    @Ignore
     @Test(description = "Check redirection to social networks.",
             dataProvider = "social_networks_info",
             dataProviderClass = KpiDataProvider.class,
@@ -66,6 +68,7 @@ public class HomePageTest extends BaseTest {
                 .checkPageIsOpenedInNewTab(youTube);
     }
 
+    @Ignore
     @Test(description = "Check educational and professional program redirection.",
             retryAnalyzer = IRetryAnalyzer.class)
     public void checkEducationalAndProfessionalProgramRedirection() {
@@ -94,6 +97,7 @@ public class HomePageTest extends BaseTest {
         checkUrl(EXPECTED_STUDENTS_TIMETABLE_URL);
     }
 
+    @Ignore
     @Test(description = "Check bachelors work topics redirection.",
             retryAnalyzer = IRetryAnalyzer.class)
     public void checkBachelorsWorkTopicsRedirection() {
@@ -122,6 +126,7 @@ public class HomePageTest extends BaseTest {
         checkUrl(EXPECTED_DISCIPLINES_DURING_THE_QUARANTINE_TIME_URL);
     }
 
+    @Ignore
     @Test(description = "Check feedback redirection.",
             retryAnalyzer = IRetryAnalyzer.class)
     public void checkFeedbackRedirection() {
@@ -174,6 +179,7 @@ public class HomePageTest extends BaseTest {
                 .checkInternationalOlympiad(LINK_NUMBER_THREE, LINK_NUMBER_THREE);
     }
 
+    @Ignore
     @Test(description = "Check admission rules 2021 in rus.",
             retryAnalyzer = IRetryAnalyzer.class)
     public void checkAdmissionRules21RedirectionInRus() {
@@ -183,6 +189,7 @@ public class HomePageTest extends BaseTest {
         checkUrl(EXPECTED_ADMISSION_RULES_21_URL);
     }
 
+    @Ignore
     @Test(description = "Check admission rules 2021 redirection in ukr.",
             retryAnalyzer = IRetryAnalyzer.class)
     public void checkAdmissionRules21RedirectionInUkr() {
@@ -193,6 +200,7 @@ public class HomePageTest extends BaseTest {
         checkUrl(EXPECTED_ADMISSION_RULES_21_URL);
     }
 
+    @Ignore
     @Test(description = "Check selection committee redirection in rus.",
             retryAnalyzer = IRetryAnalyzer.class)
     public void checkSelectionCommitteeRedirectionInRus() {
@@ -202,6 +210,7 @@ public class HomePageTest extends BaseTest {
         checkUrl(EXPECTED_SELECTION_COMMITTEE_URL);
     }
 
+    @Ignore
     @Test(description = "Check selection committee redirection in ukr.",
             retryAnalyzer = IRetryAnalyzer.class)
     public void checkSelectionCommitteeRedirectionInUkr() {
