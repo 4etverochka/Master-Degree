@@ -13,8 +13,8 @@ public enum KpiIntConstants {
     NUMBER_SEVEN(7),
     NUMBER_EIGHT(8),
     COUNT_OF_TEACHERS_ENG(21),
-    COUNT_OF_TEACHERS(41),
-    TEACHER_FROM_LIST_NUMBER(18);
+    COUNT_OF_TEACHERS(42),
+    TEACHER_FROM_LIST_NUMBER(19);
 
     @Getter
     private final int value;
